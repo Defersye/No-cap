@@ -7,6 +7,7 @@ class Router
 
    function __construct()
    {
+      include "routes/routes.php";
    }
 
    private $routes = [];
