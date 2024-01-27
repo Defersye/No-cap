@@ -1,0 +1,18 @@
+# Установка типа файла для иконок
+AddType image/x-icon .ico
+
+# Включение механизма перезаписи URL
+RewriteEngine on
+
+# Проверка, что запрашиваемый файл или директория не существуют
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Перенаправление всех запросов на index.php, добавляя параметр route
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
+
+# Установка кодировки UTF-8 по умолчанию
+AddDefaultCharset UTF-8
+
+# Отключение автоматического экранирования кавычек в PHP (magic_quotes_gpc)
+php_flag magic_quotes_gpc Off
