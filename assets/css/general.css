@@ -1,0 +1,163 @@
+@import url(../font/font.css);
+/* buyan, eastman, retro */
+:root {
+   --bg-color: #eae6d7;
+   --text-color: #3e342c;
+   --first-accent-color: #e49999;
+   --second-accent-color: #a5a5a5;
+   --footer-color: #505050;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: none;
+   line-height: 1;
+   font-size: 16px;
+   text-decoration: none;
+   box-sizing: border-box;
+   color: inherit;
+   /* text-transform: uppercase; */
+   font-family: "eastman", serif;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+body {
+   width: 100%;
+   color: var(--text-color);
+}
+.container {
+   margin: 0 auto;
+   padding: 0 5px;
+   width: 100%;
+   max-width: 1200px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+main {
+   background-color: var(--bg-color);
+}
+section {
+   padding-bottom: 80px;
+}
+a,
+button {
+   background-color: inherit;
+   cursor: pointer;
+}
+
+/* header */
+header {
+   padding: 15px 0 10px;
+   width: 100%;
+   background: linear-gradient(to right, #af5252 50%, #0000 0%),
+      var(--first-accent-color);
+   background-position: bottom;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
+header .container {
+   flex-direction: row;
+   flex-grow: 1;
+}
+hr {
+   padding-top: 7px;
+   background: linear-gradient(to right, #af5252 0%, #af5252 100%),
+      var(--first-accent-color);
+   background-position: bottom;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
+.header_nav {
+   display: flex;
+   gap: 30px;
+   align-items: center;
+   justify-content: space-between;
+}
+.header_link {
+   color: #784040;
+   font-family: "buyan";
+   font-weight: 600;
+   font-size: 20px;
+}
+.header_logo {
+   font-size: 30px;
+}
+.header_btn {
+   padding: 10px 20px;
+   background-color: #783b3b;
+   border-radius: 5px;
+   color: #f5e4e4;
+   box-shadow: #0004 2px 2px 5px;
+}
+
+/* footer */
+.footer_hr {
+   padding-top: 0px;
+   padding-bottom: 7px;
+   background: linear-gradient(to right, #262626 0%, #262626 100%),
+      var(--footer-color);
+   background-position: top;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
+footer {
+   padding: 15px 0 10px;
+   color: var(--bg-color);
+   width: 100%;
+   background: linear-gradient(to right, #262626 50%, #0000 0%),
+      var(--footer-color);
+   background-position: top;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
+footer .container {
+   align-items: start;
+}
+.footer_info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.footer_title {
+   font-family: "buyan";
+   font-weight: 600;
+   font-size: 160px;
+   letter-spacing: 5px;
+}
+.footer_contacts {
+   padding-left: 40px;
+   padding-bottom: 5px;
+   height: 120px;
+   width: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.footer_contact {
+   font-weight: 200;
+}
+.footer_contact span {
+   font-weight: 400;
+   color: #df6f50;
+}
+.footer_socials {
+   padding-bottom: 20px;
+   width: 400px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.footer_social {
+   font-family: "buyan";
+   font-size: 20px;
+}
+.footer_copyright {
+   color: #df6f50;
+   font-family: "eastman";
+   font-size: 12px;
+   font-weight: 300;
+}
