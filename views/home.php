@@ -1,3 +1,4 @@
+<!-- top_sellers sales collections  -->
 <section class="hero">
    <div class="container">
       <div class="hero_content">

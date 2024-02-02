@@ -33,25 +33,3 @@
    src: url("Eastman-Black.woff");
    font-weight: 700;
 }
-
-@font-face {
-   font-family: "buyan";
-   src: url("BuyanThin.ttf");
-   font-weight: 200;
-}
-@font-face {
-   font-family: "buyan";
-   src: url("BuyanRegular.ttf");
-   font-weight: 400;
-}
-@font-face {
-   font-family: "buyan";
-   src: url("BuyanBold.ttf");
-   font-weight: 600;
-}
-
-@font-face {
-   font-family: "retro";
-   src: url("posteretro.ttf");
-   font-weight: 400;
-}

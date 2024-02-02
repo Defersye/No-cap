@@ -97,13 +97,6 @@
    align-items: center;
    justify-content: center;
 }
-.hero_hr {
-   background: linear-gradient(to right, #79673a 0%, #79673a 100%),
-      var(--bg-color);
-   background-position: bottom;
-   background-size: 15px 1px;
-   background-repeat: repeat-x;
-}
 
 /* about */
 .about {
@@ -190,7 +183,4 @@
 }
 .col_p br {
    margin-top: 10px;
-}
-.about_hr {
-   background: var(--second-accent-color);
 }
