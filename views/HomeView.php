@@ -14,9 +14,9 @@ class HomeView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>Retro Pick | online store for the sale of retro products</title>
+         <title>NO CAP | Online store for style lovers</title>
 
-         <link rel="shortcut icon" href="./assets/img/layout/favicon.ico" type="image/x-icon">
+         <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/home.css">
       </head>

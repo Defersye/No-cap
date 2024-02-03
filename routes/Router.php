@@ -7,7 +7,7 @@ class Router
 
    function __construct()
    {
-      include "routes/routes.php";
+      $this->addRoute('home', 'HomeController@index');
    }
 
    private $routes = [];
@@ -35,7 +35,6 @@ class Router
          $handler = $this->routes[$route];
          $this->callHandler($handler);
       } else {
-         // Обработка ситуации, когда маршрут не найден
          header("HTTP/1.0 404 Not Found");
          echo "Страница не найдена!";
       }

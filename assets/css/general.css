@@ -34,21 +34,16 @@ body {
    align-items: center;
    justify-content: space-between;
 }
-main {
-}
-section {
-}
 a,
 button {
    cursor: pointer;
 }
 
 /* header */
-header {
-   padding: 15px 0;
-}
 header .container {
+   padding: 15px 0;
    flex-direction: row;
+   border-bottom: #000 solid 1px;
 }
 .left:has(.header_nav),
 .right:has(.header_nav) {
@@ -100,7 +95,7 @@ footer .container {
 }
 .footer_subscribe #submit {
    cursor: pointer;
-   padding: 0 20px;
+   padding: 0 25px;
 }
 .footer_subscribe #submit:hover {
    background-color: steelblue;
