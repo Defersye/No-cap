@@ -70,7 +70,7 @@ header .container {
 }
 .header_link {
    text-transform: uppercase;
-   font-size: 20px;
+   font-size: 18px;
 }
 .header_link:hover {
    color: steelblue;
@@ -122,4 +122,12 @@ footer .container {
 }
 .footer_copyright {
    font-size: 12px;
+}
+
+/* path */
+.path {
+   display: flex;
+}
+.path_text {
+   font-weight: 500;
 }
