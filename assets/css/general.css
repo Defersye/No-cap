@@ -40,6 +40,15 @@ button {
 }
 
 /* header */
+header {
+   position: sticky;
+   top: 0;
+   transition: 0.3s;
+   background-color: #fff;
+}
+.header_hidden {
+   transform: translateY(-100%);
+}
 header .container {
    padding: 15px 0;
    flex-direction: row;
@@ -68,7 +77,7 @@ header .container {
 }
 .header_logo {
    position: relative;
-   font-size: 48px;
+   font-size: 40px;
    font-family: "intro";
    text-transform: uppercase;
 }

@@ -11,22 +11,10 @@ class Router
    }
 
    private $routes = [];
-   /**
-    * Добавляет маршрут в список маршрутов.
-    *
-    * @param string $route URI маршрута (например, 'home' или 'products').
-    * @param string $handler Обработчик маршрута (например, 'HomeController@index').
-    */
    public function addRoute($route, $handler)
    {
       $this->routes[$route] = $handler;
    }
-
-   /**
-    * Обрабатывает текущий маршрут.
-    *
-    * @param string $route Текущий URI маршрута.
-    */
    public function handle($route)
    {
       // Проверка, существует ли маршрут в списке
@@ -39,12 +27,6 @@ class Router
          echo "Страница не найдена!";
       }
    }
-
-   /**
-    * Вызывает обработчик маршрута.
-    *
-    * @param string $handler Обработчик маршрута (например, 'HomeController@index').
-    */
    private function callHandler($handler)
    {
       // Предполагаем, что обработчик представляет собой строку с именем контроллера и метода
