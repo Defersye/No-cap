@@ -6,7 +6,8 @@ class CatalogController
 {
    public function index()
    {
-      $catalogModule = new \models\CatalogModel();
-      $catalogView = new \views\CatalogView();
+      $catalogModel = new \models\CatalogModel();
+      $products = $catalogModel->getProducts();
+      $catalogView = new \views\CatalogView($products);
    }
 }

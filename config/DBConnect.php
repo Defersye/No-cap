@@ -1,5 +1,7 @@
 <?php
 
+namespace config;
+
 class DBConnect
 {
    private static $instance;

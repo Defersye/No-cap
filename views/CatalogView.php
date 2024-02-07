@@ -4,7 +4,7 @@ namespace views;
 
 class CatalogView
 {
-   function __construct()
+   function __construct($products)
    {
 ?>
       <!doctype html>
@@ -24,7 +24,7 @@ class CatalogView
       <body>
          <?php
          include "./templates/header.html";
-         $this->catalog();
+         $this->catalog($products);
          include "./templates/footer.html";
          ?>
       </body>
@@ -33,7 +33,7 @@ class CatalogView
 <?php
    }
 
-   function catalog()
+   function catalog($products)
    {
       include "./views/catalog.php";
    }
