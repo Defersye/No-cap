@@ -5,12 +5,12 @@
    border: none;
    text-decoration: none;
    box-sizing: border-box;
-   font-family: "eastman", serif;
+   font-family: "poppins", serif;
    letter-spacing: 0.3px;
    font-weight: 300;
    font-size: 16px;
    line-height: 1;
-   color: #000;
+   color: inherit;
 }
 body::-webkit-scrollbar {
    display: none;
@@ -26,9 +26,9 @@ body {
 }
 .container {
    margin: 0 auto;
-   padding: 0 5px;
+   padding: 0 10px;
    width: 100%;
-   max-width: 1200px;
+   max-width: 1440px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -44,13 +44,13 @@ header {
    position: sticky;
    top: 0;
    transition: 0.3s;
-   background-color: #fff;
+   background-color: #fffc;
 }
 .header_hidden {
    transform: translateY(-100%);
 }
 header .container {
-   padding: 15px 0;
+   padding: 15px 10px;
    flex-direction: row;
    border-bottom: #000 solid 1px;
 }
@@ -127,7 +127,17 @@ footer .container {
 /* path */
 .path {
    display: flex;
+   padding: 40px 0;
+}
+.path .container {
+   flex-direction: row;
+   justify-content: start;
 }
 .path_text {
-   font-weight: 500;
+   font-weight: 400;
+}
+.path_arrow {
+   height: 9px;
+   width: 10px;
+   object-fit: contain;
 }

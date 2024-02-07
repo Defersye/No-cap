@@ -1,8 +1,10 @@
 <main>
    <div class="path">
-      <a href="/catalog" class="path_text">Catalog</a>
-      <p class="path_text">&nbsp;&gt;&nbsp;</p>
-      <a href="" class="path_text">dgasdrfg</a>
+      <div class="container">
+         <a href="/catalog" class="path_text">Catalog</a>
+         <p class="path_text">&nbsp;<img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
+         <a href="" class="path_text">Clothing</a>
+      </div>
    </div>
    <section class="catalog">
       <div class="container">
@@ -15,16 +17,80 @@
             <button class="catalog_filter">Radios</button>
             <button class="catalog_filter">Others</button>
          </div> -->
-         <div class="catalog_products_container">
-            <div class="catalog_products">
-               <a href="/card" class="catalog_card">
-                  <img src="assets/img/database/red_af700.jpg" alt="" class="catalog_card_img">
-                  <h5 class="catalog_card_title">Red af700</h5>
-                  <p class="catalog_card_price">&euro;5000</p>
-               </a>
-            </div>
+         <div class="catalog_cards">
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">Palau</h5>
+               <p class="catalog_card_collection">Oceania</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
          </div>
       </div>
    </section>
-   <hr class="catalog_hr">
 </main>

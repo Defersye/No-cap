@@ -1,36 +1,36 @@
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Thin.woff");
+   font-family: "poppins";
+   src: url("Poppins-Thin.woff");
    font-weight: 100;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Extralight.woff");
+   font-family: "poppins";
+   src: url("Poppins-Extralight.woff");
    font-weight: 200;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Light.woff");
+   font-family: "poppins";
+   src: url("Poppins-Light.woff");
    font-weight: 300;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Regular.woff");
+   font-family: "poppins";
+   src: url("Poppins-Regular.woff");
    font-weight: 400;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Medium.woff");
+   font-family: "poppins";
+   src: url("Poppins-Medium.woff");
    font-weight: 500;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Bold.woff");
+   font-family: "poppins";
+   src: url("Poppins-Bold.woff");
    font-weight: 600;
 }
 @font-face {
-   font-family: "eastman";
-   src: url("Eastman-Black.woff");
+   font-family: "poppins";
+   src: url("Poppins-Black.woff");
    font-weight: 700;
 }
 
