@@ -19,6 +19,7 @@ class CatalogView
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/catalog.css">
+         <script src="assets/js/catalog_card_animation.js"></script>
       </head>
 
       <body>

@@ -20,74 +20,92 @@
          <div class="catalog_cards">
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/palau_1.jpg" />
+                  <img class="img_off" src="assets/img/database/palau_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">palau</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/tonga_1.jpg" />
+                  <img class="img_off" src="assets/img/database/tonga_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">tonga</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/cape_verde_1.jpg" />
+                  <img class="img_off" src="assets/img/database/cape_verde_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">cape verde</h5>
+               <p class="catalog_card_collection">Africa</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/palau_1.jpg" />
+                  <img class="img_off" src="assets/img/database/palau_2.jpg" />
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">palau</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/tonga_1.jpg" />
+                  <img class="img_off" src="assets/img/database/tonga_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">tonga</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/cape_verde_1.jpg" />
+                  <img class="img_off" src="assets/img/database/cape_verde_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">cape verde</h5>
+               <p class="catalog_card_collection">Africa</p>
+               <p class="catalog_card_price">&euro;200</p>
+            </a>
+            <a href="/card" class="catalog_card">
+               <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/palau_1.jpg" />
+                  <img class="img_off" src="assets/img/database/palau_2.jpg" />
+                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
+               </div>
+               <h5 class="catalog_card_title">palau</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/tonga_1.jpg" />
+                  <img class="img_off" src="assets/img/database/tonga_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
+               <h5 class="catalog_card_title">tonga</h5>
                <p class="catalog_card_collection">Oceania</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
             <a href="/card" class="catalog_card">
                <div class="catalog_card_img">
+                  <img class="img_on" src="assets/img/database/cape_verde_1.jpg" />
+                  <img class="img_off" src="assets/img/database/cape_verde_2.jpg" />
                   <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
                </div>
-               <h5 class="catalog_card_title">Palau</h5>
-               <p class="catalog_card_collection">Oceania</p>
-               <p class="catalog_card_price">&euro;200</p>
-            </a>
-            <a href="/card" class="catalog_card">
-               <div class="catalog_card_img">
-                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
-               </div>
-               <h5 class="catalog_card_title">Palau</h5>
-               <p class="catalog_card_collection">Oceania</p>
-               <p class="catalog_card_price">&euro;200</p>
-            </a>
-            <a href="/card" class="catalog_card">
-               <div class="catalog_card_img">
-                  <div onclick="addToWishlist(this)" class="catalog_card_like"></div>
-               </div>
-               <h5 class="catalog_card_title">Palau</h5>
-               <p class="catalog_card_collection">Oceania</p>
+               <h5 class="catalog_card_title">cape verde</h5>
+               <p class="catalog_card_collection">Africa</p>
                <p class="catalog_card_price">&euro;200</p>
             </a>
          </div>
