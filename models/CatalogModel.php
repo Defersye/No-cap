@@ -11,7 +11,7 @@ class CatalogModel
    }
    public function getProducts()
    {
-      $query = mysqli_query($this->conn, "SELECT * FROM products");
+      $query = mysqli_query($this->conn, "SELECT * FROM products, collections WHERE collection_id = id_collection");
       if ($query->num_rows) {
          while ($row = $query->fetch_assoc()) {
             $answers[] = $row;

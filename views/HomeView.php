@@ -30,10 +30,16 @@ class HomeView
       </body>
 
       </html>
-<?php
+   <?php
    }
    function home()
-   {
-      include "./views/home.php";
+   { ?>
+      <!-- top_sellers sales collections  -->
+      <main>
+         <section class="hero_slider">
+            <div class="container">
+         </section>
+      </main>
+<?php
    }
 }
