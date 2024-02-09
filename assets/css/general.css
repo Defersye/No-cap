@@ -156,3 +156,7 @@ footer .container {
 .suggestions {
    padding-bottom: 120px;
 }
+.suggestions_slider {
+   display: flex;
+   column-gap: 10px;
+}

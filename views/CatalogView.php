@@ -60,6 +60,7 @@ class CatalogView
                </div>
             </div>
          </section>
+         <?= include "./templates/suggestions.php" ?>
       </main>
       <?php
    }

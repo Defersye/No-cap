@@ -75,7 +75,6 @@ class CartView
                </div>
             </div>
          </section>
-         <?= include "./templates/suggestions.php" ?>
       </main>
       <?php
    }
@@ -96,8 +95,17 @@ class CartView
             </a>
             <p class="cart_card_price">&euro;<?= $item['price'] ?></p>
             <div class="cart_card_quantity">3</div>
-            <p class="cart_card_total">&euro;450</p>
+            <input type="text" name="productСount" value="1" class="cart_card_quantity">
+            <p class="cart_card_total">&euro;<?= $item['price'] * 3 ?></p>
          </div>
 <?php }
    }
 }
+
+?>
+<span class="change minus min">
+   <span>-</span>
+</span>
+<span class="change plus">
+   <span>+</span>
+</span>
