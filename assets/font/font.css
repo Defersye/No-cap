@@ -1,36 +1,36 @@
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Thin.woff");
+   src: url("Poppins-Thin.ttf");
    font-weight: 100;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Extralight.woff");
+   src: url("Poppins-Extralight.ttf");
    font-weight: 200;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Light.woff");
+   src: url("Poppins-Light.ttf");
    font-weight: 300;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Regular.woff");
+   src: url("Poppins-Regular.ttf");
    font-weight: 400;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Medium.woff");
+   src: url("Poppins-Medium.ttf");
    font-weight: 500;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Bold.woff");
+   src: url("Poppins-Bold.ttf");
    font-weight: 600;
 }
 @font-face {
    font-family: "poppins";
-   src: url("Poppins-Black.woff");
+   src: url("Poppins-Black.ttf");
    font-weight: 700;
 }
 

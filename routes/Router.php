@@ -9,6 +9,7 @@ class Router
    {
       $this->addRoute('home', 'HomeController@index');
       $this->addRoute('catalog', 'CatalogController@index');
+      $this->addRoute('cart', 'CartController@index');
    }
 
    private $routes = [];

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const header = document.querySelector("header");
       let prevScroll = window.scrollY;
       let currentScroll;
-      window.addEventListener("scroll", () => {
+      document.addEventListener("scroll", () => {
          currentScroll = window.scrollY;
          const headerHidden = () => header.classList.contains("header_hidden");
 

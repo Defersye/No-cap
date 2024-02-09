@@ -1,0 +1,51 @@
+.card {
+   padding-top: 80px;
+   background: linear-gradient(to right, #af9552 50%, #ac575700 0%),
+      var(--bg-color);
+   background-position: bottom;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
+.card .container {
+   flex-direction: row;
+}
+.card_img {
+   width: 600px;
+   height: 400px;
+   object-fit: cover;
+   box-shadow: #0006 0px 0px 10px;
+}
+.card_info {
+   width: 550px;
+}
+.card_title {
+   font-family: "buyan";
+   font-weight: 600;
+   font-size: 100px;
+   letter-spacing: 5px;
+}
+.card_description {
+   font-weight: 300;
+}
+.card_price {
+   padding: 20px 0;
+   font-weight: 600;
+   font-size: 40px;
+}
+.card_btn {
+   width: 200px;
+   padding: 15px 40px;
+   border: 2px solid var(--text-color);
+   /* font-size: 20px; */
+   font-family: "buyan";
+   font-weight: 600;
+   font-size: 20px;
+   letter-spacing: 2px;
+}
+.card_hr {
+   background: linear-gradient(to right, #79673a 0%, #79673a 100%),
+      var(--bg-color);
+   background-position: bottom;
+   background-size: 15px 1px;
+   background-repeat: repeat-x;
+}
