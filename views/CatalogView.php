@@ -47,20 +47,20 @@ class CatalogView
          <section class="catalog">
             <div class="container">
                <!-- <div class="catalog_filters">
-            <p class="catalog_filter_title">Filters //</p>
-            <button class="catalog_filter">Cameras</button>
-            <button class="catalog_filter">Lenses</button>
-            <button class="catalog_filter">Consoles</button>
-            <button class="catalog_filter">TVs</button>
-            <button class="catalog_filter">Radios</button>
-            <button class="catalog_filter">Others</button>
-         </div> -->
+                  <p class="catalog_filter_title">Filters //</p>
+                  <button class="catalog_filter">Cameras</button>
+                  <button class="catalog_filter">Lenses</button>
+                  <button class="catalog_filter">Consoles</button>
+                  <button class="catalog_filter">TVs</button>
+                  <button class="catalog_filter">Radios</button>
+                  <button class="catalog_filter">Others</button>
+               </div> -->
                <div class="catalog_cards">
                   <?php $this->renderProducts($products); ?>
                </div>
             </div>
          </section>
-         <?= include "./templates/suggestions.php" ?>
+         <!-- <?= include "./templates/suggestions.php" ?> -->
       </main>
       <?php
    }

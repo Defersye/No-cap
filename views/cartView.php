@@ -95,17 +95,8 @@ class CartView
             </a>
             <p class="cart_card_price">&euro;<?= $item['price'] ?></p>
             <div class="cart_card_quantity">3</div>
-            <input type="text" name="productСount" value="1" class="cart_card_quantity">
-            <p class="cart_card_total">&euro;<?= $item['price'] * 3 ?></p>
+            <p class="cart_card_total">&euro;450</p>
          </div>
 <?php }
    }
 }
-
-?>
-<span class="change minus min">
-   <span>-</span>
-</span>
-<span class="change plus">
-   <span>+</span>
-</span>

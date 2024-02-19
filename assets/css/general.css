@@ -47,7 +47,8 @@ header {
    position: sticky;
    top: 0;
    transition: 0.3s;
-   background-color: #fffd;
+   background-color: #fff8;
+   backdrop-filter: blur(10px);
    z-index: 10;
 }
 .header_hidden {

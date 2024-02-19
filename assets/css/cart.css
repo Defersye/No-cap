@@ -32,7 +32,7 @@
    display: grid;
    grid-template-columns: 1fr repeat(3, 150px);
    place-items: center;
-   border-bottom: 1px solid steelblue;
+   border-bottom: 1px solid #0002;
 }
 .cart_card:hover {
    box-shadow: #0003 0px 0px 15px;
