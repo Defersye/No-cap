@@ -12,6 +12,10 @@
    line-height: 1;
    color: inherit;
 }
+*:focus {
+   outline-width: 1px;
+   outline-color: steelblue;
+}
 body::-webkit-scrollbar {
    display: none;
 }
@@ -34,7 +38,8 @@ body {
    justify-content: space-between;
 }
 a,
-button {
+button,
+input {
    cursor: pointer;
    background: none;
 }
@@ -73,7 +78,9 @@ header .container {
    column-gap: 20px;
    justify-content: space-between;
 }
-.header_link {
+.header_link,
+.header_link::placeholder {
+   color: #000;
    text-transform: uppercase;
    font-size: 18px;
    font-weight: 500;

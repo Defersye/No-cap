@@ -1,5 +1,9 @@
 # Store
 
--  поиск и liked? ajax
+<b>TODO list:</b>
 
-1. где у юзера в базе хранятся закладки и корзина?
+-  search
+-  likes
+-  calculating cart
+-  sale thing
+-  add to cart button

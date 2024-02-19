@@ -32,6 +32,7 @@
 </span>
 <div class="filters__price-container">
 
+
     <div class="slider-container">
         <div class="slider-track"></div>
         <input type="range" min="0" max="20000" value="0" id="minPrice">

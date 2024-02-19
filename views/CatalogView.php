@@ -19,7 +19,6 @@ class CatalogView
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/catalog.css">
-         <script src="assets/js/catalog_card_animation.js"></script>
       </head>
 
       <body>
@@ -51,9 +50,6 @@ class CatalogView
                   <button class="catalog_filter">Cameras</button>
                   <button class="catalog_filter">Lenses</button>
                   <button class="catalog_filter">Consoles</button>
-                  <button class="catalog_filter">TVs</button>
-                  <button class="catalog_filter">Radios</button>
-                  <button class="catalog_filter">Others</button>
                </div> -->
                <div class="catalog_cards">
                   <?php $this->renderProducts($products); ?>
@@ -81,3 +77,9 @@ class CatalogView
 <?php }
    }
 }
+
+?>
+<!-- sale -->
+<!-- <?php if ($item['hot']) {
+         echo "<img class='card__hot_icon'  src='../public/img/hot.png' alt=''>";
+      } ?> -->
