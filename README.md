@@ -3,7 +3,8 @@
 <b>TODO list:</b>
 
 -  search
--  likes
+-  liked
 -  calculating cart
 -  sale thing
 -  add to cart button
+-  suggestions

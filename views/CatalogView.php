@@ -52,34 +52,16 @@ class CatalogView
                   <button class="catalog_filter">Consoles</button>
                </div> -->
                <div class="catalog_cards">
-                  <?php $this->renderProducts($products); ?>
+                  <?
+                  foreach ($products as $item) {
+                     include 'templates/catalogCard.php';
+                  } ?>
                </div>
             </div>
          </section>
-         <!-- <?= include "./templates/suggestions.php" ?> -->
+         <? //include "./templates/suggestions.php" 
+         ?>
       </main>
-      <?php
-   }
-
-   public function renderProducts($products)
-   {
-      foreach ($products as $item) { ?>
-         <a href="/card" class="catalog_card">
-            <div class="catalog_card_img">
-               <img class="img_on" src="assets/img/database/<?= $item['first_img'] ?>" />
-               <img class="img_off" src="assets/img/database/<?= $item['second_img'] ?>" />
-               <button onclick="addToCart(this)" class="catalog_card_like"></button>
-            </div>
-            <h5 class="catalog_card_title"><?= $item['name'] ?></h5>
-            <p class="catalog_card_collection"><?= $item['name_collection'] ?></p>
-            <p class="catalog_card_price">&euro;<?= $item['price'] ?></p>
-         </a>
-<?php }
+<?php
    }
 }
-
-?>
-<!-- sale -->
-<!-- <?php if ($item['hot']) {
-         echo "<img class='card__hot_icon'  src='../public/img/hot.png' alt=''>";
-      } ?> -->

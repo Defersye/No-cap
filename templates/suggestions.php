@@ -3,7 +3,12 @@
       <h2>Suggested for you</h2>
       <div class="suggestions_slider">
          <button class="suggestion_arrow"></button>
-         <?php $this->renderProducts($products); ?>
+         <div class="catalog_cards">
+            <?
+            foreach ($products as $item) {
+               include 'templates/catalogCard.php';
+            } ?>
+         </div>
          <button class="suggestion_arrow"></button>
       </div>
    </div>
