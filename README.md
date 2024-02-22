@@ -2,7 +2,6 @@
 
 <b>TODO list:</b>
 
--  search with blacking
 -  liked
 -  calculating cart
 -  sale thing
