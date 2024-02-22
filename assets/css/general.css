@@ -52,7 +52,7 @@ input {
 header {
    position: sticky;
    top: 0;
-   transition: 0.3s;
+   transition: 0.3s ease-in-out;
    background-color: #fff8;
    backdrop-filter: blur(10px);
    z-index: 10;
@@ -99,24 +99,27 @@ header .container {
 .search {
    height: 17px;
 }
+.container:has(.search_content) {
+   position: fixed;
+   top: 80px;
+   left: 0;
+   right: 0;
+   z-index: 10;
+   transition: 0.3s ease-in-out;
+}
 .search_content {
+   margin-right: calc(100% - 900px);
    padding: 20px;
-   position: absolute;
-   top: 100px;
    max-width: 900px;
    width: 100%;
    height: 450px;
    display: none;
    overflow-x: auto;
    gap: 30px;
-   background-color: #fff;
    border: #000 1px solid;
-}
-.search_close {
-   display: fixed;
-   height: 100px;
-   width: 100px;
-   background-color: tomato;
+   background-color: #fff8;
+   backdrop-filter: blur(10px);
+   transition: 0.3s ease-in-out;
 }
 
 /* footer */

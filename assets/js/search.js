@@ -20,19 +20,6 @@ $(document).ready(function () {
    });
 });
 
-// active
-// $(document).ready(function () {
-//    const $search = $(".search");
-
-//    $search.on("input", function () {
-//       if ($search.val() != "") {
-//          $search.addClass("search_active");
-//       } else {
-//          $search.removeClass("search_active");
-//       }
-//    });
-// });
-
 // ajax
 $(document).ready(function () {
    $(document).on("input", ".search", function (event) {
