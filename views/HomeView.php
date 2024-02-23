@@ -38,6 +38,8 @@ class HomeView
       <main>
          <section class="hero_slider">
             <div class="container">
+               Not yet, G...
+            </div>
          </section>
       </main>
 <?php

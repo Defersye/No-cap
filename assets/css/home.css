@@ -4,6 +4,11 @@
 }
 .hero_slider .container {
    flex-direction: row;
+   justify-content: center;
    height: 800px;
    background-color: steelblue;
+   font-size: 28px;
+   color: #000000;
+   font-weight: 200;
+   letter-spacing: 20px;
 }

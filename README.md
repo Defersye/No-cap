@@ -4,7 +4,8 @@
 
 -  liked
 -  calculating cart
--  sale thing
 -  add to cart button
--  suggestions
+-  suggestions ?
 -  quantity
+-  product card
+-  email subscription ?

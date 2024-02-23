@@ -6,13 +6,13 @@
    </div>
    <h5 class="catalog_card_title"><?= $item['name'] ?></h5>
    <p class="catalog_card_collection"><?= $item['name_collection'] ?></p>
-   <p class="catalog_card_price">&euro;<?= $item['price'] ?></p>
+   <div class="catalog_card_nums">
+      <? if ($item['discount']) {
+         echo "<p class='catalog_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+         echo "<p class='catalog_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+      } else {
+         echo "<p class='catalog_card_price'>&euro;" . $item['price'] . "</p>";
+      }
+      ?>
+   </div>
 </a>
-
-
-<!-- sale -->
-<?
-// if ($item['hot']) {
-//    echo "<img class='card__hot_icon'  src='../public/img/hot.png' alt=''>";
-// } 
-?>

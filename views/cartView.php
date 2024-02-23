@@ -59,16 +59,16 @@ class CartView
                      <p class="cart_payment_title">Payment:</p>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub">Subtotal:</p>
-                        <p class="cart_payment_nums">&euro;123</p>
+                        <p class="cart_payment_nums" id="payment_sub">&euro;123</p>
                      </div>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub cart_payment_discount">Discount:</p>
-                        <p class="cart_payment_nums cart_payment_discount">&euro;23</p>
+                        <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;23</p>
                      </div>
                      <div class="cart_payment_line"></div>
                      <div class="cart_payment_box">
                         <p class="cart_payment_total">Order total:</p>
-                        <p class="cart_payment_nums-total">&euro;100</p>
+                        <p class="cart_payment_nums-total" id="payment_total"></p>
                      </div>
                   </div>
                   <input type="submit" id="submit" value="Check out">
@@ -76,6 +76,7 @@ class CartView
             </div>
          </section>
       </main>
+      <script src="/assets/js/cart.js"></script>
       <?php
    }
 
