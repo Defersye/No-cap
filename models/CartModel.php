@@ -12,7 +12,7 @@ class CartModel
    public function getCartProducts()
    {
       // users?
-      $query = mysqli_query($this->conn, "SELECT `name`, `price`, `first_img`,  `name_collection` FROM products, collections WHERE collection_id = id_collection");
+      $query = mysqli_query($this->conn, "SELECT * FROM products, collections WHERE collection_id = id_collection");
       if ($query->num_rows) {
          while ($row = $query->fetch_assoc()) {
             $answers[] = $row;

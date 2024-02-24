@@ -87,16 +87,28 @@ class CartView
             <a href="/card" class="cart_card_data">
                <div class="cart_card_img">
                   <img src="assets/img/database/<?= $item['first_img'] ?>" />
-                  <div onclick="addToCart(this)" class="catalog_card_like"></div>
+                  <div onclick="addToCart(this)" class="cart_card_like"></div>
                </div>
                <div class="cart_card_info">
                   <h5 class="cart_card_title"><?= $item['name'] ?></h5>
                   <p class="cart_card_collection"><?= $item['name_collection'] ?></p>
                </div>
             </a>
-            <p class="cart_card_price">&euro;<?= $item['price'] ?></p>
-            <div class="cart_card_quantity">3</div>
-            <p class="cart_card_total">&euro;450</p>
+            <div class="cart_card_nums">
+               <? if ($item['discount']) {
+                  echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+                  echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+               } else {
+                  echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
+               }
+               ?>
+            </div>
+            <div class="cart_card_quantity">
+               <div class="cart_card_quantity_change decrement">-</div>
+               <div class="cart_card_quantity_nums">3</div>
+               <div class="cart_card_quantity_change increment">+</div>
+            </div>
+            <p class="cart_card_total">&euro;123</p>
          </div>
 <?php }
    }
