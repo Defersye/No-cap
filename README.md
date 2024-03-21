@@ -2,6 +2,8 @@
 
 <b>TODO list:</b>
 
+-  filters
+
 -  liked
 
 -  calculating cart ~
