@@ -1,4 +1,4 @@
-<a href="/card" class="catalog_card">
+<a href="/productCard?id_product=<?= $item['id'] ?>" class="catalog_card">
    <div class="catalog_card_img">
       <img data-id="<?= $item['id'] ?>" class="img_on" src="assets/img/database/<?= $item['first_img'] ?>" />
       <img data-id="<?= $item['id'] ?>" class="img_off" src="assets/img/database/<?= $item['second_img'] ?>" />

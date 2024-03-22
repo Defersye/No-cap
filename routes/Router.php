@@ -9,7 +9,7 @@ class Router
    {
       $this->addRoute('home', 'HomeController@index');
       $this->addRoute('catalog', 'CatalogController@index');
-      $this->addRoute('product', 'ProductController@index');
+      $this->addRoute('productCard', 'ProductCardController@index');
       $this->addRoute('cart', 'CartController@index');
       $this->addRoute('search', 'ajax\SearchController@searchProducts');
       $this->addRoute('clearSearch', 'ajax\SearchController@clearSearch');
