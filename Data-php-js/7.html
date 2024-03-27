@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Таймер</title>
+   <style>
+      body {
+         font-family: sans-serif;
+         margin: 0;
+         padding: 20px;
+      }
+
+      h1 {
+         text-align: center;
+      }
+
+      #timer-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 200px;
+         border: 1px solid #ccc;
+         padding: 20px;
+      }
+
+      #time-input {
+         width: 250px;
+         padding: 10px 20px;
+         border: 1px solid #ccc;
+         margin-bottom: 10px;
+      }
+
+      #time-display {
+         font-size: 36px;
+         font-weight: bold;
+         text-align: center;
+      }
+
+      #start-timer {
+         padding: 10px 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Таймер</h1>
+   <div id="timer-container">
+      <input type="number" id="time-input" placeholder="Введите время (в секундах)">
+      <button id="start-timer">Запустить</button>
+      <div id="time-display">00:00</div>
+   </div>
+   <script>
+      const timeDisplay = document.querySelector('#time-display');
+      const timeInput = document.querySelector('#time-input');
+      const startTimerBtn = document.querySelector('#start-timer');
+
+      let timer;
+
+      // Функция для обновления отображения времени
+      function updateTimeDisplay(seconds) {
+         const minutes = Math.floor(seconds / 60);
+         const secondsLeft = seconds % 60;
+
+         const formattedMinutes = minutes.toString().padStart(2, '0');
+         const formattedSeconds = secondsLeft.toString().padStart(2, '0');
+
+         timeDisplay.textContent = `${formattedMinutes}:${formattedSeconds}`;
+      }
+
+      // Функция для запуска таймера
+      function startTimer() {
+         let secondsRemaining = parseInt(timeInput.value);
+         if (!secondsRemaining) {
+            alert('Введите время!');
+            return;
+         }
+
+         timer = setInterval(() => {
+            secondsRemaining--;
+
+            updateTimeDisplay(secondsRemaining);
+
+            if (secondsRemaining === 0) {
+               clearInterval(timer);
+               // Оповещение по истечении времени
+               alert('Время вышло!');
+               startTimerBtn.disabled = false;
+            }
+         }, 1000);
+
+         startTimerBtn.disabled = true;
+      }
+
+      startTimerBtn.addEventListener('click', startTimer);
+
+   </script>
+</body>
+
+</html>

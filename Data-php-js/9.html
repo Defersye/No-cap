@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Квадрат, меняющий цвет</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 20px;
+         text-align: center;
+      }
+
+      #square {
+         width: 200px;
+         height: 200px;
+         margin: 0 auto;
+         border: 3px solid #8c8c8c;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="square"></div>
+   <script>
+      const square = document.querySelector('#square');
+
+      document.addEventListener('mousemove', (event) => {
+         const halfWidth = window.innerWidth / 2;
+         const color = event.clientX > halfWidth ? 'black' : 'white';
+         square.style.backgroundColor = color;
+      });
+
+
+
+      // document.addEventListener('mousemove', (event) => {
+      //    const width = window.innerWidth;
+      //    const cursorPosition = event.clientX;
+      //    const colorValue = Math.floor((cursorPosition / width) * 255);
+      //    square.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+      // });
+   </script>
+</body>
+
+</html>
