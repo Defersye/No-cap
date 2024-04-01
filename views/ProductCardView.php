@@ -47,13 +47,27 @@ class ProductCardView
          </div>
          <section class="productCard">
             <div class="container">
-               <div class="box product-box">
-                  <h3 class="card__title"><?= $item['name'] ?></h3>
+               <img data-id="<?= $item['id'] ?>" src="assets/img/database/<?= $item['first_img'] ?>" />
+               <div class="productCard_info">
+                  <h5 class="productCard_title"><?= $item['name'] ?></h5>
+                  <p class="productCard_title"><?= $item['description'] ?></p>
+                  <p class="productCard_collection"><?= $item['name_collection'] ?></p>
+                  <p class="productCard_category"><?= $item['name_category'] ?></p>
+                  <div class="productCard_nums">
+                     <? if ($item['discount']) {
+                        echo "<p class='productCard_price_crossed'>&euro;" . $item['price'] . "</p>";
+                        echo "<p class='productCard_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+                     } else {
+                        echo "<p class='productCard_price'>&euro;" . $item['price'] . "</p>";
+                     }
+                     ?>
+                  </div>
                </div>
+
+               <!-- <h3 class="card__title"><?= $item['name'] ?></h3> -->
             </div>
          </section>
       </main>
-      <script src="/assets/js/productCard.js"></script>
 <?php
    }
 }

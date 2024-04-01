@@ -1,0 +1,51 @@
+/* cards */
+.productCard {
+   padding-bottom: 120px;
+}
+.productCard .container {
+   flex-direction: row;
+   justify-content: center;
+   gap: 20px;
+}
+.productCard img {
+   width: 480px;
+   height: 600px;
+   object-fit: cover;
+}
+.productCard_like {
+   margin: 5px;
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background-image: url("../img/layout/unliked.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   transition: 0.3s ease-in-out;
+}
+.productCard_title {
+   padding-top: 15px;
+   font-size: 18px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.productCard_collection {
+   padding-top: 5px;
+}
+.productCard_nums {
+   display: flex;
+   column-gap: 10px;
+   padding: 5px;
+}
+/* nums */
+.productCard_price {
+   font-weight: 500;
+}
+.productCard_price_crossed {
+   font-weight: 300;
+   color: gray;
+   text-decoration: line-through;
+}
+.productCard_discount {
+   font-weight: 500;
+   color: steelblue;
+}
