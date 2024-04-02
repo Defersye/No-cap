@@ -1,1 +1,0 @@
-<body <?php body_class(); ?> style="background-color: <?php echo esc_attr(get_theme_mod('my_theme_background_color')); ?>">

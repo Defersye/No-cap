@@ -2,13 +2,13 @@
 
 namespace controllers\ajax;
 
-use models\HomeModel;
+use models\CatalogModel;
 
 class SearchController
 {
     public function searchProducts()
     {
-        $CatalogModel = new \models\CatalogModel;
+        $CatalogModel = new CatalogModel;
 
         $products = $CatalogModel->getSearch($_POST['search']);
         if (!empty($products)) {
@@ -22,7 +22,7 @@ class SearchController
 
     public function clearSearch()
     {
-        $CatalogModel = new \models\CatalogModel;
+        $CatalogModel = new CatalogModel;
         $search = $CatalogModel->getProducts();
         foreach ($search as $item) {
             include 'templates/catalogCard.php';

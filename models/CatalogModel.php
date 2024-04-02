@@ -36,4 +36,47 @@ class CatalogModel
          return null;
       }
    }
+   function getCategory()
+   {
+      $query = $this->conn->query("select * from categories");
+
+      if ($query->num_rows) {
+         while ($row = $query->fetch_assoc()) {
+            $answer[] = $row;
+         }
+      }
+      return $answer;
+   }
+   function getCollection()
+   {
+      $query = $this->conn->query("select * from collections");
+
+      if ($query->num_rows) {
+         while ($row = $query->fetch_assoc()) {
+            $answer[] = $row;
+         }
+      }
+      return $answer;
+   }
+   function getFilters($category, $collection, $discount)
+   {
+      $answer = [];
+      $sql = "SELECT * FROM products, collections WHERE collection_id = id_collection";
+      if (!empty($category) && $category != "Any") {
+         $sql .= " AND category_id = $category";
+      }
+      if (!empty($collection) && $collection != "Any") {
+         $sql .= " AND collection_id = $collection";
+      }
+      if (!empty($discount) && $discount != null) {
+         $sql .= " AND discount > 0";
+      }
+      $query = $this->conn->query($sql);
+      if ($query->num_rows) {
+         while ($row = $query->fetch_assoc()) {
+            $answer[] = $row;
+         }
+      }
+      return $answer;
+   }
 }

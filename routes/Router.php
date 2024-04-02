@@ -13,6 +13,8 @@ class Router
       $this->addRoute('cart', 'CartController@index');
       $this->addRoute('search', 'ajax\SearchController@searchProducts');
       $this->addRoute('clearSearch', 'ajax\SearchController@clearSearch');
+      $this->addRoute('filter', 'ajax\FilterController@filterProducts');
+      $this->addRoute('clearFilter', 'ajax\FilterController@clearFilter');
    }
 
    private $routes = [];

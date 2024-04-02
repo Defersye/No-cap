@@ -4,7 +4,7 @@ namespace views;
 
 class CatalogView
 {
-   function __construct($products)
+   function __construct($products, $categories, $collections)
    {
 ?>
       <!doctype html>
@@ -24,16 +24,17 @@ class CatalogView
       <body>
          <?php
          include "./templates/header.html";
-         $this->catalog($products);
+         $this->catalog($products, $categories, $collections);
          include "./templates/footer.html";
          ?>
+         <script src="assets/js/filter.js"></script>
       </body>
 
       </html>
    <?php
    }
 
-   function catalog($products)
+   function catalog($products, $categories, $collections)
    { ?>
       <main>
          <div class="path">
@@ -45,12 +46,32 @@ class CatalogView
          </div>
          <section class="catalog">
             <div class="container">
-               <!-- <div class="catalog_filters">
-                  <p class="catalog_filter_title">Filters //</p>
-                  <button class="catalog_filter">Cameras</button>
-                  <button class="catalog_filter">Lenses</button>
-                  <button class="catalog_filter">Consoles</button>
-               </div> -->
+               <div class="catalog_filters">
+                  <p class="catalog_filter_title">Filters</p>
+                  <p class="catalog_filter_subtitle">Category</p>
+                  <select class="catalog_filter_select" id="category">
+                     <option value="Any">Any</option>
+                     <?
+                     foreach ($categories as $category) {
+                     ?>
+                        <option value="<?= $category['id_category'] ?>"><?= $category['name_category'] ?></option>
+                     <?
+                     } ?>
+                  </select>
+                  <p class="catalog_filter_subtitle">Collection</p>
+                  <select class="catalog_filter_select" id="collection">
+                     <option value="Any">Any</option>
+                     <?
+                     foreach ($collections as $collection) {
+                     ?>
+                        <option value="<?= $collection['id_collection'] ?>"><?= $collection['name_collection'] ?></option>
+                     <?
+                     } ?>
+                  </select>
+                  <p class="catalog_filter_subtitle">Discount</p>
+                  <input class="catalog_filter_check" type="checkbox" id="discount" />
+                  <a href="" class="catalog_filter_subtitle" id="clear">Clear</a>
+               </div>
                <div class="catalog_cards">
                   <?
                   foreach ($products as $item) {

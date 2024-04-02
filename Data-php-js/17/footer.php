@@ -1,1 +1,0 @@
-<p class="copyright"><?php echo esc_html(get_theme_mod('my_theme_copyright')); ?></p>

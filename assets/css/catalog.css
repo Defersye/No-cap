@@ -3,21 +3,50 @@
 }
 
 /* filters */
-/* .catalog_filters {
+.catalog_filters {
+   margin-bottom: 40px;
    width: 100%;
    display: flex;
    align-items: center;
-   gap: 30px;
 }
 .catalog_filter_title {
-   font-family: "buyan";
-   font-size: 30px;
-   font-weight: 600;
+   font-weight: 500;
+   text-transform: uppercase;
 }
-.catalog_filter {
-   font-family: "buyan";
-   font-size: 20px;
-   color: var(--bg-color);
-   padding: 5px 20px;
-   background-color: var(--text-color);
-} */
+.catalog_filter_subtitle {
+   margin-left: 25px;
+   text-transform: uppercase;
+}
+.catalog_filter_select {
+   margin-left: 5px;
+   height: 25px;
+}
+/* check */
+.catalog_filter_check {
+   margin-left: 5px;
+   width: 25px;
+   height: 25px;
+   position: relative;
+   cursor: pointer;
+}
+.catalog_filter_check:before {
+   content: "";
+   display: block;
+   box-sizing: border-box;
+   width: 25px;
+   height: 25px;
+   background-color: white;
+   border: 1px solid black;
+}
+.catalog_filter_check:checked:after {
+   content: "";
+   display: block;
+   width: 7px;
+   height: 15px;
+   border: solid black;
+   border-width: 0 1px 1px 0;
+   transform: rotate(45deg);
+   position: absolute;
+   top: 2px;
+   left: 8px;
+}

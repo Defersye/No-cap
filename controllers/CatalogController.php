@@ -8,6 +8,8 @@ class CatalogController
    {
       $catalogModel = new \models\CatalogModel();
       $products = $catalogModel->getProducts();
-      $catalogView = new \views\CatalogView($products);
+      $categories = $catalogModel->getCategory();
+      $collections = $catalogModel->getCollection();
+      $catalogView = new \views\CatalogView($products, $categories, $collections);
    }
 }
