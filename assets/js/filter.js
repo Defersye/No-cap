@@ -30,6 +30,9 @@ $(document).ready(function () {
    }
    function clearFilter() {
       event.preventDefault();
+      $("#category").val("Any");
+      $("#collection").val("Any");
+      $("#discount").prop("checked", false);
       $.ajax({
          url: "clearFilter",
          success: function (response) {
