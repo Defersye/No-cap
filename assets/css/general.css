@@ -249,7 +249,7 @@ footer .container {
 }
 .catalog_card_nums {
    display: flex;
-   column-gap: 10px;
+   column-gap: 5px;
    padding: 5px;
 }
 /* nums */

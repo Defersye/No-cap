@@ -49,22 +49,27 @@ class ProductCardView
             <div class="container">
                <img data-id="<?= $item['id'] ?>" src="assets/img/database/<?= $item['first_img'] ?>" />
                <div class="productCard_info">
-                  <h5 class="productCard_title"><?= $item['name'] ?></h5>
-                  <p class="productCard_title"><?= $item['description'] ?></p>
-                  <p class="productCard_collection"><?= $item['name_collection'] ?></p>
-                  <p class="productCard_category"><?= $item['name_category'] ?></p>
+                  <div class="productCard_div">
+                     <h5 class="productCard_title"><?= $item['name'] ?></h5>
+                     <button onclick="addToLiked(this)" class="productCard_like"></button>
+                  </div>
                   <div class="productCard_nums">
                      <? if ($item['discount']) {
-                        echo "<p class='productCard_price_crossed'>&euro;" . $item['price'] . "</p>";
                         echo "<p class='productCard_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+                        echo "<p class='productCard_price_crossed'>&euro;" . $item['price'] . "</p>";
                      } else {
                         echo "<p class='productCard_price'>&euro;" . $item['price'] . "</p>";
                      }
                      ?>
                   </div>
+                  <p class="productCard_category"><span>Category:</span> <?= $item['name_category'] ?></p>
+                  <p class="productCard_collection"><span>Collection:</span> <?= $item['name_collection'] ?></p>
+                  <p class="productCard_description"><?= $item['description'] ?></p>
+                  <div class="productCard_btns">
+                     <a href="#" class="productCard_link">Add to Cart</a>
+                     <a href="#" class="productCard_link">Quick buy</a>
+                  </div>
                </div>
-
-               <!-- <h3 class="card__title"><?= $item['name'] ?></h3> -->
             </div>
          </section>
       </main>

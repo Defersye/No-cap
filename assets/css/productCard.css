@@ -8,37 +8,49 @@
    gap: 20px;
 }
 .productCard img {
-   width: 480px;
-   height: 600px;
+   width: 560px;
+   height: 700px;
    object-fit: cover;
 }
-.productCard_like {
-   margin: 5px;
-   position: absolute;
-   width: 20px;
-   height: 20px;
-   background-image: url("../img/layout/unliked.png");
-   background-size: contain;
-   background-repeat: no-repeat;
-   transition: 0.3s ease-in-out;
+
+.productCard_info {
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+}
+.productCard_div {
+   display: flex;
+   align-items: center;
+   padding-bottom: 10px;
 }
 .productCard_title {
-   padding-top: 15px;
-   font-size: 18px;
+   font-size: 40px;
    font-weight: 600;
    text-transform: uppercase;
 }
-.productCard_collection {
-   padding-top: 5px;
+.productCard_like {
+   margin-left: 10px;
+   width: 32px;
+   height: 32px;
+   background-image: url("../img/layout/unliked_dark.png");
+   background-size: 95% 90%;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   transition: 0.1s ease-in-out;
 }
-.productCard_nums {
-   display: flex;
-   column-gap: 10px;
-   padding: 5px;
+.productCard_like:hover {
+   transform: scale(105%);
 }
 /* nums */
+.productCard_nums {
+   display: flex;
+   column-gap: 5px;
+   align-items: end;
+   padding-bottom: 20px;
+}
 .productCard_price {
    font-weight: 500;
+   font-size: 24px;
 }
 .productCard_price_crossed {
    font-weight: 300;
@@ -48,4 +60,39 @@
 .productCard_discount {
    font-weight: 500;
    color: steelblue;
+   font-size: 24px;
+}
+.productCard_category span,
+.productCard_collection span {
+   color: gray;
+}
+.productCard_description {
+   padding-top: 10px;
+   line-height: 1.2;
+   max-width: 600px;
+   width: 100%;
+}
+.productCard_btns {
+   margin-top: 20px;
+   display: flex;
+   max-width: 600px;
+   width: 100%;
+}
+.productCard_link {
+   display: flex;
+   justify-content: center;
+   flex-grow: 1;
+   background-color: #e6e6e6;
+   padding: 15px;
+   font-size: 18px;
+   text-transform: uppercase;
+   transition: 0.3s ease-in-out;
+}
+.productCard_link + .productCard_link {
+   border-left: 1px solid #717171;
+}
+.productCard_link:hover {
+   background-color: steelblue;
+   color: white;
+   transition: 0.2s ease-in-out;
 }
