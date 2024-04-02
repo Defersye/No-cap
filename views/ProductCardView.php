@@ -62,8 +62,10 @@ class ProductCardView
                      }
                      ?>
                   </div>
-                  <p class="productCard_category"><span>Category:</span> <?= $item['name_category'] ?></p>
-                  <p class="productCard_collection"><span>Collection:</span> <?= $item['name_collection'] ?></p>
+                  <div class="productCard_ids">
+                     <p class="productCard_category"><span>Category:</span> <a href="/catalog?category=<?= $item['name_category'] ?>"><?= $item['name_category'] ?></a></p>
+                     <p class="productCard_collection"><span>Collection:</span> <a href="/catalog?collection=<?= $item['name_collection'] ?>"><?= $item['name_collection'] ?></a></p>
+                  </div>
                   <p class="productCard_description"><?= $item['description'] ?></p>
                   <div class="productCard_btns">
                      <a href="#" class="productCard_link">Add to Cart</a>

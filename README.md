@@ -2,18 +2,18 @@
 
 <b>TODO list:</b>
 
--  filters
+-  rating
 
 -  liked
 
--  calculating cart ~
+-  cart
 
--  suggestions
+-  suggestions ~
 
--  product card > add to cart button + category/collection transition
+-  product card > buttons + category/collection transition
 
--  email subscription ?
+-  email subscription ~
 
 -  quantity thing
 
--  footer pages
+-  footer links ~

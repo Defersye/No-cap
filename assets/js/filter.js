@@ -6,6 +6,9 @@ $(document).ready(function () {
          setFilter();
       }
    );
+   $(window).on("load", function (event) {
+      setFilter();
+   });
 
    function setFilter() {
       event.preventDefault();
@@ -14,7 +17,7 @@ $(document).ready(function () {
       let discount = Number($("#discount").prop("checked"));
       $.ajax({
          url: "filter",
-         type: "post",
+         type: "get",
          data: {
             category: category,
             collection: collection,

@@ -23,10 +23,10 @@ $(document).ready(function () {
 // ajax
 $(document).ready(function () {
    $(document).on("input", ".search", function (event) {
-      setFilter();
+      setSearch();
    });
 
-   function setFilter() {
+   function setSearch() {
       event.preventDefault();
       let search = $(".search").val();
       if (search !== "") {

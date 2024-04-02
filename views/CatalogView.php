@@ -53,9 +53,11 @@ class CatalogView
                      <option value="Any">Any</option>
                      <?
                      foreach ($categories as $category) {
-                     ?>
-                        <option value="<?= $category['id_category'] ?>"><?= $category['name_category'] ?></option>
-                     <?
+                        if ($_GET['category'] == $category['name_category']) {
+                           echo "<option value=" . $category['id_category'] . " selected>" . $category['name_category'] . "</option>";
+                        } else {
+                           echo "<option value=" . $category['id_category'] . ">" . $category['name_category'] . "</option>";
+                        }
                      } ?>
                   </select>
                   <p class="catalog_filter_subtitle">Collection</p>
@@ -63,9 +65,11 @@ class CatalogView
                      <option value="Any">Any</option>
                      <?
                      foreach ($collections as $collection) {
-                     ?>
-                        <option value="<?= $collection['id_collection'] ?>"><?= $collection['name_collection'] ?></option>
-                     <?
+                        if ($_GET['collection'] == $collection['name_collection']) {
+                           echo "<option value=" . $collection['id_collection'] . " selected>" . $collection['name_collection'] . "</option>";
+                        } else {
+                           echo "<option value=" . $collection['id_collection'] . ">" . $collection['name_collection'] . "</option>";
+                        }
                      } ?>
                   </select>
                   <p class="catalog_filter_subtitle">Discount</p>

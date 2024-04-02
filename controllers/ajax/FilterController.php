@@ -10,7 +10,7 @@ class FilterController
     {
         $CatalogModel = new CatalogModel;
 
-        $products = $CatalogModel->getFilters($_POST['category'], $_POST['collection'], $_POST['discount']);
+        $products = $CatalogModel->getFilters($_GET['category'], $_GET['collection'], $_GET['discount']);
         if (!empty($products)) {
             foreach ($products as $item) {
                 include 'templates/catalogCard.php';

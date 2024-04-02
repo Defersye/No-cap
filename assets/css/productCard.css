@@ -46,7 +46,7 @@
    display: flex;
    column-gap: 5px;
    align-items: end;
-   padding-bottom: 20px;
+   padding-bottom: 40px;
 }
 .productCard_price {
    font-weight: 500;
@@ -62,13 +62,19 @@
    color: steelblue;
    font-size: 24px;
 }
+.productCard_ids {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding-bottom: 10px;
+}
 .productCard_category span,
 .productCard_collection span {
    color: gray;
+   line-height: 1.5;
 }
 .productCard_description {
-   padding-top: 10px;
-   line-height: 1.2;
+   line-height: 1.5;
    max-width: 600px;
    width: 100%;
 }
@@ -89,7 +95,7 @@
    transition: 0.3s ease-in-out;
 }
 .productCard_link + .productCard_link {
-   border-left: 1px solid #717171;
+   border-left: 1px solid #aaa;
 }
 .productCard_link:hover {
    background-color: steelblue;
