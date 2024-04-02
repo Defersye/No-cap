@@ -12,7 +12,7 @@
 
 -  product card > buttons + category/collection transition
 
--  email subscription ~
+-  email subscription (footer & register) ~
 
 -  quantity thing
 

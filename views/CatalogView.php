@@ -23,7 +23,7 @@ class CatalogView
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->catalog($products, $categories, $collections);
          include "./templates/footer.html";
          ?>

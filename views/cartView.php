@@ -23,7 +23,7 @@ class CartView
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->catalog($products);
          include "./templates/footer.html";
          ?>

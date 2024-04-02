@@ -23,7 +23,7 @@ class ProductCardView
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->card($item);
          include "./templates/footer.html";
          ?>

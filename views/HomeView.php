@@ -23,7 +23,7 @@ class HomeView
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->home();
          include "./templates/footer.html";
          ?>

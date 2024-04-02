@@ -1,0 +1,47 @@
+.register_error {
+   display: none;
+   color: #ba576f;
+   font-weight: 600;
+}
+/* register */
+.register_container {
+}
+.register_title {
+}
+.register_form {
+}
+.register_input {
+}
+.register_p {
+}
+.register_btn {
+}
+
+/* login */
+.login_container {
+   padding: 50px 0;
+   height: 300px;
+   width: 400px;
+}
+.login_title {
+   text-align: center;
+}
+.login_form {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   row-gap: 10px;
+}
+.login_input {
+   padding: 5px auto;
+   width: 100%;
+   /* height: 25px; */
+   border: 1px solid #ba576f;
+}
+.login_btn {
+   width: 100%;
+}
+.login_p a {
+   color: steelblue;
+}
