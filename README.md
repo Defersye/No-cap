@@ -4,6 +4,8 @@
 
 -  rating
 
+-  register avatar
+
 -  liked
 
 -  cart

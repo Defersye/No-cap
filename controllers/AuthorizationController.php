@@ -4,11 +4,28 @@ namespace controllers;
 
 class AuthorizationController
 {
+   public function renderRegister()
+   {
+      $registerView = new \views\RegisterView();
+   }
+
    public function register()
    {
-      $registerModel = new \models\AuthorizationModel;
-      $registerView = new \views\RegisterView();
-      // $RegisterModel->register($_POST['register_name'], $_POST['register_email'], $_POST['register_password'], $_FILES['register_photo']);
-      // $user = $RegisterModel->getUser($_POST['register_email']);
+      $registerModel = new \models\AuthorizationModel();
+      /*, $_POST['register_avatar']*/
+      $registerProducts = $registerModel->register($_POST['name'], $_POST['login'], $_POST['email'], $_POST['password']);
+      echo $registerProducts;
+   }
+
+   public function renderLogin()
+   {
+      $loginView = new \views\LoginView();
+   }
+
+   public function login()
+   {
+      $loginModel = new \models\AuthorizationModel();
+      $loginProducts = $loginModel->login($_POST['email'], $_POST['password']);
+      echo $loginProducts;
    }
 }

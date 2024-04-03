@@ -86,7 +86,7 @@ class CartView
          <div class="cart_card">
             <a href="/productCard?id_product=<?= $item['id'] ?>" class="cart_card_data">
                <div class="cart_card_img">
-                  <img src="assets/img/database/<?= $item['first_img'] ?>" />
+                  <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
                   <div onclick="addToCart(this)" class="cart_card_like"></div>
                </div>
                <div class="cart_card_info">

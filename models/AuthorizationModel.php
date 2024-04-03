@@ -2,6 +2,8 @@
 
 namespace models;
 
+use function PHPSTORM_META\type;
+
 class AuthorizationModel
 {
    protected $conn;
@@ -11,25 +13,48 @@ class AuthorizationModel
    }
    function getUser($email)
    {
+      $answers = "";
       $query = $this->conn->query("SELECT * FROM users WHERE email='$email'");
-      if ($query->num_rows) {
-         while ($row = $query->fetch_assoc()) {
-            $answers[] = $row;
+      while ($row = $query->fetch_assoc()) {
+         if (gettype($row) == 'object') {
+            foreach ($row as $key => $value) {
+               $answers[$key] = $value;
+            }
+         } else {
+            $answers = $row;
          }
       }
       return $answers;
    }
-   function register($name, $email, $password, $confirm)
+   function register($name, $login, $email, $password)/*, $avatar*/
    {
-      if ($password == $confirm) {
-         $hash_password = password_hash($password, PASSWORD_DEFAULT);
-
-         $query = $this->conn->query("INSERT INTO users (full_name , email, password, avatar) VALUES ('$name', '$email', '$hash_password', '1.png')");
-
-         $user = $this->getUser($email);
-         $_SESSION['auth'] = $user['id'];
+      $user = $this->getUser($email);
+      if ($user != "") {
+         return 'Email already taken!';
       } else {
-         return "Wrong confirm password!";
+         $md5_password = md5($password);
+         $this->conn->query("INSERT INTO users (full_name, login, email, password) VALUES ('$name', '$login', '$email', '$md5_password')");/*(avatar), '$avatar'*/
+
+         return 'Registration went successful';
+      }
+   }
+
+   function login($email, $password)
+   {
+      $user = $this->getUser($email);
+      if ($user != "") {
+         $md5_password = md5($password);
+         if ($user['password'] == $md5_password) {
+            $this->conn->query("SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$md5_password'");
+
+            $user = $this->getUser($email);
+            $_SESSION['user'] = $user['login'];
+            return 'Okay!';
+         } else {
+            return 'Wrong password!';
+         }
+      } else {
+         return 'Wrong email or password!';
       }
    }
 }

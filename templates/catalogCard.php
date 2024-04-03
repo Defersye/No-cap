@@ -1,7 +1,7 @@
 <a href="/productCard?id_product=<?= $item['id'] ?>" class="catalog_card">
    <div class="catalog_card_img">
-      <img data-id="<?= $item['id'] ?>" class="img_on" src="assets/img/database/<?= $item['first_img'] ?>" />
-      <img data-id="<?= $item['id'] ?>" class="img_off" src="assets/img/database/<?= $item['second_img'] ?>" />
+      <img data-id="<?= $item['id'] ?>" class="img_on" src="assets/img/database/products/<?= $item['first_img'] ?>" />
+      <img data-id="<?= $item['id'] ?>" class="img_off" src="assets/img/database/products/<?= $item['second_img'] ?>" />
       <button onclick="addToLiked(this)" class="catalog_card_like"></button>
    </div>
    <h5 class="catalog_card_title"><?= $item['name'] ?></h5>

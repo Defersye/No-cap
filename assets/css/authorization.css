@@ -1,70 +1,95 @@
-.register_error {
-   display: none;
-   color: #ba576f;
-   font-weight: 600;
-}
-/* register */
-.register {
+/* auth */
+.auth {
    padding-bottom: 120px;
 }
-.register_title {
+.auth .container {
+   justify-content: center;
+}
+.auth_title {
    font-size: 24px;
    font-weight: 500;
    text-transform: uppercase;
 }
-.register_form {
+.auth_form {
    padding: 10px;
+   width: 100%;
+   max-width: 650px;
    display: flex;
    flex-direction: column;
    align-items: center;
-   row-gap: 20px;
-   /* background-color: tan; */
+   row-gap: 25px;
 }
-.register_input {
+.auth_input {
    height: 45px;
    padding: 10px;
    width: 100%;
    border-bottom: 1px solid black;
 }
-.register_p {
-   font-size: 14px;
-   width: fit-content;
+.auth_error {
+   margin-top: -15px;
+   display: none;
+   color: #ba576f;
 }
-.register_p a {
+.auth_p {
+   margin-top: -10px;
+   width: fit-content;
+   font-size: 14px;
+   text-align: center;
+}
+.auth_p a {
    color: steelblue;
 }
-.register_btn {
+.auth_btn {
    width: 100%;
    padding: 20px;
    font-size: 18px;
    text-transform: uppercase;
 }
 
-/* login */
-.login_container {
-   padding: 50px 0;
-   height: 300px;
-   width: 400px;
+/* register */
+.register_div {
+   width: 100%;
+   position: relative;
 }
-.login_title {
-   text-align: center;
+
+.register_div .avatar {
+   opacity: 0;
+   position: absolute;
 }
-.login_form {
-   margin: 0 auto;
+
+.register_div_input {
    display: flex;
-   flex-direction: column;
-   width: 100%;
-   row-gap: 10px;
 }
-.login_input {
-   padding: 5px auto;
+
+.register_input_row {
+   height: 45px;
+   padding: 10px;
    width: 100%;
-   /* height: 25px; */
-   border: 1px solid #ba576f;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid black;
+
+   display: inline-block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   line-height: initial;
 }
-.login_btn {
-   width: 100%;
+
+.register_input_btn {
+   cursor: pointer;
+   height: 45px;
+   padding: 0 30px;
+   display: grid;
+   place-items: center;
+   background-color: #e6e6e6;
+   color: black;
+   font-size: 18px;
+   text-transform: uppercase;
+   border-bottom: 1px solid black;
 }
-.login_p a {
-   color: steelblue;
+.register_input_btn_hover {
+   background-color: steelblue;
+   color: white;
+   transition: 0.2s ease-in-out;
 }
