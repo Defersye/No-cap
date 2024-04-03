@@ -11,8 +11,8 @@ class Router
       $this->addRoute('catalog', 'CatalogController@index');
       $this->addRoute('productCard', 'ProductCardController@index');
       $this->addRoute('cart', 'CartController@index');
-      $this->addRoute('register', 'RegisterController@index');
-      $this->addRoute('login', 'LoginController@index');
+      $this->addRoute('register', 'AuthorizationController@register');
+      $this->addRoute('login', 'AuthorizationController@login');
 
       // filters
       $this->addRoute('search', 'ajax\SearchController@searchProducts');

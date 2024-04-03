@@ -7,7 +7,7 @@ function autoload($class_name)
       include_once(PATH_SITE . "/" . $class_name . ".php");
    } else {
       header("HTTP/1.0 404 Not Found");
-      echo "К сожалению, такой страницы не существует. [" . PATH_SITE . $class_name . ".php ]";
+      echo "К сожалению, такой страницы не существует. [" . PATH_SITE . "/" . $class_name . ".php ]";
       exit;
    }
 }

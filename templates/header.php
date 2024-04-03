@@ -19,7 +19,8 @@
             <?
             } else {
             ?>
-               <a href="/login" class="header_link">account</a>
+               <!-- for now register, later login -->
+               <a href="/register" class="header_link">account</a>
             <?
             }
             ?>
