@@ -28,4 +28,9 @@ class AuthorizationController
       $loginProducts = $loginModel->login($_POST['email'], $_POST['password']);
       echo $loginProducts;
    }
+   function logout()
+   {
+      unset($_SESSION['user']);
+      header('Location: /home');
+   }
 }
