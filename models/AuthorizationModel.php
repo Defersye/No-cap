@@ -49,7 +49,6 @@ class AuthorizationModel
 
             $user = $this->getUser($email);
             $_SESSION['user'] = $user['login'];
-            return 'Okay!';
          } else {
             return 'Wrong password!';
          }

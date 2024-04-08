@@ -19,6 +19,7 @@ class HomeView
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/home.css">
+         <link rel="stylesheet" href="assets/css/media.css">
       </head>
 
       <body>
