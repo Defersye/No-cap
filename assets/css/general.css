@@ -11,6 +11,7 @@
    font-weight: 300;
    font-size: 16px;
    line-height: 1;
+   list-style: none;
    color: inherit;
 }
 *:focus {
@@ -96,6 +97,26 @@ header .container {
    font-family: "intro";
    text-transform: uppercase;
 }
+.header_burger {
+   width: 40px;
+   height: 40px;
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   /* background-color: steelblue; */
+}
+.burger_bar {
+   display: block;
+   width: 30px;
+   height: 2px;
+   margin: 4px auto;
+   transition: all 0.3s ease-in-out;
+   background-color: black;
+}
+.header_mobile_nav {
+   display: none;
+}
+
 /* search */
 .search {
    height: 17px;

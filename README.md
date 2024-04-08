@@ -4,6 +4,8 @@
 
 -  rating
 
+-  reviews
+
 -  liked
 
 -  cart

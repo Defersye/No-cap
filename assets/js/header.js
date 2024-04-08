@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+   // hiding on scroll
    const onScrollHeader = () => {
       const header = document.querySelector("header");
       let searchContainer = document.querySelector(".search_content");
@@ -21,4 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    };
    onScrollHeader();
+
+   // burger
+   const burger = document.querySelector(".header_burger");
+   const mobileNav = document.querySelector(".header_mobile_nav");
+
+   hamburger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      mobileNav.classList.toggle("active");
+   });
 });
