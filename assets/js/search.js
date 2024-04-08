@@ -1,8 +1,18 @@
 $(document).ready(function () {
-   let search = document.querySelector(".search");
+   let search = document.querySelectorAll(".search");
    let searchContent = document.querySelector(".search_content");
 
-   search.addEventListener("focus", (event) => {
+   let burger = getComputedStyle(document.querySelector(".header_burger"));
+   if (burger.display == "none") {
+      search = search[0];
+      search.id = "search";
+   } else {
+      search = search[1];
+      search.id = "search";
+   }
+
+   search.addEventListener("click", (event) => {
+      console.log(event.target.placeholder);
       event.target.placeholder = "Big black ...";
       event.target.style.borderBottom = "1px solid black";
       searchContent.style.display = "flex";
@@ -22,13 +32,13 @@ $(document).ready(function () {
 
 // ajax
 $(document).ready(function () {
-   $(document).on("input", ".search", function (event) {
+   $(document).on("input", "#search", function (event) {
       setSearch();
    });
 
    function setSearch() {
       event.preventDefault();
-      let search = $(".search").val();
+      let search = $("#search").val();
       if (search !== "") {
          $.ajax({
             url: "search",

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let searchContainer = document.querySelector(".search_content");
       let prevScroll = window.scrollY;
       let currentScroll;
+      let burger = getComputedStyle(document.querySelector(".header_burger"));
 
       document.addEventListener("scroll", () => {
          currentScroll = window.scrollY;
@@ -13,10 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
          if (currentScroll > prevScroll && !headerHidden()) {
             header.classList.add("header_hidden");
             searchContainer.parentNode.style.top = "10px";
+            mobileNav.style.top = "-500px";
          }
          if (currentScroll < prevScroll && headerHidden()) {
             header.classList.remove("header_hidden");
-            searchContainer.parentNode.style.top = "80px";
+
+            if (burger.display == "none") {
+               searchContainer.parentNode.style.top = "80px";
+            } else {
+               searchContainer.parentNode.style.top = "245px";
+            }
+            mobileNav.style.top = "70px";
          }
          prevScroll = currentScroll;
       });
@@ -27,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
    const burger = document.querySelector(".header_burger");
    const mobileNav = document.querySelector(".header_mobile_nav");
 
-   hamburger.addEventListener("click", () => {
+   burger.addEventListener("click", () => {
       burger.classList.toggle("active");
       mobileNav.classList.toggle("active");
    });
