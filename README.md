@@ -6,6 +6,8 @@
 
 -  register avatar
 
+-  reviews
+
 -  liked
 
 -  cart
