@@ -14,16 +14,17 @@ class CartView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>NO CAP | Online store for style lovers | Cart</title>
+         <title>Cart | NO CAP | Online store for style lovers</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/cart.css">
+         <link rel="stylesheet" href="assets/css/media.css">
       </head>
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->catalog($products);
          include "./templates/footer.html";
          ?>
@@ -86,7 +87,7 @@ class CartView
          <div class="cart_card">
             <a href="/productCard?id_product=<?= $item['id'] ?>" class="cart_card_data">
                <div class="cart_card_img">
-                  <img src="assets/img/database/<?= $item['first_img'] ?>" />
+                  <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
                   <div onclick="addToCart(this)" class="cart_card_like"></div>
                </div>
                <div class="cart_card_info">

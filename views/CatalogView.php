@@ -14,7 +14,7 @@ class CatalogView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>NO CAP | Online store for style lovers | Catalog</title>
+         <title>Catalog | NO CAP | Online store for style lovers</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
@@ -24,7 +24,7 @@ class CatalogView
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->catalog($products, $categories, $collections);
          include "./templates/footer.html";
          ?>

@@ -38,7 +38,7 @@ class CatalogModel
    }
    function getCategory()
    {
-      $query = $this->conn->query("select * from categories");
+      $query = $this->conn->query("SELECT * FROM categories");
 
       if ($query->num_rows) {
          while ($row = $query->fetch_assoc()) {
@@ -49,7 +49,7 @@ class CatalogModel
    }
    function getCollection()
    {
-      $query = $this->conn->query("select * from collections");
+      $query = $this->conn->query("SELECT * FROM collections");
 
       if ($query->num_rows) {
          while ($row = $query->fetch_assoc()) {

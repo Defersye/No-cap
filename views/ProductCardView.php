@@ -14,16 +14,17 @@ class ProductCardView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>NO CAP | Online store for style lovers | Catalog</title>
+         <title><?= $item['name'] ?> | NO CAP | Online store for style lovers</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
          <link rel="stylesheet" href="assets/css/productCard.css">
+         <link rel="stylesheet" href="assets/css/media.css">
       </head>
 
       <body>
          <?php
-         include "./templates/header.html";
+         include "./templates/header.php";
          $this->card($item);
          include "./templates/footer.html";
          ?>
@@ -47,7 +48,7 @@ class ProductCardView
          </div>
          <section class="productCard">
             <div class="container">
-               <img data-id="<?= $item['id'] ?>" src="assets/img/database/<?= $item['first_img'] ?>" />
+               <img data-id="<?= $item['id'] ?>" src="assets/img/database/products/<?= $item['first_img'] ?>" />
                <div class="productCard_info">
                   <div class="productCard_div">
                      <h5 class="productCard_title"><?= $item['name'] ?></h5>
