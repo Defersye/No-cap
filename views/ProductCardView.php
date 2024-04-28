@@ -48,7 +48,7 @@ class ProductCardView
          </div>
          <section class="productCard">
             <div class="container">
-               <img data-id="<?= $item['id'] ?>" src="assets/img/database/products/<?= $item['first_img'] ?>" />
+               <img data-id="<?= $item['id_product'] ?>" src="assets/img/database/products/<?= $item['first_img'] ?>" />
                <div class="productCard_info">
                   <div class="productCard_div">
                      <h5 class="productCard_title"><?= $item['name'] ?></h5>

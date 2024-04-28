@@ -30,7 +30,8 @@ class AuthorizationController
    }
    function logout()
    {
-      unset($_SESSION['user']);
+      unset($_SESSION['user_id']);
+      unset($_SESSION['user_login']);
       header('Location: /home');
    }
 }

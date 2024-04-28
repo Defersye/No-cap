@@ -2,8 +2,6 @@
 
 namespace models;
 
-use function PHPSTORM_META\type;
-
 class AuthorizationModel
 {
    protected $conn;
@@ -45,10 +43,12 @@ class AuthorizationModel
       if ($user != "") {
          $md5_password = md5($password);
          if ($user['password'] == $md5_password) {
-            $this->conn->query("SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$md5_password'");
+            $this->conn->query("SELECT * FROM users WHERE email = '$email' AND password = '$md5_password'");
 
             $user = $this->getUser($email);
-            $_SESSION['user'] = $user['login'];
+            $_SESSION['user_id'] = $user['id_user'];
+            $_SESSION['user_login'] = $user['login'];
+            return 'Okay!';
          } else {
             return 'Wrong password!';
          }

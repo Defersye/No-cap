@@ -9,7 +9,7 @@ class DBConnect
 
    private function __construct()
    {
-      self::$connect = mysqli_connect('localhost', 'root', '', 'no-cap') or die("Невозможно установить соединение с базой данных: " . mysqli_connect_error());
+      self::$connect = mysqli_connect('localhost', 'root', '', 'no-cap') or die("The connection to the database cannot be established: " . mysqli_connect_error());
       mysqli_query(self::$connect, 'SET names "utf8"');
    }
 

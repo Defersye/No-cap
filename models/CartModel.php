@@ -11,8 +11,8 @@ class CartModel
    }
    public function getCartProducts()
    {
-      // users?
-      $query = mysqli_query($this->conn, "SELECT * FROM products, collections WHERE collection_id = id_collection");
+      $query = mysqli_query($this->conn, "SELECT * FROM cart, products, collections WHERE id_product = product_id AND collection_id = id_collection AND user_id = " . $_SESSION['user_id']);
+      $answers = [];
       if ($query->num_rows) {
          while ($row = $query->fetch_assoc()) {
             $answers[] = $row;

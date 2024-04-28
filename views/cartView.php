@@ -83,34 +83,41 @@ class CartView
 
    public function renderCartProducts($products)
    {
-      foreach ($products as $item) { ?>
+      if ($products == 0) { ?>
          <div class="cart_card">
-            <a href="/productCard?id_product=<?= $item['id'] ?>" class="cart_card_data">
-               <div class="cart_card_img">
-                  <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
-                  <div onclick="addToCart(this)" class="cart_card_like"></div>
-               </div>
-               <div class="cart_card_info">
-                  <h5 class="cart_card_title"><?= $item['name'] ?></h5>
-                  <p class="cart_card_collection"><?= $item['name_collection'] ?></p>
-               </div>
-            </a>
-            <div class="cart_card_nums">
-               <? if ($item['discount']) {
-                  echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
-                  echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
-               } else {
-                  echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
-               }
-               ?>
-            </div>
-            <div class="cart_card_quantity">
-               <div class="cart_card_quantity_change decrement">-</div>
-               <div class="cart_card_quantity_nums">3</div>
-               <div class="cart_card_quantity_change increment">+</div>
-            </div>
-            <p class="cart_card_total">&euro;123</p>
+            <p>G, choose sum stuff</p>
          </div>
+         <?php
+      } else {
+         foreach ($products as $item) { ?>
+            <div class="cart_card">
+               <a href="/productCard?id_product=<?= $item['id_product'] ?>" class="cart_card_data">
+                  <div class="cart_card_img">
+                     <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
+                     <div onclick="addToCart(this)" class="cart_card_like"></div>
+                  </div>
+                  <div class="cart_card_info">
+                     <h5 class="cart_card_title"><?= $item['name'] ?></h5>
+                     <p class="cart_card_collection"><?= $item['name_collection'] ?></p>
+                  </div>
+               </a>
+               <div class="cart_card_nums">
+                  <? if ($item['discount']) {
+                     echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+                     echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+                  } else {
+                     echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
+                  }
+                  ?>
+               </div>
+               <div class="cart_card_quantity">
+                  <div class="cart_card_quantity_change decrement">-</div>
+                  <div class="cart_card_quantity_nums">3</div>
+                  <div class="cart_card_quantity_change increment">+</div>
+               </div>
+               <p class="cart_card_total">&euro;123</p>
+            </div>
 <?php }
+      }
    }
 }

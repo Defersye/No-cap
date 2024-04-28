@@ -11,8 +11,8 @@
       <div class="right">
          <div class="header_nav">
             <a href="/liked" class="header_link">liked</a>
-            <? if (isset($_SESSION['user'])) { ?>
-               <a href="/account" class="header_link"><?= $_SESSION['user'] ?></a>
+            <? if (isset($_SESSION['user_login'])) { ?>
+               <a href="/account" class="header_link"><?= $_SESSION['user_login'] ?></a>
                <a href="/cart" class="header_link">cart</a>
             <? } else { ?>
                <a href="/login" class="header_link">account</a>
@@ -30,8 +30,8 @@
    <a href="/catalog" class="header_link">catalog</a>
    <a href="/sales" class="header_link">sales</a>
    <a href="/liked" class="header_link">liked</a>
-   <? if (isset($_SESSION['user'])) { ?>
-      <a href="/account" class="header_link"><?= $_SESSION['user'] ?></a>
+   <? if (isset($_SESSION['user_login'])) { ?>
+      <a href="/account" class="header_link"><?= $_SESSION['user_login'] ?></a>
       <a href="/cart" class="header_link">cart</a>
    <? } else { ?>
       <a href="/login" class="header_link">account</a>

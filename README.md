@@ -8,16 +8,16 @@
 
 -  reviews
 
+-  avatar
+
 -  liked
 
--  cart
+-  cart > quantity thing
 
 -  suggestions ~
 
--  product card > buttons + category/collection transition
+-  product card > buttons
 
 -  email subscription (footer & register) ~
-
--  quantity thing
 
 -  footer links ~
