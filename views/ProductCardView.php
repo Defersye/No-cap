@@ -69,7 +69,7 @@ class ProductCardView
                   </div>
                   <p class="productCard_description"><?= $item['description'] ?></p>
                   <div class="productCard_btns">
-                     <a href="#" class="productCard_link">Add to Cart</a>
+                     <button id="addToCart" class="productCard_link">Add to Cart</button>
                      <a href="#" class="productCard_link">Quick buy</a>
                   </div>
                </div>

@@ -18,6 +18,7 @@ class AccountView
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
+         <link rel="stylesheet" href="assets/css/account.css">
          <link rel="stylesheet" href="assets/css/media.css">
       </head>
 
@@ -43,10 +44,10 @@ class AccountView
                <a class="path_text_active">Account</a>
             </div>
          </div>
-         <section class="cart">
+         <section class="account">
             <div class="container">
-               <h1 style="font-weight: 500; font-size: 32px; text-transform: uppercase"><?= $user['full_name'] ?></h1>
-               <a href="/logout">Log out</a>
+               <h1 class="account_name"><?= $user['full_name'] ?></h1>
+               <a href="/logout" class="account_logout">Log out</a>
             </div>
          </section>
       </main>

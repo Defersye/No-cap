@@ -60,7 +60,7 @@ class CartView
                      <p class="cart_payment_title">Payment:</p>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub">Subtotal:</p>
-                        <p class="cart_payment_nums" id="payment_sub">&euro;<?= $price = array_sum(array_column($products, 'price')) ?></p>
+                        <p class="cart_payment_nums" id="payment_sub">&euro;<?= $price = array_sum(array_column($products, 'sum')) ?></p>
                      </div>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub cart_payment_discount">Discount:</p>
@@ -110,12 +110,19 @@ class CartView
                   }
                   ?>
                </div>
-               <div class="cart_card_quantity">
+               <!-- <div class="cart_card_quantity">
                   <div class="cart_card_quantity_change decrement">-</div>
                   <div class="cart_card_quantity_nums">3</div>
                   <div class="cart_card_quantity_change increment">+</div>
                </div>
-               <p class="cart_card_total">&euro;123</p>
+               <p class="cart_card_total">&euro;123</p> -->
+
+               <div class="cart_card_quantity" data-id="<?= $item['id_product'] ?>">
+                  <div class="cart_card_quantity_change decrement">-</div>
+                  <input type="number" class="cart_card_quantity_nums" value="<?= $item['quantity'] ?>" pattern="[0-9]*" min="1" max="20">
+                  <div class="cart_card_quantity_change increment">+</div>
+               </div>
+               <p class="cart_card_total">&euro;<?= $item['sum'] ?></p>
             </div>
 <?php }
       }

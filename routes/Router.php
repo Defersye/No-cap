@@ -10,7 +10,6 @@ class Router
       $this->addRoute('home', 'HomeController@index');
       $this->addRoute('catalog', 'CatalogController@index');
       $this->addRoute('productCard', 'ProductCardController@index');
-      $this->addRoute('cart', 'CartController@index');
       $this->addRoute('account', 'AccountController@index');
 
       // authorization
@@ -25,6 +24,11 @@ class Router
       $this->addRoute('clearSearch', 'ajax\SearchController@clearSearch');
       $this->addRoute('filter', 'ajax\FilterController@filterProducts');
       $this->addRoute('clearFilter', 'ajax\FilterController@clearFilter');
+
+      // cart
+      $this->addRoute('cart', 'CartController@index');
+      $this->addRoute('addToCart', 'CartController@addToCart');
+      $this->addRoute('changeQuantity', 'CartController@changeQuantity');
    }
 
    private $routes = [];

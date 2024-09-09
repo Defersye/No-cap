@@ -1,0 +1,13 @@
+.account {
+   padding-bottom: 120px;
+}
+.account_name {
+   font-size: 23px;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+.account_logout {
+   font-size: 14px;
+   padding: 10px;
+   color: brown;
+}
