@@ -42,7 +42,9 @@
    transition: 0.2s ease-in-out;
 }
 .cart_card_empty {
-   padding-top: 100px;
+   padding: 100px;
+   width: 100%;
+   text-align: center;
 }
 .cart_card_data {
    padding: 10px;

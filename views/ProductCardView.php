@@ -28,7 +28,6 @@ class ProductCardView
          $this->card($item);
          include "./templates/footer.html";
          ?>
-         <script src="assets/js/cart.js"></script>
       </body>
 
       </html>
@@ -73,7 +72,6 @@ class ProductCardView
                      <button id="addToCart" data-id="<?= $item['id_product'] ?>" class="productCard_link">Добавить в корзину</button>
                      <!-- <a href="#" class="productCard_link">Купить</a> -->
                   </div>
-                  <?= $_SESSION['id_user'] ?>
                </div>
             </div>
          </section>

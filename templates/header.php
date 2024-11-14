@@ -14,6 +14,7 @@
             <? if (isset($_SESSION['user_login'])) { ?>
                <a href="/account" class="header_link"><?= $_SESSION['user_login'] ?></a>
                <a href="/cart" class="header_link">корзина</a>
+               <span class="header_cart-quantity"><?= $_SESSION['quantityChecker'] ?></span>
             <? } else { ?>
                <a href="/login" class="header_link">аккаунт</a>
             <? } ?>

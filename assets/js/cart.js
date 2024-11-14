@@ -1,4 +1,5 @@
 $(document).ready(function () {
+   refreshQuantityChecker();
    $(document).on("click", "#addToCart", function (event) {
       event.preventDefault();
       let product_id = event.target.dataset.id;
@@ -10,24 +11,21 @@ $(document).ready(function () {
             product_id: product_id,
          },
          success: function (response) {
-            // reloadCount();
+            refreshQuantityChecker();
          },
       });
    });
+   function refreshQuantityChecker() {
+      $.ajax({
+         url: "refreshQuantity",
+         type: "post",
+         data: {},
+         success: function (response) {
+            $(".header_cart-quantity").html(response);
+         },
+      });
+   }
 
-   // qwe
-   // qwe
-   // qwe
-   // function reloadCount() {
-   //    $.ajax({
-   //       url: "reloadCount",
-   //       type: "post",
-   //       data: {},
-   //       success: function (response) {
-   //          $(".header__cart_count").html(response);
-   //       },
-   //    });
-   // }
    // function reloadCart() {
    //    $.ajax({
    //       url: "reloadCart",

@@ -48,37 +48,41 @@ class CartView
          </div>
          <section class="cart">
             <div class="container">
-               <div class="cart_cards">
-                  <div class="cart_header">
-                     <b class="cart_title cart_title_product">Товар</b>
-                     <b class="cart_title">Цена</b>
-                     <b class="cart_title">Количество</b>
-                     <b class="cart_title">Итого</b>
+               <? if ($products == null) {
+                  echo "<p class='cart_card_empty'>Корзина пуста</p>";
+               } else { ?>
+                  <div class="cart_cards">
+                     <div class="cart_header">
+                        <b class="cart_title cart_title_product">Товар</b>
+                        <b class="cart_title">Цена</b>
+                        <b class="cart_title">Количество</b>
+                        <b class="cart_title">Итого</b>
+                     </div>
+                     <?php
+                     global $subtotal, $discount, $total;
+                     $this->renderCartProducts($products);
+                     ?>
                   </div>
-                  <?php
-                  global $subtotal, $discount,  $total;
-                  $this->renderCartProducts($products);
-                  ?>
-               </div>
-               <div class="cart_payment">
-                  <div class="cart_data">
-                     <p class="cart_payment_title">Оплата:</p>
-                     <div class="cart_payment_box">
-                        <p class="cart_payment_sub">Промежуточный итог:</p>
-                        <p class="cart_payment_nums" id="payment_sub">&euro;<?= $subtotal ?></p>
+                  <div class="cart_payment">
+                     <div class="cart_data">
+                        <p class="cart_payment_title">Оплата:</p>
+                        <div class="cart_payment_box">
+                           <p class="cart_payment_sub">Промежуточный итог:</p>
+                           <p class="cart_payment_nums" id="payment_sub">&euro;<?= $subtotal ?></p>
+                        </div>
+                        <div class="cart_payment_box">
+                           <p class="cart_payment_sub cart_payment_discount">Скидка:</p>
+                           <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount ?></p>
+                        </div>
+                        <div class="cart_payment_line"></div>
+                        <div class="cart_payment_box">
+                           <p class="cart_payment_total">К оплате:</p>
+                           <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $total ?></p>
+                        </div>
                      </div>
-                     <div class="cart_payment_box">
-                        <p class="cart_payment_sub cart_payment_discount">Скидка:</p>
-                        <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount ?></p>
-                     </div>
-                     <div class="cart_payment_line"></div>
-                     <div class="cart_payment_box">
-                        <p class="cart_payment_total">К оплате:</p>
-                        <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $total ?></p>
-                     </div>
+                     <input type="submit" id="submit" value="Оплатить">
                   </div>
-                  <input type="submit" id="submit" value="Оплатить">
-               </div>
+               <? } ?>
             </div>
          </section>
       </main>
@@ -89,45 +93,38 @@ class CartView
    public function renderCartProducts($products)
    {
       global $subtotal, $discount,  $total;
-      if ($products == null) { ?>
+      foreach ($products as $item) { ?>
          <div class="cart_card">
-            <p class="cart_card_empty">Корзина пуста</p>
-         </div>
-         <?php
-      } else {
-         foreach ($products as $item) { ?>
-            <div class="cart_card">
-               <a href="/productCard?id_product=<?= $item['id_product'] ?>" class="cart_card_data">
-                  <div class="cart_card_img">
-                     <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
-                     <div onclick="addToCart(this)" class="cart_card_like"></div>
-                  </div>
-                  <div class="cart_card_info">
-                     <h5 class="cart_card_title"><?= $item['name'] ?></h5>
-                     <p class="cart_card_collection"><?= $item['name_collection'] ?></p>
-                  </div>
-               </a>
-               <div class="cart_card_nums">
-                  <? if ($item['discount']) {
-                     echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
-                     echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
-                  } else {
-                     echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
-                  }
-                  ?>
+            <a href="/productCard?id_product=<?= $item['id_product'] ?>" class="cart_card_data">
+               <div class="cart_card_img">
+                  <img src="assets/img/database/products/<?= $item['first_img'] ?>" />
+                  <div onclick="addToCart(this)" class="cart_card_like"></div>
                </div>
-               <div class="cart_card_quantity" data-id="<?= $item['id_product'] ?>">
-                  <div class="cart_card_quantity_change decrement">-</div>
-                  <input type="number" class="cart_card_quantity_nums" value="<?= $item['quantity'] ?>" pattern="[0-9]*" min="1" max="20">
-                  <div class="cart_card_quantity_change increment">+</div>
+               <div class="cart_card_info">
+                  <h5 class="cart_card_title"><?= $item['name'] ?></h5>
+                  <p class="cart_card_collection"><?= $item['name_collection'] ?></p>
                </div>
-               <p class="cart_card_total">&euro;<?= $item['sum'] ?></p>
+            </a>
+            <div class="cart_card_nums">
+               <? if ($item['discount']) {
+                  echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+                  echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
+               } else {
+                  echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
+               }
+               ?>
             </div>
+            <div class="cart_card_quantity" data-id="<?= $item['id_product'] ?>">
+               <div class="cart_card_quantity_change decrement">-</div>
+               <input type="number" class="cart_card_quantity_nums" value="<?= $item['quantity'] ?>" pattern="[0-9]*" min="1" max="20">
+               <div class="cart_card_quantity_change increment">+</div>
+            </div>
+            <p class="cart_card_total">&euro;<?= $item['sum'] ?></p>
+         </div>
 <?php
-            $subtotal += $item['price'] * $item['quantity'];
-            $discount += $item['discount'] * $item['quantity'];
-         }
-         $total = $subtotal - $discount;
+         $subtotal += $item['price'] * $item['quantity'];
+         $discount += $item['discount'] * $item['quantity'];
       }
+      $total = $subtotal - $discount;
    }
 }

@@ -39,7 +39,7 @@ class HomeView
       <main>
          <section class="hero_slider">
             <div class="container">
-               Ещё не готово...
+               В разработке...
             </div>
          </section>
       </main>

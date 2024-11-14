@@ -18,5 +18,13 @@ class CartController
       $cartModel->addToCart($product_id);
    }
 
+   function refreshQuantity()
+   {
+      $cartModel = new \models\CartModel();
+      $countProducts = $cartModel->checkProductQuantity();
+      $_SESSION['quantityChecker'] = $countProducts;
+      echo $_SESSION['quantityChecker'];
+   }
+
    public function changeQuantity() {}
 }
