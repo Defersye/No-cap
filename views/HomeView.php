@@ -14,7 +14,7 @@ class HomeView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>NO CAP | Online store for style lovers</title>
+         <title>NO CAP | Интернет-магазин для ценителей стиля</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
@@ -39,7 +39,7 @@ class HomeView
       <main>
          <section class="hero_slider">
             <div class="container">
-               Not yet, G...
+               Ещё не готово...
             </div>
          </section>
       </main>

@@ -14,7 +14,7 @@ class CartView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>Cart | NO CAP | Online store for style lovers</title>
+         <title>Корзина | NO CAP | Интернет-магазин для ценителей стиля</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
@@ -41,38 +41,38 @@ class CartView
             <div class="container">
                <a href="/home" class="path_text">NO CAP</a>
                <p class="path_text">&nbsp;<img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-               <a class="path_text_active">Cart</a>
+               <a class="path_text_active">Корзина</a>
             </div>
          </div>
          <section class="cart">
             <div class="container">
                <div class="cart_cards">
                   <div class="cart_header">
-                     <b class="cart_title cart_title_product">Item</b>
-                     <b class="cart_title">Price</b>
-                     <b class="cart_title">Quantity</b>
-                     <b class="cart_title">Total</b>
+                     <b class="cart_title cart_title_product">Товар</b>
+                     <b class="cart_title">Цена</b>
+                     <b class="cart_title">Количество</b>
+                     <b class="cart_title">Итого</b>
                   </div>
                   <?php $this->renderCartProducts($products); ?>
                </div>
                <div class="cart_payment">
                   <div class="cart_data">
-                     <p class="cart_payment_title">Payment:</p>
+                     <p class="cart_payment_title">Оплата:</p>
                      <div class="cart_payment_box">
-                        <p class="cart_payment_sub">Subtotal:</p>
+                        <p class="cart_payment_sub">Промежуточный итог:</p>
                         <p class="cart_payment_nums" id="payment_sub">&euro;<?= $price = array_sum(array_column($products, 'sum')) ?></p>
                      </div>
                      <div class="cart_payment_box">
-                        <p class="cart_payment_sub cart_payment_discount">Discount:</p>
+                        <p class="cart_payment_sub cart_payment_discount">Скидка:</p>
                         <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount = array_sum(array_column($products, 'discount')) ?></p>
                      </div>
                      <div class="cart_payment_line"></div>
                      <div class="cart_payment_box">
-                        <p class="cart_payment_total">Order total:</p>
+                        <p class="cart_payment_total">К оплате:</p>
                         <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $price - $discount ?></p>
                      </div>
                   </div>
-                  <input type="submit" id="submit" value="Check out">
+                  <input type="submit" id="submit" value="Оплатить">
                </div>
             </div>
          </section>
@@ -85,7 +85,7 @@ class CartView
    {
       if ($products == 0) { ?>
          <div class="cart_card">
-            <p>G, choose sum stuff</p>
+            <p>Выберите какой-нибудь товар</p>
          </div>
          <?php
       } else {
@@ -110,13 +110,6 @@ class CartView
                   }
                   ?>
                </div>
-               <!-- <div class="cart_card_quantity">
-                  <div class="cart_card_quantity_change decrement">-</div>
-                  <div class="cart_card_quantity_nums">3</div>
-                  <div class="cart_card_quantity_change increment">+</div>
-               </div>
-               <p class="cart_card_total">&euro;123</p> -->
-
                <div class="cart_card_quantity" data-id="<?= $item['id_product'] ?>">
                   <div class="cart_card_quantity_change decrement">-</div>
                   <input type="number" class="cart_card_quantity_nums" value="<?= $item['quantity'] ?>" pattern="[0-9]*" min="1" max="20">

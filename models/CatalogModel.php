@@ -62,10 +62,10 @@ class CatalogModel
    {
       $answer = [];
       $sql = "SELECT * FROM products, collections WHERE collection_id = id_collection";
-      if (!empty($category) && $category != "Any") {
+      if (!empty($category) && $category != "Любая") {
          $sql .= " AND category_id = $category";
       }
-      if (!empty($collection) && $collection != "Any") {
+      if (!empty($collection) && $collection != "Любая") {
          $sql .= " AND collection_id = $collection";
       }
       if (!empty($discount) && $discount != null) {

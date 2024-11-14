@@ -6,7 +6,7 @@
    border: none;
    text-decoration: none;
    box-sizing: border-box;
-   font-family: "poppins", serif;
+   font-family: "open-sans", serif;
    letter-spacing: 0.3px;
    font-weight: 300;
    font-size: 16px;
@@ -132,7 +132,7 @@ header .container {
 /* search */
 .search {
    height: 17px;
-   width: 150px;
+   width: 200px;
 }
 .container:has(.search_content) {
    position: fixed;

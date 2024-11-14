@@ -13,7 +13,7 @@ $(document).ready(function () {
 
    search.addEventListener("click", (event) => {
       console.log(event.target.placeholder);
-      event.target.placeholder = "Big black ...";
+      event.target.placeholder = "Введите текст...";
       event.target.style.borderBottom = "1px solid black";
       searchContent.style.display = "flex";
    });
@@ -22,7 +22,7 @@ $(document).ready(function () {
          e.target.className != "search_content" &&
          e.target.classList[1] != "search"
       ) {
-         search.placeholder = "Search";
+         search.placeholder = "поиск";
          search.style.borderBottom = "none";
          search.value = "";
          searchContent.style.display = "none";

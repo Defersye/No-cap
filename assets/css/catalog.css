@@ -50,3 +50,6 @@
    top: 2px;
    left: 8px;
 }
+#clear:hover {
+   font-weight: 400;
+}

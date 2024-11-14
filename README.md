@@ -25,3 +25,7 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 -  email subscription (footer & register) ~
 
 -  footer links ~
+
+-  colored & size tags in products
+
+-  history of brand and collections
