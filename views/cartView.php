@@ -24,6 +24,8 @@ class CartView
 
       <body>
          <?php
+         $total = 0;
+         $discount = 0;
          include "./templates/header.php";
          $this->catalog($products);
          include "./templates/footer.html";
@@ -53,23 +55,26 @@ class CartView
                      <b class="cart_title">Количество</b>
                      <b class="cart_title">Итого</b>
                   </div>
-                  <?php $this->renderCartProducts($products); ?>
+                  <?php
+                  global $subtotal, $discount,  $total;
+                  $this->renderCartProducts($products);
+                  ?>
                </div>
                <div class="cart_payment">
                   <div class="cart_data">
                      <p class="cart_payment_title">Оплата:</p>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub">Промежуточный итог:</p>
-                        <p class="cart_payment_nums" id="payment_sub">&euro;<?= $price = array_sum(array_column($products, 'sum')) ?></p>
+                        <p class="cart_payment_nums" id="payment_sub">&euro;<?= $subtotal ?></p>
                      </div>
                      <div class="cart_payment_box">
                         <p class="cart_payment_sub cart_payment_discount">Скидка:</p>
-                        <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount = array_sum(array_column($products, 'discount')) ?></p>
+                        <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount ?></p>
                      </div>
                      <div class="cart_payment_line"></div>
                      <div class="cart_payment_box">
                         <p class="cart_payment_total">К оплате:</p>
-                        <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $price - $discount ?></p>
+                        <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $total ?></p>
                      </div>
                   </div>
                   <input type="submit" id="submit" value="Оплатить">
@@ -83,9 +88,10 @@ class CartView
 
    public function renderCartProducts($products)
    {
-      if ($products == 0) { ?>
+      global $subtotal, $discount,  $total;
+      if ($products == null) { ?>
          <div class="cart_card">
-            <p>Выберите какой-нибудь товар</p>
+            <p class="cart_card_empty">Корзина пуста</p>
          </div>
          <?php
       } else {
@@ -117,7 +123,11 @@ class CartView
                </div>
                <p class="cart_card_total">&euro;<?= $item['sum'] ?></p>
             </div>
-<?php }
+<?php
+            $subtotal += $item['price'] * $item['quantity'];
+            $discount += $item['discount'] * $item['quantity'];
+         }
+         $total = $subtotal - $discount;
       }
    }
 }

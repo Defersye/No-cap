@@ -54,7 +54,7 @@ class CatalogView
                      <option value="Любая">Любая</option>
                      <?
                      foreach ($categories as $category) {
-                        if ($_GET['category'] == $category['name_category']) {
+                        if (isset($_GET['category']) && $_GET['category'] == $category['name_category']) {
                            echo "<option value=" . $category['id_category'] . " selected>" . $category['name_category'] . "</option>";
                         } else {
                            echo "<option value=" . $category['id_category'] . ">" . $category['name_category'] . "</option>";
@@ -66,7 +66,7 @@ class CatalogView
                      <option value="Любая">Любая</option>
                      <?
                      foreach ($collections as $collection) {
-                        if ($_GET['collection'] == $collection['name_collection']) {
+                        if (isset($_GET['collection']) && $_GET['collection'] == $collection['name_collection']) {
                            echo "<option value=" . $collection['id_collection'] . " selected>" . $collection['name_collection'] . "</option>";
                         } else {
                            echo "<option value=" . $collection['id_collection'] . ">" . $collection['name_collection'] . "</option>";

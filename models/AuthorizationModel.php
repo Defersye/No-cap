@@ -46,7 +46,7 @@ class AuthorizationModel
             $this->conn->query("SELECT * FROM users WHERE email = '$email' AND password = '$md5_password'");
 
             $user = $this->getUser($email);
-            $_SESSION['user_id'] = $user['id_user'];
+            $_SESSION['id_user'] = $user['id_user'];
             $_SESSION['user_login'] = $user['login'];
             return 'Okay!';
          } else {

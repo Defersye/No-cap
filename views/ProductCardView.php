@@ -28,6 +28,7 @@ class ProductCardView
          $this->card($item);
          include "./templates/footer.html";
          ?>
+         <script src="assets/js/cart.js"></script>
       </body>
 
       </html>
@@ -52,7 +53,7 @@ class ProductCardView
                <div class="productCard_info">
                   <div class="productCard_div">
                      <h5 class="productCard_title"><?= $item['name'] ?></h5>
-                     <button onclick="addToLiked(this)" class="productCard_like"></button>
+                     <!-- <button onclick="addToLiked(this)" class="productCard_like"></button> -->
                   </div>
                   <div class="productCard_nums">
                      <? if ($item['discount']) {
@@ -69,9 +70,10 @@ class ProductCardView
                   </div>
                   <p class="productCard_description"><?= $item['description'] ?></p>
                   <div class="productCard_btns">
-                     <button id="addToCart" class="productCard_link">Добавить в корзину</button>
-                     <a href="#" class="productCard_link">Купить</a>
+                     <button id="addToCart" data-id="<?= $item['id_product'] ?>" class="productCard_link">Добавить в корзину</button>
+                     <!-- <a href="#" class="productCard_link">Купить</a> -->
                   </div>
+                  <?= $_SESSION['id_user'] ?>
                </div>
             </div>
          </section>
