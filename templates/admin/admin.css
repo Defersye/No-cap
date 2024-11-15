@@ -1,0 +1,117 @@
+.admin {
+   padding-bottom: 120px;
+}
+.red {
+   color: brown;
+   background-color: #fee;
+}
+
+/* buttons */
+.table-names {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   padding-bottom: 60px;
+}
+.table-name {
+   font-size: 20px;
+   padding: 10px 20px;
+   border-bottom: 1px solid black;
+}
+.active {
+   background-color: steelblue;
+   color: white;
+   border: none;
+}
+
+/* table */
+table {
+   border-collapse: separate;
+}
+th {
+   background-color: #eee;
+   font-weight: 500;
+   padding: 10px;
+}
+tr {
+   border-bottom: 1px dashed white;
+}
+td {
+   padding: 10px;
+   text-align: center;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 300px;
+}
+td:has(button),
+td:has(a) {
+   padding: 0;
+}
+td > button,
+td > a {
+   background-color: #eee;
+   padding: 10px;
+}
+td > button > img,
+td > a > img {
+   height: 20px;
+   width: 20px;
+   object-fit: contain;
+}
+a {
+   display: block;
+}
+.delete {
+   background-color: #fee;
+   color: #a52323;
+}
+.edit {
+   background-color: #fefedd;
+   color: #ba0;
+}
+.new {
+   margin: 0 auto;
+   margin-top: 20px;
+   padding: 10px 20px;
+   width: fit-content;
+   display: block;
+   color: steelblue;
+   background-color: #e5f3ff;
+   border: 1px solid steelblue;
+}
+
+/* new */ /* auth */
+.auth {
+   display: grid;
+   place-items: center;
+}
+.auth .container {
+   justify-content: center;
+}
+.form_title {
+   font-size: 24px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+.form {
+   padding: 10px;
+   width: 100%;
+   max-width: 650px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 5px;
+}
+.form_input {
+   height: 45px;
+   padding: 10px;
+   width: 100%;
+   border-bottom: 1px solid black;
+}
+.form_btn {
+   width: 100%;
+   padding: 20px;
+   font-size: 18px;
+   text-transform: uppercase;
+}

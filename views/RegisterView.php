@@ -53,17 +53,8 @@ class RegisterView
                   <input type="email" id="register_email" class="auth_input" placeholder="email" required>
                   <input type="password" id="register_password" class="auth_input" placeholder="password" required>
                   <input type="password" id="register_confirm" class="auth_input" placeholder="confirm password" required>
-                  <p class="auth_error">Ошибка!</p>
-
-                  <!-- <div class="register_div">
-                     <input type="file" id="register_avatar" class="avatar auth_input" accept="image/png, image/jpeg, image/jpg" placeholder="image" />
-                     <label class="register_div_input" for="field__file-2">
-                        <div class="register_input_row">The image is not selected</div>
-                        <div class="register_input_btn">Choose</div>
-                     </label>
-                  </div> -->
-
                   <p class="auth_p">Создавая учетную запись, вы соглашаетесь с нашими <a href="">Условиями и Положениями</a>, <a href="">Политикой Конфиденциальности</a></p>
+                  <p class="auth_error">Ошибка!</p>
                   <button class="auth_btn" type="submit" id="submit">Создать аккаунт</button>
                   <p class="auth_p">Уже есть учетная запись? <a href="/login">Войдите!</a></p>
                </form>

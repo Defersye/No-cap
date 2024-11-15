@@ -11,6 +11,7 @@ class Router
       $this->addRoute('catalog', 'CatalogController@index');
       $this->addRoute('productCard', 'ProductCardController@index');
       $this->addRoute('account', 'AccountController@index');
+      $this->addRoute('admin', 'AdminController@index');
 
       // authorization
       $this->addRoute('register', 'AuthorizationController@renderRegister');

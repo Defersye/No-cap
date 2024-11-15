@@ -57,7 +57,6 @@ class LoginView
 
                   <p class="auth_p">Ещё нет аккаунта? <a href="/register">Зарегестрируйтесь!</a></p>
                </form>
-
             </div>
          </section>
       </main>

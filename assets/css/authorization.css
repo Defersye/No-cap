@@ -2,8 +2,6 @@
 .auth {
    display: grid;
    place-items: center;
-   height: 100%;
-   min-height: 60vh;
 }
 .auth .container {
    justify-content: center;
@@ -47,52 +45,4 @@
    padding: 20px;
    font-size: 18px;
    text-transform: uppercase;
-}
-
-/* register */
-.register_div {
-   width: 100%;
-   position: relative;
-}
-
-.register_div .avatar {
-   opacity: 0;
-   position: absolute;
-}
-
-.register_div_input {
-   display: flex;
-}
-
-.register_input_row {
-   height: 45px;
-   padding: 10px;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   border-bottom: 1px solid black;
-
-   display: inline-block;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   line-height: initial;
-}
-
-.register_input_btn {
-   cursor: pointer;
-   height: 45px;
-   padding: 0 30px;
-   display: grid;
-   place-items: center;
-   background-color: #e6e6e6;
-   color: black;
-   font-size: 18px;
-   text-transform: uppercase;
-   border-bottom: 1px solid black;
-}
-.register_input_btn_hover {
-   background-color: steelblue;
-   color: white;
-   transition: 0.2s ease-in-out;
 }
