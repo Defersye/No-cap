@@ -53,8 +53,8 @@ if ($result->num_rows) {
                ?>
                   <input type="text" name="name" value="<?= $item['name'] ?>" class="form_input" required><br>
                   <input type="text" name="description" value="<?= $item['description'] ?>" class="form_input" required><br>
-                  <input type="number" name="price" value="<?= $item['price'] ?>" class="form_input" required><br>
-                  <input type="number" name="discount" value="<?= $item['discount'] ?>" class="form_input" required><br>
+                  <input type="number" name="price" value="<?= $item['price'] ?>" class="form_input" required pattern="[0-9]*" min="1"><br>
+                  <input type="number" name="discount" value="<?= $item['discount'] ?>" class="form_input" required pattern="[0-9]*" min="0"><br>
                   <input type="number" name="category_id" value="<?= $item['category_id'] ?>" class="form_input" required><br>
                   <input type="number" name="collection_id" value="<?= $item['collection_id'] ?>" class="form_input" required><br>
                   <input type="text" name="first_img" value="<?= $item['first_img'] ?>" class="form_input" required><br>

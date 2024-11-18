@@ -48,7 +48,7 @@ if (isset($_GET['table'])) {
             <div id="users" <?= $table == 'users' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">actions</th>
+                     <th colspan="2">действия</th>
                      <th>id user</th>
                      <th>full name</th>
                      <th>login</th>
@@ -89,7 +89,7 @@ if (isset($_GET['table'])) {
             <div id="products" <?= $table == 'products' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">actions</th>
+                     <th colspan="2">действия</th>
                      <th>id product</th>
                      <th>name</th>
                      <th>description</th>
@@ -138,7 +138,7 @@ if (isset($_GET['table'])) {
             <div id="categories" <?= $table == 'categories' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">actions</th>
+                     <th colspan="2">действия</th>
                      <th>id category</th>
                      <th>name category</th>
                   </tr>
@@ -173,7 +173,7 @@ if (isset($_GET['table'])) {
             <div id="collections" <?= $table == 'collections' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">actions</th>
+                     <th colspan="2">действия</th>
                      <th>id collection</th>
                      <th>name collection</th>
                   </tr>

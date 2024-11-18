@@ -30,7 +30,6 @@ class Router
       $this->addRoute('cart', 'CartController@index');
       $this->addRoute('addToCart', 'CartController@addToCart');
       $this->addRoute('refreshQuantity', 'CartController@refreshQuantity');
-
       $this->addRoute('changeQuantity', 'CartController@changeQuantity');
    }
 

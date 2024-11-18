@@ -1,7 +1,7 @@
 <footer>
    <div class="container">
       <form action="" method="post" class="footer_subscribe">
-         <input type="email" name="email" id="email" placeholder="Подпишитесь на скидку 10% на наши продукты" />
+         <input type="email" name="email" id="email" placeholder="Подпишитесь для скидки 10% на наши товары" />
          <input type="submit" id="submit" value="Подписаться" />
       </form>
       <div class="footer_links">
@@ -12,8 +12,9 @@
          <a href="/privacy_policy" class="footer_link">политика конфиденциальности</a>
       </div>
       <p class="footer_copyright">&copy;
-         <script>document.write(new Date().getFullYear())</script> NO CAP | defersye
+         <span id="year"></span> NO CAP | defersye
       </p>
+      <script>document.getElementById('year').innerHTML = new Date().getFullYear();</script>
    </div>
 </footer>
 <script src="assets/js/header.js"></script>

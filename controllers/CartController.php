@@ -23,8 +23,14 @@ class CartController
       $cartModel = new \models\CartModel();
       $countProducts = $cartModel->checkProductQuantity();
       $_SESSION['quantityChecker'] = $countProducts;
-      echo $_SESSION['quantityChecker'];
+      echo json_encode($countProducts);
    }
 
-   public function changeQuantity() {}
+   function changeQuantity()
+   {
+      $action = $_POST['action'];
+      $id_cart = $_POST['id_cart'];
+      $cartModel = new \models\CartModel();
+      echo $cartModel->changeQuantity($action, $id_cart);
+   }
 }

@@ -38,8 +38,8 @@
             <form action="new_product_action.php" method="post" class="form">
                <input type="text" name="name" placeholder="name" class="form_input" required><br>
                <input type="text" name="description" placeholder="description" class="form_input" required><br>
-               <input type="number" name="price" placeholder="price" class="form_input" required><br>
-               <input type="number" name="discount" placeholder="discount" class="form_input" required><br>
+               <input type="number" name="price" placeholder="price" class="form_input" required pattern="[0-9]*" min="1"><br>
+               <input type="number" name="discount" placeholder="discount" class="form_input" required pattern="[0-9]*" min="0"><br>
                <input type="number" name="category_id" placeholder="category id" class="form_input" required><br>
                <input type="number" name="collection_id" placeholder="collection id" class="form_input" required><br>
                <input type="text" name="first_img" placeholder="first image name" class="form_input" required><br>

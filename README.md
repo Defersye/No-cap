@@ -6,26 +6,18 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 
 <b>TODO list:</b>
 
--  rating
+-  reviews ~
 
--  register avatar
-
--  reviews
-
--  avatar
-
--  liked
+-  liked ~
 
 -  cart > quantity thing
 
 -  suggestions ~
 
--  product card > buttons
-
 -  email subscription (footer & register) ~
 
 -  footer links ~
 
--  colored & size tags in products
+-  color & size tags in products
 
 -  history of brand and collections
