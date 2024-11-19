@@ -6,6 +6,9 @@ class HomeController
 {
    public function index()
    {
-      $homeView = new \views\HomeView();
+      $homeModel = new \models\HomeModel();
+      $products = $homeModel->getProducts();
+      $collections = $homeModel->getCollection();
+      $HomeView = new \views\HomeView($products, $collections);
    }
 }

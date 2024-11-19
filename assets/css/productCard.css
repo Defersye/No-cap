@@ -85,14 +85,17 @@
    width: 100%;
 }
 .productCard_link {
+   padding: 15px;
    display: flex;
    justify-content: center;
    flex-grow: 1;
-   background-color: #e6e6e6;
-   padding: 15px;
+   color: white;
    font-size: 18px;
    text-transform: uppercase;
-   transition: 0.3s ease-in-out;
+   background-color: steelblue;
+   background-size: 200px 200px;
+   background-image: url(/assets//img/layout/texture.png);
+   transition: 0.2s ease-in-out;
 }
 .productCard_link + .productCard_link {
    border-left: 1px solid #aaa;
@@ -100,5 +103,5 @@
 .productCard_link:hover {
    background-color: steelblue;
    color: white;
-   transition: 0.2s ease-in-out;
+   background-image: none;
 }

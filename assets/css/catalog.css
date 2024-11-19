@@ -50,6 +50,12 @@
    top: 2px;
    left: 8px;
 }
+#clear {
+   padding: 10px 0;
+   width: 110px;
+   text-align: center;
+   transition: 0.2s ease-in-out;
+}
 #clear:hover {
-   font-weight: 400;
+   font-weight: 500;
 }

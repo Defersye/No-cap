@@ -47,7 +47,14 @@ input {
    background: none;
 }
 #submit {
-   background-color: #e6e6e6;
+   color: white;
+   background-color: steelblue;
+   background-size: 200px 200px;
+   background-image: url(/assets//img/layout/texture.png);
+   transition: 0.2s ease-in-out;
+}
+#submit:hover {
+   background-image: none;
 }
 
 /* header */
@@ -194,11 +201,6 @@ footer .container {
 .footer_subscribe #submit {
    cursor: pointer;
    padding: 0 25px;
-}
-#submit:hover {
-   background-color: steelblue;
-   color: white;
-   transition: 0.2s ease-in-out;
 }
 .footer_links {
    display: flex;

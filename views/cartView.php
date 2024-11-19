@@ -93,7 +93,7 @@ class CartView
 
    public function renderCartProducts($products)
    {
-      global $subtotal, $discount,  $total;
+      global $subtotal, $discount, $total;
       foreach ($products as $item) { ?>
          <div class="cart_card">
             <a href="/productCard?id_product=<?= $item['product_id'] ?>" class="cart_card_data">

@@ -1,14 +1,183 @@
+.section_title {
+   font-size: 24px;
+   font-weight: 400;
+   padding-bottom: 20px;
+}
+sup {
+   font-size: 12px;
+   text-transform: uppercase;
+}
+
 /* hero */
-.hero_slider {
+.hero {
+   padding-bottom: 60px;
+}
+.hero .container {
+   min-height: 600px;
+   background-size: cover;
+   background-position: center center;
+   background-image: url(/assets//img/layout/hero.png);
+}
+.hero_btn {
+   margin-top: auto;
+   margin-bottom: 40px;
+   padding: 20px 40px;
+   color: white;
+   font-size: 24px;
+   text-transform: uppercase;
+   border: 2px solid white;
+   transition: 0.2s ease-in-out;
+}
+.hero_btn:hover {
+   border-color: steelblue;
+   filter: drop-shadow(0px 0px 5px steelblue)
+      drop-shadow(0px 0px 10px steelblue) drop-shadow(0px 0px 30px steelblue);
+}
+
+/* suggestions */
+.suggestions {
+   padding-bottom: 60px;
+}
+.suggestions_cards {
+   max-width: 1400px;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   overflow-x: scroll;
+}
+
+/* collections */
+.collections {
    padding-bottom: 120px;
 }
-.hero_slider .container {
-   flex-direction: row;
+.collections_cards {
+   /* margin: 50px; */
+   width: 100%;
+   max-width: 1400px;
+   display: grid;
+   grid-template-columns: 2fr repeat(2, 1fr);
+   grid-template-rows: repeat(2, 200px);
+   gap: 15px;
+}
+.collections_item {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
    justify-content: center;
-   height: 800px;
-   background-color: steelblue;
-   font-size: 28px;
-   color: #000000;
-   font-weight: 200;
-   letter-spacing: 20px;
+   background-color: black;
+   overflow: hidden;
+}
+.collections_item img {
+   min-width: 105%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transition: 0.3s ease-in-out;
+   filter: saturate(0%);
+}
+.collections_item p {
+   max-width: 160px;
+   position: absolute;
+   color: white;
+   font-size: 20px;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 600;
+   /* letter-spacing: 10px; */
+}
+.collections_item:hover img {
+   min-width: 100%;
+   filter: saturate(100%);
+}
+.collections_item:hover p {
+   filter: drop-shadow(0px 0px 2px steelblue) drop-shadow(0px 0px 5px steelblue)
+      drop-shadow(0px 0px 10px steelblue) drop-shadow(0px 0px 30px steelblue);
+}
+
+/* about */
+.about {
+   padding-bottom: 60px;
+   color: white;
+}
+.about_content {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.about_content_text {
+   padding: 100px 60px;
+   background-size: 500px 500px;
+   background-image: url(/assets//img/layout/texture.png);
+   background-color: #222;
+}
+sup {
+   font-size: 12px;
+   text-transform: uppercase;
+}
+.about_content_title {
+   padding-top: 10px;
+   padding-bottom: 30px;
+   font-size: 50px;
+   font-family: "intro";
+   text-transform: uppercase;
+}
+.about_content_text p {
+   padding-bottom: 10px;
+   line-height: 1.5;
+   word-spacing: 2px;
+}
+.about_content_text p span {
+   font-family: "intro";
+   text-transform: uppercase;
+}
+.about_content_text a {
+   margin-top: 20px;
+   padding: 15px 40px;
+   display: block;
+   width: fit-content;
+   color: white;
+   border: 2px solid white;
+   transition: 0.1s ease-in-out;
+}
+.about_content_text a:hover {
+   /* background-color: steelblue; */
+   border-color: steelblue;
+   filter: drop-shadow(0px 0px 2px steelblue)
+      drop-shadow(0px 0px 10px steelblue);
+}
+.about_content_img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* last */
+.last {
+   padding-bottom: 120px;
+}
+.last_logo {
+   margin: 120px 0;
+   font-size: 140px;
+   font-family: "intro";
+   text-transform: uppercase;
+   filter: drop-shadow(0 0 3px black) drop-shadow(0 0 6px black)
+      drop-shadow(0 0 20px black) drop-shadow(0 0 40px black);
+}
+.last_offers {
+   padding-top: 60px;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+.last_offer {
+   text-align: center;
+}
+.last_offer_title {
+   font-family: "intro";
+   text-transform: uppercase;
+   padding-bottom: 10px;
+}
+.last_offer_text {
+   max-width: 250px;
 }
