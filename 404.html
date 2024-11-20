@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>404 | NO CAP | Интернет-магазин для ценителей стиля</title>
+
+   <link rel="shortcut icon" href="/assets/img/layout/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="/assets/css/general.css">
+   <style>
+      .container {
+         flex-direction: row;
+         justify-content: center;
+         gap: 60px;
+      }
+
+      ._404 {
+         padding-top: 40px;
+         padding-bottom: 120px;
+      }
+
+      span {
+         margin: 60px 0;
+         font-size: 160px;
+         font-family: "intro";
+         text-transform: uppercase;
+         filter: drop-shadow(0 0 3px black) drop-shadow(0 0 6px black) drop-shadow(0 0 20px black) drop-shadow(0 0 40px black);
+      }
+
+      .text {
+         display: grid;
+         place-items: center;
+      }
+
+      h1 {
+         font-size: 32px;
+         font-weight: 600;
+      }
+
+      p {
+         font-weight: 400;
+         padding: 15px;
+         color: gray;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <div class="left"> </div>
+         <a href="/home" class="header_logo">no cap</a>
+         <div class="right"> </div>
+      </div>
+   </header>
+   <main>
+      <section class="_404">
+         <div class="container">
+            <span>404</span>
+            <div class="text">
+               <h1>Страница не найдена!</h1>
+               <p>Проверьте правильность адреса ссылки</p>
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <p class="footer_copyright">&copy;
+            <script>
+               document.write(new Date().getFullYear())
+            </script> NO CAP | defersye
+         </p>
+      </div>
+   </footer>
+   <script src="admin.js"></script>
+</body>
+
+</html>

@@ -31,7 +31,7 @@ $(document).ready(function () {
          },
          success: function (response) {
             if (response == "Okay!") {
-               window.location.href = "/home";
+               window.location.href = "/account";
             }
             $(".auth_error").html(response);
             $(".auth_error").css("display", "block");

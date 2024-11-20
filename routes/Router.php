@@ -47,7 +47,7 @@ class Router
          $this->callHandler($handler);
       } else {
          header("HTTP/1.0 404 Not Found");
-         echo "Страница не найдена!";
+         header('Location: /404.html');
       }
    }
    private function callHandler($handler)

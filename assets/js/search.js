@@ -12,7 +12,6 @@ $(document).ready(function () {
    }
 
    search.addEventListener("click", (event) => {
-      console.log(event.target.placeholder);
       event.target.placeholder = "Введите текст...";
       event.target.style.borderBottom = "1px solid black";
       searchContent.style.display = "flex";
