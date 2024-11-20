@@ -19,7 +19,11 @@ class AuthorizationController
 
    public function renderLogin()
    {
-      $loginView = new \views\LoginView();
+      if (isset($_SESSION['user_login'])) {
+         header('Location: /account');
+      } else {
+         $loginView = new \views\LoginView();
+      }
    }
 
    public function login()

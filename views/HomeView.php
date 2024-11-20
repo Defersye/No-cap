@@ -28,6 +28,17 @@ class HomeView
          $this->home($products, $collections);
          include "./templates/footer.html";
          ?>
+         <script defer>
+            (function() {
+               function scrollHorizontally(e) {
+                  e = window.event || e;
+                  var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                  document.getElementById('scroll').scrollLeft -= (delta * 200);
+                  e.preventDefault();
+               }
+               document.getElementById('scroll').addEventListener("mousewheel", scrollHorizontally, false);
+            })();
+         </script>
       </body>
 
       </html>
@@ -35,7 +46,6 @@ class HomeView
    }
    function home($products, $collections)
    { ?>
-      <!-- top_sellers sales collections  -->
       <main>
          <section class="hero">
             <div class="container">
@@ -44,8 +54,8 @@ class HomeView
          </section>
          <section class="suggestions">
             <div class="container">
-               <h6 class="section_title">Тебе могут понравиться</h6>
-               <div class="suggestions_cards">
+               <h6 class="suggestions_title">Тебе могут понравиться</h6>
+               <div class="suggestions_cards" id="scroll">
                   <?
                   foreach ($products as $item) {
                      include 'templates/catalogCard.php';

@@ -14,14 +14,20 @@
    padding-bottom: 60px;
 }
 .table-name {
-   font-size: 20px;
    padding: 10px 20px;
+   font-size: 20px;
    border-bottom: 1px solid black;
 }
 .active {
-   background-color: steelblue;
    color: white;
+   background-color: steelblue;
+   background-size: 200px 200px;
+   background-image: url(/assets//img/layout/texture.png);
    border: none;
+   transition: 0.2s ease-in-out;
+}
+.active:hover {
+   background-image: none;
 }
 
 /* table */

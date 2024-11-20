@@ -10,8 +10,6 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 
 -  liked ~
 
--  cart > quantity thing
-
 -  suggestions ~
 
 -  email subscription (footer & register) ~
@@ -20,4 +18,8 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 
 -  color & size tags in products
 
--  history of brand and collections
+-  order
+
+-  account
+
+-  history of brand and collections ~
