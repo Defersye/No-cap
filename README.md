@@ -6,6 +6,8 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 
 <b>TODO list:</b>
 
+-  fix header height
+
 -  reviews ~
 
 -  liked ~
