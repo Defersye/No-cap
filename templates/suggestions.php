@@ -1,6 +1,6 @@
 <section class="suggestions">
    <div class="container">
-      <h2>Предложенное для Вас</h2>
+      <h2>Suggested for you</h2>
       <div class="suggestions_slider">
          <button class="suggestion_arrow"></button>
          <div class="catalog_cards">

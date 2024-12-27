@@ -28,12 +28,12 @@ class AuthorizationModel
    {
       $user = $this->getUser($email);
       if ($user != "") {
-         return 'Данная почта уже используется!';
+         return 'This email is already in use!';
       } else {
          $md5_password = md5($password);
          $this->conn->query("INSERT INTO users (full_name, login, email, password) VALUES ('$name', '$login', '$email', '$md5_password')");/*(avatar), '$avatar'*/
 
-         return 'Регистрация прошла успешно!';
+         return 'Registration completed successfully!';
       }
    }
 
@@ -50,10 +50,10 @@ class AuthorizationModel
             $_SESSION['user_login'] = $user['login'];
             return 'Okay!';
          } else {
-            return 'Неверный пароль!';
+            return 'Incorrect password!';
          }
       } else {
-         return 'Неверная почта или пароль!';
+         return 'Incorrect email or password!';
       }
    }
 }

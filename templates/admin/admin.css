@@ -23,7 +23,6 @@
    background-color: steelblue;
    background-size: 200px 200px;
    background-image: url(/assets//img/layout/texture.png);
-   border: none;
    transition: 0.2s ease-in-out;
 }
 .active:hover {

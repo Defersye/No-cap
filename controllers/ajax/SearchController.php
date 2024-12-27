@@ -16,7 +16,7 @@ class SearchController
                 include 'templates/catalogCard.php';
             }
         } else {
-            echo "Таких вещей нет... Нам очень жаль!";
+            echo "There are no such items... We are very sorry!";
         }
     }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Ноя 14 2024 г., 08:52
+-- Время создания: Дек 13 2024 г., 14:02
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -40,8 +40,13 @@ CREATE TABLE `cart` (
 
 INSERT INTO `cart` (`id_cart`, `user_id`, `product_id`, `quantity`) VALUES
 (1, 5, 2, 3),
-(2, 5, 8, 1),
-(3, 5, 4, 5);
+(2, 5, 8, 5),
+(3, 5, 4, 11),
+(25, 7, 1, 1),
+(29, 7, 2, 1),
+(33, 1, 3, 2),
+(35, 1, 11, 1),
+(36, 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -61,7 +66,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id_category`, `name_category`) VALUES
 (1, 'Футболки'),
 (2, 'Носки'),
-(3, 'Кепки');
+(3, 'Кепки'),
+(15, 'Обувь');
 
 -- --------------------------------------------------------
 
@@ -80,7 +86,10 @@ CREATE TABLE `collections` (
 
 INSERT INTO `collections` (`id_collection`, `name_collection`) VALUES
 (1, 'Океания'),
-(2, 'Африка');
+(2, 'Африка'),
+(3, 'Латинская Америка'),
+(4, 'Азия'),
+(5, 'Европа');
 
 -- --------------------------------------------------------
 
@@ -111,9 +120,12 @@ INSERT INTO `products` (`id_product`, `name`, `description`, `price`, `discount`
 (4, 'Футболка Фиджи', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 200, 0, 1, 1, 'fiji_shirt_1.jpg', 'fiji_shirt_2.jpg'),
 (5, 'Футболка Вануату', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 200, 20, 1, 1, 'vanuatu_shirt_1.jpg', 'vanuatu_shirt_2.jpg'),
 (6, 'Футболка Кирибати', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 200, 0, 1, 1, 'kiribati_shirt_1.jpg', 'kiribati_shirt_2.jpg'),
-(7, 'Футболка Габон', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 150, 10, 1, 2, 'gabon_shirt_1.jpg', 'gabon_shirt_2.jpg'),
-(8, 'Футболка Нигерия', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 150, 0, 1, 2, 'nigeria_shirt_1.jpg', 'nigeria_shirt_2.jpg'),
-(9, 'Кепка Нигерия', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 100, 0, 3, 2, 'nigeria_cup_1.jpg', 'nigeria_cup_2.jpg');
+(7, 'Футболка Нигерия', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 150, 0, 1, 2, 'nigeria_shirt_1.jpg', 'nigeria_shirt_2.jpg'),
+(8, 'Футболка Габон', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 150, 10, 1, 2, 'gabon_shirt_1.jpg', 'gabon_shirt_2.jpg'),
+(9, 'Футболка Перу', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\r\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\r\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\r\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 250, 20, 1, 3, 'peru_shirt_1.jpg', 'peru_shirt_2.jpg'),
+(10, 'Кепка Нигерия', 'Стиль: Это футболка с круглым вырезом для повседневного образа.</br>\nЦвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>\nДизайн: В нем упоминается \"закатный\" дизайн, вызывающий ностальгию и ощущение расслабленности.</br>\nМатериал: \"Сверхмягкий органический хлопок\" подчеркивает комфорт и экологичность.', 100, 0, 3, 2, 'nigeria_cap_1.jpg', 'nigeria_cap_2.jpg'),
+(11, 'Кепка Перу', 'Стиль: Это бейсболка для повседневного образа.</br>Цвет: В описании указано, что она выглядит блекло и размыто, что наводит на мысль о винтажных цветах.</br>Дизайн: В нем упоминается ', 150, 0, 2, 3, 'peru_cap_1.jpg', 'peru_cap_2.jpg'),
+(12, 'defersye', 'asdas', 1111, 23, 3, 1, 'asd.asd', 'авквпкнп');
 
 -- --------------------------------------------------------
 
@@ -140,22 +152,19 @@ CREATE TABLE `users` (
   `full_name` varchar(355) DEFAULT NULL,
   `login` varchar(100) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `password` varchar(500) DEFAULT NULL,
-  `avatar` varchar(500) DEFAULT NULL
+  `password` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id_user`, `full_name`, `login`, `email`, `password`, `avatar`) VALUES
-(1, 'Uwuwewewe Ugweuhem Osas', '21 bananas', 'osas21@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260', 'uploads/1706538858PhotoReal_black_messy_hair_white_guy_in_glasses_red_shirt_dark_0.jpg'),
-(2, 'uvuvwevwevwe ugwemuhwem osas', 'The pilot', 'pilot0545@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260', 'uploads/1706542832PhotoReal_black_messy_hair_white_guy_in_glasses_red_shirt_dark_0.jpg'),
-(3, 'Ibrahim Al Abdul', 'Lil Osama', 'Osama911@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260', 'uploads/1706542864PhotoReal_black_messy_hair_white_guy_in_glasses_red_shirt_dark_0.jpg'),
-(4, 'Burlakov Danil Andreevich', 'Central C4', 'danil_c4@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260', 'uploads/1706689782PhotoReal_black_messy_hair_white_guy_in_glasses_red_shirt_dark_0.jpg'),
-(5, 'eminem slim marshall', 'eminem', 'real_slim@mm.com', 'f52412c4ff1dacd2111f4951f3db1260', NULL),
-(6, 'sldjask', 'popa', 'kjkjk$sdsfd.sdf', '19e3f623b3fa27717e94204383b94dd7', NULL),
-(7, 'Дядя Стёпа', 'Каланча', 'Stepa@gmail.com', 'ad13a2a07ca4b7642959dc0c4c740ab6', NULL);
+INSERT INTO `users` (`id_user`, `full_name`, `login`, `email`, `password`) VALUES
+(1, 'Uwuwewewe Ugweuhem Osas', '21 bananas', 'osas21@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260'),
+(2, 'uvuvwevwevwe ugwemuhwem osas', 'The pilot', 'pilot0545@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260'),
+(3, 'Ibrahim Al Abdul', 'Lil Osama', 'Osama911@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260'),
+(4, 'Burlakov Danil Andreevich', 'Central C4', 'danil_c4@gmail.com', 'f52412c4ff1dacd2111f4951f3db1260'),
+(5, 'eminem slim marshall', 'eminem', 'real_slim@mm.com', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Индексы сохранённых таблиц
@@ -205,25 +214,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_cart` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id_category` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_category` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `collections`
 --
 ALTER TABLE `collections`
-  MODIFY `id_collection` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_collection` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_product` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `reviews`
@@ -235,7 +244,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

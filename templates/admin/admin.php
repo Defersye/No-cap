@@ -13,7 +13,7 @@ if (isset($_GET['table'])) {
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Админ панель | NO CAP | Интернет-магазин для ценителей стиля</title>
+   <title>Admin panel | NO CAP | Online store for style lovers</title>
 
    <link rel="shortcut icon" href="/assets/img/layout/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="/assets/css/general.css">
@@ -33,27 +33,28 @@ if (isset($_GET['table'])) {
          <div class="container">
             <a href="/home" class="path_text">NO CAP</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a class="path_text_active">Админ панель</a>
+            <a class="path_text_active">Admin panel</a>
          </div>
       </div>
       <section class="admin">
          <div class="container">
             <div class="table-names">
-               <button id="usersBtn" onclick="switchTables('users')" class="table-name <?= $table == 'users' ? "active" : "" ?>">Пользователи</button>
-               <button id="productsBtn" onclick="switchTables('products')" class="table-name <?= $table == 'products' ? "active" : "" ?>">Товары</button>
-               <button id="categoriesBtn" onclick="switchTables('categories')" class="table-name <?= $table == 'categories' ? "active" : "" ?>">Категории</button>
-               <button id="collectionsBtn" onclick="switchTables('collections')" class="table-name <?= $table == 'collections' ? "active" : "" ?>">Коллекции</button>
+               <button id="usersBtn" onclick="switchTables('users')" class="table-name <?= $table == 'users' ? "active" : "" ?>">Users</button>
+               <button id="productsBtn" onclick="switchTables('products')" class="table-name <?= $table == 'products' ? "active" : "" ?>">Products</button>
+               <button id="categoriesBtn" onclick="switchTables('categories')" class="table-name <?= $table == 'categories' ? "active" : "" ?>">Categories</button>
+               <button id="collectionsBtn" onclick="switchTables('collections')" class="table-name <?= $table == 'collections' ? "active" : "" ?>">Collections</button>
             </div>
 
             <div id="users" <?= $table == 'users' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">действия</th>
+                     <th colspan="2">actions</th>
                      <th>id user</th>
                      <th>full name</th>
                      <th>login</th>
                      <th>email</th>
                      <th>password</th>
+                     <th>avatar</th>
                   </tr>
                   <?
                   $result = $conn->query("SELECT * FROM users");
@@ -79,17 +80,18 @@ if (isset($_GET['table'])) {
                         <td><?= $user['login'] ?></td>
                         <td><?= $user['email'] ?></td>
                         <td><?= $user['password'] ?></td>
+                        <td><?= $user['avatar'] ?></td>
                      </tr>
                   <?
                   } ?>
                </table>
-               <a href="new/new_user.php" class="new">Новый пользователь</a>
+               <a href="new/new_user.php" class="new">New user</a>
             </div>
 
             <div id="products" <?= $table == 'products' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">действия</th>
+                     <th colspan="2">actions</th>
                      <th>id product</th>
                      <th>name</th>
                      <th>description</th>
@@ -132,13 +134,13 @@ if (isset($_GET['table'])) {
                   <?
                   } ?>
                </table>
-               <a href="new/new_product.php" class="new">Новый товар</a>
+               <a href="new/new_product.php" class="new">New product</a>
             </div>
 
             <div id="categories" <?= $table == 'categories' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">действия</th>
+                     <th colspan="2">actions</th>
                      <th>id category</th>
                      <th>name category</th>
                   </tr>
@@ -167,13 +169,13 @@ if (isset($_GET['table'])) {
                   <?
                   } ?>
                </table>
-               <a href="new/new_category.php" class="new">Новая категория</a>
+               <a href="new/new_category.php" class="new">New category</a>
             </div>
 
             <div id="collections" <?= $table == 'collections' ? "style='display: block;'" : "style='display: none;'" ?>>
                <table>
                   <tr>
-                     <th colspan="2">действия</th>
+                     <th colspan="2">actions</th>
                      <th>id collection</th>
                      <th>name collection</th>
                   </tr>
@@ -202,7 +204,7 @@ if (isset($_GET['table'])) {
                   <?
                   } ?>
                </table>
-               <a href="new/new_collection.php" class="new">Новая коллекция</a>
+               <a href="new/new_collection.php" class="new">New collection</a>
             </div>
          </div>
       </section>

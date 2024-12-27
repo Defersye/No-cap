@@ -14,7 +14,7 @@ class CatalogView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title>Каталог | NO CAP | Интернет-магазин для ценителей стиля</title>
+         <title>Catalog | NO CAP | Online store for style lovers</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
@@ -42,16 +42,16 @@ class CatalogView
             <div class="container">
                <a href="/home" class="path_text">NO CAP</a>
                <p class="path_text">&nbsp;<img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-               <a class="path_text_active">Каталог</a>
+               <a class="path_text_active">Catalog</a>
             </div>
          </div>
          <section class="catalog">
             <div class="container">
                <div class="catalog_filters">
-                  <p class="catalog_filter_title">Фильтры</p>
-                  <p class="catalog_filter_subtitle">Категория</p>
+                  <p class="catalog_filter_title">Filters</p>
+                  <p class="catalog_filter_subtitle">Category</p>
                   <select class="catalog_filter_select" id="category">
-                     <option value="Любая">Любая</option>
+                     <option value="Any">Any</option>
                      <?
                      foreach ($categories as $category) {
                         if (isset($_GET['category']) && $_GET['category'] == $category['name_category']) {
@@ -61,9 +61,9 @@ class CatalogView
                         }
                      } ?>
                   </select>
-                  <p class="catalog_filter_subtitle">Коллекция</p>
+                  <p class="catalog_filter_subtitle">Collection</p>
                   <select class="catalog_filter_select" id="collection">
-                     <option value="Любая">Любая</option>
+                     <option value="Any">Any</option>
                      <?
                      foreach ($collections as $collection) {
                         if (isset($_GET['collection']) && $_GET['collection'] == $collection['name_collection']) {
@@ -73,9 +73,9 @@ class CatalogView
                         }
                      } ?>
                   </select>
-                  <p class="catalog_filter_subtitle">Скидка</p>
+                  <p class="catalog_filter_subtitle">Discount</p>
                   <input class="catalog_filter_check" type="checkbox" id="discount" />
-                  <a href="" class="catalog_filter_subtitle" id="clear">Очистить</a>
+                  <a href="" class="catalog_filter_subtitle" id="clear">Clear</a>
                </div>
                <div class="catalog_cards">
                   <?

@@ -30,8 +30,8 @@ $(document).ready(function () {
    }
    function clearFilter() {
       event.preventDefault();
-      $("#category").val("Любая");
-      $("#collection").val("Любая");
+      $("#category").val("Any");
+      $("#collection").val("Any");
       $("#discount").prop("checked", false);
       $.ajax({
          url: "clearFilter",

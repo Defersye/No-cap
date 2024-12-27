@@ -2,6 +2,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "no-cap-russian";
+$database = "no-cap";
 
 $conn = new mysqli($servername, $username, $password, $database);

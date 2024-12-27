@@ -6,7 +6,7 @@
    border: none;
    text-decoration: none;
    box-sizing: border-box;
-   font-family: "open-sans", serif;
+   font-family: "poppins", sans-serif;
    letter-spacing: 0.3px;
    font-weight: 300;
    font-size: 16px;
@@ -109,7 +109,7 @@ header .container {
    align-items: center;
    justify-content: center;
    font-size: 12px;
-   font-weight: 800;
+   font-weight: 600;
    color: steelblue;
    border-radius: 50%;
    border: 2px solid steelblue;
@@ -155,7 +155,7 @@ header .container {
 /* search */
 .search {
    height: 17px;
-   width: 200px;
+   width: 150px;
 }
 .container:has(.search_content) {
    position: fixed;
@@ -294,7 +294,7 @@ footer .container {
 .catalog_card_title {
    padding-top: 15px;
    font-size: 18px;
-   font-weight: 600;
+   font-weight: 500;
    text-transform: uppercase;
 }
 .catalog_card_collection {

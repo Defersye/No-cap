@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Ноя 14 2024 г., 08:52
+-- Время создания: Дек 27 2024 г., 06:27
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -39,9 +39,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id_cart`, `user_id`, `product_id`, `quantity`) VALUES
-(1, 5, 2, 3),
-(2, 5, 8, 1),
-(3, 5, 4, 5);
+(13, 5, 1, 5),
+(15, 5, 2, 30),
+(17, 5, 3, 67);
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,10 @@ CREATE TABLE `collections` (
 
 INSERT INTO `collections` (`id_collection`, `name_collection`) VALUES
 (1, 'Oceania'),
-(2, 'Africa');
+(2, 'Africa'),
+(3, 'Latin America'),
+(4, 'Asia'),
+(5, 'Europe');
 
 -- --------------------------------------------------------
 
@@ -113,7 +116,8 @@ INSERT INTO `products` (`id_product`, `name`, `description`, `price`, `discount`
 (6, 'Kiribati shirt', 'Style: It\'s a crewneck t-shirt for a casual look.</br>\r\nColor: The description implies a faded, washed-out look, suggesting vintage colors.</br>\r\nDesign: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>\r\nMaterial: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 200, 0, 1, 1, 'kiribati_shirt_1.jpg', 'kiribati_shirt_2.jpg'),
 (7, 'Gabon shirt', 'Style: It\'s a crewneck t-shirt for a casual look.</br>\r\nColor: The description implies a faded, washed-out look, suggesting vintage colors.</br>\r\nDesign: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>\r\nMaterial: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 150, 10, 1, 2, 'gabon_shirt_1.jpg', 'gabon_shirt_2.jpg'),
 (8, 'Nigeria shirt', 'Style: It\'s a crewneck t-shirt for a casual look.</br>\nColor: The description implies a faded, washed-out look, suggesting vintage colors.</br>\nDesign: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>\nMaterial: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 150, 0, 1, 2, 'nigeria_shirt_1.jpg', 'nigeria_shirt_2.jpg'),
-(9, 'Nigeria cup', 'Style: It\'s a crewneck t-shirt for a casual look.</br>\r\nColor: The description implies a faded, washed-out look, suggesting vintage colors.</br>\r\nDesign: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>\r\nMaterial: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 100, 0, 3, 2, 'nigeria_cup_1.jpg', 'nigeria_cup_2.jpg');
+(9, 'Nigeria cup', 'Style: It\'s a crewneck t-shirt for a casual look.</br>\r\nColor: The description implies a faded, washed-out look, suggesting vintage colors.</br>\r\nDesign: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>\r\nMaterial: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 100, 0, 3, 2, 'nigeria_cup_1.jpg', 'nigeria_cup_2.jpg'),
+(10, 'Peru cap', 'Style: It\'s a crewneck t-shirt for a casual look.</br>Color: The description implies a faded, washed-out look, suggesting vintage colors.</br>Design: It mentions a \"sunset\" design, evoking nostalgia and a relaxed feel.</br>Material: \"Super-soft organic cotton\" highlights comfort and eco-friendliness.', 150, 0, 3, 3, 'peru_cap_1.jpg', 'peru_cap_2.jpg');
 
 -- --------------------------------------------------------
 
@@ -205,7 +209,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_cart` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -217,13 +221,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `collections`
 --
 ALTER TABLE `collections`
-  MODIFY `id_collection` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_collection` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_product` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `reviews`

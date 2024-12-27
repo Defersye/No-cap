@@ -29,7 +29,7 @@ class AuthorizationController
    public function login()
    {
       if ($_POST['email'] == "admin" && $_POST['password'] == "admin") {
-         echo '<a href="/templates/admin/admin.php">В админ панель</a>';
+         echo '<a href="/templates/admin/admin.php">To admin panel</a>';
       } else {
          $loginModel = new \models\AuthorizationModel();
          $loginProducts = $loginModel->login($_POST['email'], $_POST['password']);

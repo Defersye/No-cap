@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Админ панель | NO CAP | Интернет-магазин для ценителей стиля</title>
+   <title>Admin panel | NO CAP | Online store for style lovers</title>
 
    <link rel="shortcut icon" href="/assets/img/layout/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="/assets/css/general.css">
@@ -27,14 +27,14 @@
          <div class="container">
             <a href="/home" class="path_text">NO CAP</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a href="../admin.php?table=products" class="path_text">Админ панель</a>
+            <a href="../admin.php?table=products" class="path_text">Admin panel</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a class="path_text_active">Новый товар</a>
+            <a class="path_text_active">New product</a>
          </div>
       </div>
       <section class="auth">
          <div class="container">
-            <h2 class="form_title">Новый товар</h2>
+            <h2 class="form_title">New product</h2>
             <form action="new_product_action.php" method="post" class="form">
                <input type="text" name="name" placeholder="name" class="form_input" required><br>
                <input type="text" name="description" placeholder="description" class="form_input" required><br>
@@ -44,7 +44,7 @@
                <input type="number" name="collection_id" placeholder="collection id" class="form_input" required><br>
                <input type="text" name="first_img" placeholder="first image name" class="form_input" required><br>
                <input type="text" name="second_img" placeholder="second image name" class="form_input" required><br>
-               <button type="submit" class="form_btn" id="submit">Создать</button>
+               <button type="submit" class="form_btn" id="submit">Create</button>
             </form>
          </div>
       </section>

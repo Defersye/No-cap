@@ -14,7 +14,7 @@ class ProductCardView
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         <title><?= $item['name'] ?> | NO CAP | Интернет-магазин для ценителей стиля</title>
+         <title><?= $item['name'] ?> | NO CAP | Online store for style lovers</title>
 
          <link rel="shortcut icon" href="assets/img/layout/favicon.ico" type="image/x-icon">
          <link rel="stylesheet" href="assets/css/general.css">
@@ -41,7 +41,7 @@ class ProductCardView
             <div class="container">
                <a href="/home" class="path_text">NO CAP</a>
                <p class="path_text">&nbsp;<img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-               <a href="/catalog" class="path_text">Каталог</a>
+               <a href="/catalog" class="path_text">Catalog</a>
                <p class="path_text">&nbsp;<img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
                <a class="path_text_active"><?= $item['name'] ?></a>
             </div>
@@ -64,12 +64,12 @@ class ProductCardView
                      ?>
                   </div>
                   <div class="productCard_ids">
-                     <p class="productCard_category"><span>Категория:</span> <a href="/catalog?category=<?= $item['name_category'] ?>"><?= $item['name_category'] ?></a></p>
-                     <p class="productCard_collection"><span>Коллекция:</span> <a href="/catalog?collection=<?= $item['name_collection'] ?>"><?= $item['name_collection'] ?></a></p>
+                     <p class="productCard_category"><span>Category:</span> <a href="/catalog?category=<?= $item['name_category'] ?>"><?= $item['name_category'] ?></a></p>
+                     <p class="productCard_collection"><span>Collection:</span> <a href="/catalog?collection=<?= $item['name_collection'] ?>"><?= $item['name_collection'] ?></a></p>
                   </div>
                   <p class="productCard_description"><?= $item['description'] ?></p>
                   <div class="productCard_btns">
-                     <button id="addToCart" data-id="<?= $item['id_product'] ?>" class="productCard_link">Добавить в корзину</button>
+                     <button id="addToCart" data-id="<?= $item['id_product'] ?>" class="productCard_link">Add to cart</button>
                      <!-- <a href="#" class="productCard_link">Купить</a> -->
                   </div>
                </div>

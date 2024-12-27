@@ -1,5 +1,3 @@
-window.onload(switchTables());
-
 function switchTables(table) {
    let usersTable = document.getElementById("users").style;
    let productsTable = document.getElementById("products").style;
