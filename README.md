@@ -6,15 +6,11 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 
 <b>TODO list:</b>
 
--  add avatar to user!!!
-
 -  fix header height
 
 -  reviews ~
 
 -  liked ~
-
--  suggestions ~
 
 -  email subscription (footer & register) ~
 
@@ -25,5 +21,3 @@ Here's my day so far; went to jail, lost the girl of my dreams, and got my butt 
 -  order
 
 -  account
-
--  history of brand and collections ~

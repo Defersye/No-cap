@@ -20,8 +20,6 @@ $(document).ready(function () {
 
    function checkLogin(email, password) {
       event.preventDefault();
-      console.log(email);
-      console.log(password);
       $.ajax({
          url: "checkLogin",
          type: "post",

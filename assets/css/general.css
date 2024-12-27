@@ -44,7 +44,8 @@ body {
 }
 a,
 button,
-input {
+input,
+textarea {
    cursor: pointer;
    background: none;
 }
@@ -52,7 +53,7 @@ input {
    color: white;
    background-color: steelblue;
    background-size: 200px 200px;
-   background-image: url(/assets//img/layout/texture.png);
+   background-image: url(/assets/img/layout/texture.png);
    transition: 0.2s ease-in-out;
 }
 #submit:hover {

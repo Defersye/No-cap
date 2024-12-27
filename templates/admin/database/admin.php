@@ -33,7 +33,9 @@ if (isset($_GET['table'])) {
          <div class="container">
             <a href="/home" class="path_text">NO CAP</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a class="path_text_active">Admin panel</a>
+            <a href="../index.php" class="path_text">Admin panel</a>
+            <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
+            <a class="path_text_active">Database</a>
          </div>
       </div>
       <section class="admin">
