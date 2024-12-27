@@ -39,7 +39,9 @@ sup {
    padding-bottom: 60px;
 }
 .suggestions_cards {
-   max-width: 1420px;
+   margin: 0 -10px;
+   width: 100vw;
+   max-width: 100%;
    display: flex;
    align-items: center;
    gap: 30px;
@@ -52,7 +54,6 @@ sup {
 }
 .suggestions_cards::-webkit-scrollbar-thumb {
    background-color: steelblue;
-   width: 5px;
 }
 
 /* collections */
@@ -62,7 +63,6 @@ sup {
 .collections_cards {
    /* margin: 50px; */
    width: 100%;
-   max-width: 1440px;
    display: grid;
    grid-template-columns: 2fr repeat(2, 1fr);
    grid-template-rows: repeat(2, 200px);

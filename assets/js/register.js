@@ -1,23 +1,3 @@
-// // hover
-// let inpt = document.querySelector("#register_avatar");
-// let btn = document.querySelector(".register_input_btn");
-
-// inpt.addEventListener("mouseover", function () {
-//    btn.classList.add("register_input_btn_hover");
-// });
-// inpt.addEventListener("mouseout", function () {
-//    btn.classList.remove("register_input_btn_hover");
-// });
-
-// // input
-// let fields = document.querySelectorAll("#register_avatar");
-// Array.prototype.forEach.call(fields, function (input) {
-//    input.addEventListener("change", function (e) {
-//       let filename = inpt.files[0].name;
-//       document.querySelector(".register_input_row").innerText = filename;
-//    });
-// });
-
 // ajax
 $(document).ready(function () {
    $("#submit").click(function () {
@@ -26,25 +6,29 @@ $(document).ready(function () {
       let email = $("#register_email").val();
       let password = $("#register_password").val();
       let confirm = $("#register_confirm").val();
-      // let avatar = $("#register_avatar").val();
+      let avatar = $("#register_avatar")[0].files[0];
+
       if (name && login && email && password && confirm) {
-         checkRegister(name, login, email, password, confirm);
+         checkRegister(name, login, email, password, confirm, avatar);
       }
    });
 
-   function checkRegister(name, login, email, password, confirm) {
+   function checkRegister(name, login, email, password, confirm, avatar) {
       event.preventDefault();
       if (password == confirm) {
+         let formData = new FormData();
+         formData.append("name", name);
+         formData.append("login", login);
+         formData.append("email", email);
+         formData.append("password", password);
+         formData.append("avatar", avatar);
+
          $.ajax({
             url: "checkRegister",
             type: "post",
-            data: {
-               name: name,
-               login: login,
-               email: email,
-               password: password,
-               // avatar: avatar,
-            },
+            data: formData,
+            processData: false,
+            contentType: false,
             success: function (response) {
                let get = response.split(" ").join("-");
                window.location.href = "/login?response=" + get;

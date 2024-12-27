@@ -47,11 +47,11 @@ class AccountView
          <section class="account">
             <div class="container">
                <h1 class="account_name"><?= $user['full_name'] ?></h1>
+               <img src="assets/img/database/avatars/<?= $user['avatar'] ?>" alt="" class="account_avatar">
                <a href="/logout" class="account_logout">Logout</a>
             </div>
          </section>
       </main>
-      <script src="/assets/js/cart.js"></script>
 <?php
    }
 }

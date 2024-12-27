@@ -46,3 +46,39 @@
    font-size: 18px;
    text-transform: uppercase;
 }
+
+/* avatar */
+.auth_avatar {
+   display: flex;
+   width: 100%;
+}
+.auth_avatar_text {
+   padding: 10px;
+   height: 45px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   float: left;
+   border-bottom: 1px solid black;
+}
+.auth_avatar_btn {
+   padding: 10px 20px;
+   height: 45px;
+   min-width: fit-content;
+   display: grid;
+   place-items: center;
+   color: white;
+   text-transform: uppercase;
+   background-color: steelblue;
+   background-size: 200px 200px;
+   background-image: url(/assets//img/layout/texture.png);
+   transition: 0.2s ease-in-out;
+}
+#register_avatar {
+   display: none;
+}
+.auth_avatar:hover .auth_avatar_btn,
+.auth_avatar:active .auth_avatar_btn {
+   background-image: none;
+}

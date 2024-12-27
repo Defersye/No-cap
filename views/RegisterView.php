@@ -27,6 +27,17 @@ class RegisterView
          include "./templates/header.php";
          $this->register();
          ?>
+         <script>
+            let text = document.querySelector('.auth_avatar_text');
+            if (text.innerHTML = "Uploaded file") {
+               text.style.color = "#757575";
+            }
+            document.getElementById('register_avatar').addEventListener('change', function() {
+               let file = this.files[0];
+               text.innerHTML = file.name;
+               text.style.color = "black";
+            });
+         </script>
          <script src="assets/js/jquery-3.3.1.min.js"></script>
          <script src="assets/js/register.js"></script>
       </body>
@@ -53,6 +64,11 @@ class RegisterView
                   <input type="email" id="register_email" class="auth_input" placeholder="email" required>
                   <input type="password" id="register_password" class="auth_input" placeholder="password" required>
                   <input type="password" id="register_confirm" class="auth_input" placeholder="confirm password" required>
+                  <label class="auth_avatar">
+                     <span class="auth_avatar_text" type="text">Uploaded file</span>
+                     <input type="file" id="register_avatar" class="auth_input" placeholder="avatar" required>
+                     <span class="auth_avatar_btn">Choose file</span>
+                  </label>
                   <p class="auth_p">By creating an account, you agree to our <a href="">Terms and Conditions</a>, <a href="">Privacy Policy</a></p>
                   <p class="auth_error">Error!</p>
                   <button class="auth_btn" type="submit" id="submit">Create account</button>

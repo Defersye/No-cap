@@ -24,14 +24,26 @@ class AuthorizationModel
       }
       return $answers;
    }
-   function register($name, $login, $email, $password)/*, $avatar*/
+   function register($name, $login, $email, $password, $avatar)
    {
       $user = $this->getUser($email);
       if ($user != "") {
          return 'This email is already in use!';
       } else {
          $md5_password = md5($password);
-         $this->conn->query("INSERT INTO users (full_name, login, email, password) VALUES ('$name', '$login', '$email', '$md5_password')");/*(avatar), '$avatar'*/
+
+         // Handle avatar upload
+         $avatar_path = '';
+         if ($avatar['name']) {;
+            $avatar_name = $avatar['name'];
+            $avatar_path = 'assets/img/database/avatars/' . $avatar_name;
+
+            if (!move_uploaded_file($avatar['tmp_name'], $avatar_path)) {
+               return 'Error uploading avatar!';
+            }
+         }
+
+         $this->conn->query("INSERT INTO users (full_name, login, email, password, avatar) VALUES ('$name', '$login', '$email', '$md5_password', '$avatar_name')");
 
          return 'Registration completed successfully!';
       }

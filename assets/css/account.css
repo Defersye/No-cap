@@ -7,6 +7,12 @@
    font-weight: 500;
    text-transform: capitalize;
 }
+.account_avatar {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   object-fit: cover;
+}
 .account_logout {
    font-weight: 400;
    padding: 15px;

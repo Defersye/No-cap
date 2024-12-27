@@ -318,12 +318,3 @@ footer .container {
    font-weight: 500;
    color: steelblue;
 }
-
-/* suggestion */
-.suggestions {
-   padding-bottom: 120px;
-}
-.suggestions_slider {
-   display: flex;
-   column-gap: 10px;
-}

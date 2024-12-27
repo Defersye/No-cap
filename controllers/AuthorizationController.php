@@ -12,8 +12,7 @@ class AuthorizationController
    public function register()
    {
       $registerModel = new \models\AuthorizationModel();
-      /*, $_POST['register_avatar']*/
-      $registerProducts = $registerModel->register($_POST['name'], $_POST['login'], $_POST['email'], $_POST['password']);
+      $registerProducts = $registerModel->register($_POST['name'], $_POST['login'], $_POST['email'], $_POST['password'], $_FILES['avatar']);
       echo $registerProducts;
    }
 
