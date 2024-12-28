@@ -7,4 +7,4 @@ $name_category = $_POST['name_category'];
 $sql = "UPDATE categories SET name_category = '$name_category' WHERE id_category = $id_category";
 $result = $conn->query($sql);
 
-header('Location: ../admin.php?table=categories');
+header('Location: ../../admin_index.php?table=categories');

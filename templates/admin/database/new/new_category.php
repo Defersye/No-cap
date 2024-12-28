@@ -27,7 +27,7 @@
          <div class="container">
             <a href="/home" class="path_text">NO CAP</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a href="../admin.php?table=categories" class="path_text">Admin panel</a>
+            <a href="../../admin_index.php?table=categories" class="path_text">Admin panel</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
             <a class="path_text_active">New category</a>
          </div>
@@ -52,7 +52,6 @@
          </p>
       </div>
    </footer>
-   <script src="admin.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,17 @@ if ($result->num_rows) {
    while ($row = $result->fetch_assoc()) {
       $answers[] = $row;
    }
-} ?>
+}
+
+$result = $conn->query("SELECT * FROM categories");
+while ($row = $result->fetch_assoc()) {
+   $categories[] = $row;
+}
+$result = $conn->query("SELECT * FROM collections");
+while ($row = $result->fetch_assoc()) {
+   $collections[] = $row;
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -39,7 +49,7 @@ if ($result->num_rows) {
          <div class="container">
             <a href="/home" class="path_text">NO CAP</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
-            <a href="../admin.php?table=products" class="path_text">Admin panel</a>
+            <a href="../../admin_index.php?table=products" class="path_text">Admin panel</a>
             <p class="path_text">&nbsp;<img src="/assets/img/layout/path_arrow.png" alt="" class="path_arrow">&nbsp;</p>
             <a class="path_text_active">Edit product</a>
          </div>
@@ -51,14 +61,22 @@ if ($result->num_rows) {
                <?
                foreach ($answers as $item) {
                ?>
-                  <input type="text" name="name" value="<?= $item['name'] ?>" class="form_input" required><br>
-                  <input type="text" name="description" value="<?= $item['description'] ?>" class="form_input" required><br>
-                  <input type="number" name="price" value="<?= $item['price'] ?>" class="form_input" required pattern="[0-9]*" min="1"><br>
-                  <input type="number" name="discount" value="<?= $item['discount'] ?>" class="form_input" required pattern="[0-9]*" min="0"><br>
-                  <input type="number" name="category_id" value="<?= $item['category_id'] ?>" class="form_input" required><br>
-                  <input type="number" name="collection_id" value="<?= $item['collection_id'] ?>" class="form_input" required><br>
-                  <input type="text" name="first_img" value="<?= $item['first_img'] ?>" class="form_input" required><br>
-                  <input type="text" name="second_img" value="<?= $item['second_img'] ?>" class="form_input" required><br>
+                  <input type="text" name="name" value="<?= $item['name'] ?>" class="form_input" required>
+                  <input type="text" name="description" value="<?= $item['description'] ?>" class="form_input" required>
+                  <input type="number" name="price" value="<?= $item['price'] ?>" class="form_input" required pattern="[0-9]*" min="1">
+                  <input type="number" name="discount" value="<?= $item['discount'] ?>" class="form_input" required pattern="[0-9]*" min="0">
+                  <select name="category_id" class="form_input" required>
+                     <?php foreach ($categories as $category) { ?>
+                        <option value="<?= $category['id_category'] ?>" <?= $item['category_id'] == $category['id_category'] ? 'selected' : '' ?>><?= $category['name_category'] ?></option>
+                     <?php } ?>
+                  </select>
+                  <select name="collection_id" class="form_input" required>
+                     <?php foreach ($collections as $collection) { ?>
+                        <option value="<?= $collection['id_collection'] ?>" <?= $item['collection_id'] == $collection['id_collection'] ? 'selected' : '' ?>><?= $collection['name_collection'] ?></option>
+                     <?php } ?>
+                  </select>
+                  <input type="text" name="first_img" value="<?= $item['first_img'] ?>" class="form_input" required>
+                  <input type="text" name="second_img" value="<?= $item['second_img'] ?>" class="form_input" required>
                <?
                } ?>
                <button type="submit" class="form_btn" id="submit">Edit</button>
@@ -75,7 +93,6 @@ if ($result->num_rows) {
          </p>
       </div>
    </footer>
-   <script src="admin.js"></script>
 </body>
 
 </html>

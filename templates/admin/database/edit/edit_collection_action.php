@@ -7,4 +7,4 @@ $name_collection = $_POST['name_collection'];
 $sql = "UPDATE collections SET name_collection = '$name_collection' WHERE id_collection = $id_collection";
 $result = $conn->query($sql);
 
-header('Location: ../admin.php?table=collections');
+header('Location: ../../admin_index.php?table=collections');

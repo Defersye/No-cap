@@ -7,7 +7,7 @@
    height: 300px;
    border-radius: 50%;
    object-fit: cover;
-   border: 1px solid #000;
+   border: 2px solid #000;
 }
 .account_name {
    margin-top: 10px;

@@ -225,11 +225,14 @@ footer .container {
    padding: 40px 0;
 }
 .path .container {
+   /* min-width: fit-content; */
    flex-direction: row;
    justify-content: start;
 }
-.path_text {
+.path_text,
+.path_text_active {
    font-weight: 400;
+   text-wrap: nowrap;
    opacity: 0.5;
 }
 .path_arrow {
@@ -238,7 +241,6 @@ footer .container {
    object-fit: contain;
 }
 .path_text_active {
-   font-weight: 400;
    opacity: 1;
 }
 

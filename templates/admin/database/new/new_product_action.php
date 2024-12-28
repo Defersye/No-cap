@@ -15,4 +15,4 @@ $sql = "INSERT INTO products
             VALUES (NULL, '$name', '$description', $price, $discount, $category_id, $collection_id, '$first_img', '$second_img')";
 $result = $conn->query($sql);
 
-header('Location: ../admin.php?table=products');
+header('Location: ../../admin_index.php?table=products');

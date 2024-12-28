@@ -19,8 +19,8 @@ discount = $discount,
 category_id = $category_id, 
 collection_id = $collection_id, 
 first_img = '$first_img', 
-second_img = '$second_img' 
+second_img = '$second_img'
 WHERE id_product = $id_product";
 $result = $conn->query($sql);
 
-header('Location: ../admin.php?table=products');
+header('Location: ../../admin_index.php?table=products');

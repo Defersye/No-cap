@@ -31,6 +31,9 @@
    display: none;
    color: #ba576f;
 }
+.auth_error a {
+   font-weight: 500;
+}
 .auth_p {
    margin-top: -10px;
    width: fit-content;

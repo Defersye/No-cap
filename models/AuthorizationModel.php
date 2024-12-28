@@ -65,7 +65,7 @@ class AuthorizationModel
             $_SESSION['user_login'] = $user['login'];
             return 'Okay!';
          } else {
-            return 'Incorrect password!';
+            return 'Incorrect password! Forgot it? <a href="/forgot">Reset password</a>';
          }
       } else {
          return 'Incorrect email or password!';

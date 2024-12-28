@@ -59,21 +59,24 @@ function switchTables(table) {
 
 function deleteConfirmUser(id) {
    if (confirm("Вы уверены, что хотите удалить запись?")) {
-      window.location.href = "delete/delete_user.php?id_user=" + id;
+      window.location.href = "database/delete/delete_user.php?id_user=" + id;
    }
 }
 function deleteConfirmProduct(id) {
    if (confirm("Вы уверены, что хотите удалить запись?")) {
-      window.location.href = "delete/delete_product.php?id_product=" + id;
+      window.location.href =
+         "database/delete/delete_product.php?id_product=" + id;
    }
 }
 function deleteConfirmCategory(id) {
    if (confirm("Вы уверены, что хотите удалить запись?")) {
-      window.location.href = "delete/delete_category.php?id_category=" + id;
+      window.location.href =
+         "database/delete/delete_category.php?id_category=" + id;
    }
 }
 function deleteConfirmCollection(id) {
    if (confirm("Вы уверены, что хотите удалить запись?")) {
-      window.location.href = "delete/delete_collection.php?id_collection=" + id;
+      window.location.href =
+         "database/delete/delete_collection.php?id_collection=" + id;
    }
 }

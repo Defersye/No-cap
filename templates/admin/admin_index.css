@@ -1,0 +1,41 @@
+.admin .container {
+   display: grid;
+   align-items: start;
+   grid-template-columns: 300px 1fr;
+   grid-template-areas: "aside article";
+   gap: 20px;
+}
+/* nav */
+aside {
+   margin-bottom: 20px;
+   width: 100%;
+   padding: 10px;
+   box-shadow: 10px 8px 10px -10px #0003;
+}
+.admin_nav_title {
+   padding-top: 10px;
+   text-align: center;
+   font-size: 20px;
+   font-weight: 500;
+}
+.admin_nav_line {
+   margin-top: 20px;
+   margin-bottom: 10px;
+   height: 1px;
+   width: 100%;
+   background-color: #000;
+}
+.admin_nav_link li {
+   padding: 15px;
+   border-left: 5px solid white;
+}
+.admin_nav_link li:hover {
+   border-color: steelblue;
+   font-weight: 500;
+}
+.admin_nav_link.active li {
+   font-weight: 500;
+   color: steelblue;
+   background-color: #d6ecff;
+   border-color: steelblue;
+}

@@ -20,7 +20,7 @@ NO CAP is an e-commerce platform specializing in street casual style clothing. T
 
 -  order
 
--  account
+-  account customization
 
 ## Features
 

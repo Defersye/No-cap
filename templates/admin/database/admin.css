@@ -30,14 +30,19 @@
 }
 
 /* table */
-div:has(table) {
+.table_container {
    width: 100%;
-   display: grid;
-   place-items: center;
+   max-width: calc(100vw - 340px - (100vw - 1440px));
+   overflow-x: auto;
 }
 table {
-   border-collapse: separate;
    margin: 0 auto;
+   width: 100%;
+   max-width: fit-content;
+   display: block;
+   overflow-x: auto;
+   white-space: nowrap;
+   border-collapse: separate;
 }
 th {
    background-color: #eee;
@@ -49,11 +54,9 @@ tr {
 }
 td {
    padding: 10px;
-   text-align: center;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
    max-width: 300px;
+   text-align: center;
+   overflow: auto;
 }
 td:has(button),
 td:has(a) {
@@ -116,12 +119,18 @@ button {
    display: flex;
    flex-direction: column;
    align-items: center;
-   row-gap: 5px;
+   row-gap: 25px;
 }
 .form_input {
-   height: 45px;
    padding: 10px;
+   height: 45px;
    width: 100%;
+   border-bottom: 1px solid black;
+}
+select.form_input {
+   padding: 5px;
+   position: relative;
+   border: 1px solid white;
    border-bottom: 1px solid black;
 }
 .form_btn {

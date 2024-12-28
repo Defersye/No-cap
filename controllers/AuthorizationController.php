@@ -29,7 +29,7 @@ class AuthorizationController
    public function login()
    {
       if ($_POST['email'] == "admin" && $_POST['password'] == "admin") {
-         echo '<a href="/templates/admin/index.php">To admin panel</a>';
+         echo '<a href="/templates/admin/admin_index.php">Click to go to admin panel</a>';
       } else {
          $loginModel = new \models\AuthorizationModel();
          $loginProducts = $loginModel->login($_POST['email'], $_POST['password']);
@@ -40,6 +40,6 @@ class AuthorizationController
    {
       unset($_SESSION['user_id']);
       unset($_SESSION['user_login']);
-      header('Location: /home');
+      header('Location: /login');
    }
 }
