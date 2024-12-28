@@ -57,7 +57,7 @@ while ($row = $result->fetch_assoc()) {
       <section class="auth">
          <div class="container">
             <h2 class="form_title">Edit product</h2>
-            <form action="edit_product_action.php?id_product=<?= $id_product ?>" method="post" class="form">
+            <form action="edit_product_action.php?id_product=<?= $id_product ?>" method="post" class="form" enctype="multipart/form-data">
                <?
                foreach ($answers as $item) {
                ?>
@@ -75,8 +75,16 @@ while ($row = $result->fetch_assoc()) {
                         <option value="<?= $collection['id_collection'] ?>" <?= $item['collection_id'] == $collection['id_collection'] ? 'selected' : '' ?>><?= $collection['name_collection'] ?></option>
                      <?php } ?>
                   </select>
-                  <input type="text" name="first_img" value="<?= $item['first_img'] ?>" class="form_input" required>
-                  <input type="text" name="second_img" value="<?= $item['second_img'] ?>" class="form_input" required>
+                  <label class="auth_img">
+                     <span id="register_img_1_text" class="auth_img_text" type="text">first image</span>
+                     <input type="file" id="register_img_1" name="product_img[]" class="auth_input" required>
+                     <span class="auth_img_btn">Choose file</span>
+                  </label>
+                  <label class="auth_img">
+                     <span id="register_img_2_text" class="auth_img_text" type="text">second image</span>
+                     <input type="file" id="register_img_2" name="product_img[]" class="auth_input" required>
+                     <span class="auth_img_btn">Choose file</span>
+                  </label>
                <?
                } ?>
                <button type="submit" class="form_btn" id="submit">Edit</button>
@@ -93,6 +101,22 @@ while ($row = $result->fetch_assoc()) {
          </p>
       </div>
    </footer>
+   <script>
+      // img
+      let text1 = document.getElementById('register_img_1_text');
+      text1.innerHTML = "<?= $item['first_img'] ?>";
+      document.getElementById('register_img_1').addEventListener('change', function() {
+         let file = this.files[0];
+         text1.innerHTML = file.name;
+      });
+
+      let text2 = document.getElementById('register_img_2_text');
+      text2.innerHTML = "<?= $item['second_img'] ?>";
+      document.getElementById('register_img_2').addEventListener('change', function() {
+         let file = this.files[0];
+         text2.innerHTML = file.name;
+      });
+   </script>
 </body>
 
 </html>

@@ -139,3 +139,40 @@ select.form_input {
    font-size: 18px;
    text-transform: uppercase;
 }
+
+/* img */
+.auth_img {
+   display: flex;
+   width: 100%;
+}
+.auth_img_text {
+   padding: 10px;
+   height: 45px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   float: left;
+   border-bottom: 1px solid black;
+}
+.auth_img_btn {
+   padding: 10px 20px;
+   height: 45px;
+   min-width: fit-content;
+   display: grid;
+   place-items: center;
+   color: white;
+   text-transform: uppercase;
+   background-color: steelblue;
+   background-size: 200px 200px;
+   background-image: url(/assets//img/layout/texture.png);
+   transition: 0.2s ease-in-out;
+}
+#register_img_1,
+#register_img_2 {
+   display: none;
+}
+.auth_img:hover .auth_img_btn,
+.auth_img:active .auth_img_btn {
+   background-image: none;
+}

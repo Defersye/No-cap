@@ -48,11 +48,11 @@ while ($row = $result->fetch_assoc()) {
       <section class="auth">
          <div class="container">
             <h2 class="form_title">New product</h2>
-            <form action="new_product_action.php" method="post" class="form">
+            <form action="new_product_action.php" method="post" class="form" enctype="multipart/form-data">
                <input type="text" name="name" placeholder="name" class="form_input" required>
                <input type="text" name="description" placeholder="description" class="form_input" required>
                <input type="number" name="price" placeholder="price" class="form_input" required pattern="[0-9]*" min="1">
-               <input type="number" name="discount" placeholder="discount" class="form_input" required pattern="[0-9]*" min="0">
+               <input type="number" name="discount" placeholder="discount" class="form_input" required pattern="[0-9]*" min="0" value="0">
                <select name="category_id" class="form_input" required>
                   <option value="" disabled selected>category</option>
                   <?php foreach ($categories as $category) { ?>
@@ -65,8 +65,16 @@ while ($row = $result->fetch_assoc()) {
                      <option value="<?= $collection['id_collection'] ?>"><?= $collection['name_collection'] ?></option>
                   <?php } ?>
                </select>
-               <input type="text" name="first_img" placeholder="first image name" class="form_input" required>
-               <input type="text" name="second_img" placeholder="second image name" class="form_input" required>
+               <label class="auth_img">
+                  <span id="register_img_1_text" class="auth_img_text" type="text">first image</span>
+                  <input type="file" id="register_img_1" name="product_img[]" class="auth_input" required>
+                  <span class="auth_img_btn">Choose file</span>
+               </label>
+               <label class="auth_img">
+                  <span id="register_img_2_text" class="auth_img_text" type="text">second image</span>
+                  <input type="file" id="register_img_2" name="product_img[]" class="auth_input" required>
+                  <span class="auth_img_btn">Choose file</span>
+               </label>
                <button type="submit" class="form_btn" id="submit">Create</button>
             </form>
          </div>
@@ -82,6 +90,7 @@ while ($row = $result->fetch_assoc()) {
       </div>
    </footer>
    <script>
+      // select
       let categorySelect = document.querySelector('select[name="category_id"]');
       categorySelect.style.color = "#757575";
       categorySelect.addEventListener('change', function() {
@@ -91,6 +100,34 @@ while ($row = $result->fetch_assoc()) {
       collectionSelect.style.color = "#757575";
       collectionSelect.addEventListener('change', function() {
          collectionSelect.style.color = "black";
+      });
+
+      // img
+      let text1 = document.getElementById('register_img_1_text');
+      if (text1.innerHTML = "first image") {
+         text1.style.color = "#757575";
+      }
+      document.getElementById('register_img_1').addEventListener('change', function() {
+         let file = this.files[0];
+         text1.innerHTML = file.name;
+         text1.style.color = "black";
+      });
+
+      let text2 = document.getElementById('register_img_2_text');
+      if (text2.innerHTML = "second image") {
+         text2.style.color = "#757575";
+      }
+      document.getElementById('register_img_2').addEventListener('change', function() {
+         let file = this.files[0];
+         text2.innerHTML = file.name;
+         text2.style.color = "black";
+      });
+
+      // required
+      document.getElementById('submit').addEventListener('click', function() {
+         if (text1.innerHTML == "first image" || text2.innerHTML == "second image") {
+            alert("Please select an images");
+         }
       });
    </script>
 </body>

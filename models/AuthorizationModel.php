@@ -33,7 +33,6 @@ class AuthorizationModel
          $md5_password = md5($password);
 
          // Handle avatar upload
-         $avatar_path = '';
          if (isset($avatar['name'])) {;
             $avatar_name = $avatar['name'];
             $avatar_path = 'assets/img/database/avatars/' . $avatar_name;

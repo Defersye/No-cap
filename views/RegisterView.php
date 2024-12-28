@@ -66,7 +66,7 @@ class RegisterView
                   <input type="password" id="register_confirm" class="auth_input" placeholder="confirm password" required>
                   <label class="auth_avatar">
                      <span class="auth_avatar_text" type="text">uploaded file name</span>
-                     <input type="file" id="register_avatar" class="auth_input" placeholder="avatar">
+                     <input type="file" id="register_avatar" class="auth_input">
                      <span class="auth_avatar_btn">Choose file</span>
                   </label>
                   <p class="auth_p">By creating an account, you agree to our <a href="">Terms and Conditions</a>, <a href="">Privacy Policy</a></p>
