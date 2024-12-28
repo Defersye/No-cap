@@ -29,7 +29,7 @@ class RegisterView
          ?>
          <script>
             let text = document.querySelector('.auth_avatar_text');
-            if (text.innerHTML = "Uploaded file") {
+            if (text.innerHTML = "uploaded file name") {
                text.style.color = "#757575";
             }
             document.getElementById('register_avatar').addEventListener('change', function() {
@@ -61,12 +61,12 @@ class RegisterView
                <form class="auth_form" method="post">
                   <input type="text" id="register_name" class="auth_input" placeholder="full name" required>
                   <input type="text" id="register_login" class="auth_input" placeholder="login" required>
-                  <input type="email" id="register_email" class="auth_input" placeholder="email" required>
+                  <input type="email" id="register_email" class="auth_input" placeholder="email@mail.com" required pattern="^\S+@\S+\.\S+$">
                   <input type="password" id="register_password" class="auth_input" placeholder="password" required>
                   <input type="password" id="register_confirm" class="auth_input" placeholder="confirm password" required>
                   <label class="auth_avatar">
-                     <span class="auth_avatar_text" type="text">Uploaded file</span>
-                     <input type="file" id="register_avatar" class="auth_input" placeholder="avatar" required>
+                     <span class="auth_avatar_text" type="text">uploaded file name</span>
+                     <input type="file" id="register_avatar" class="auth_input" placeholder="avatar">
                      <span class="auth_avatar_btn">Choose file</span>
                   </label>
                   <p class="auth_p">By creating an account, you agree to our <a href="">Terms and Conditions</a>, <a href="">Privacy Policy</a></p>

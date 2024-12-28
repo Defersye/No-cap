@@ -7,6 +7,7 @@ class Router
 
    function __construct()
    {
+      // pages
       $this->addRoute('home', 'HomeController@index');
       $this->addRoute('catalog', 'CatalogController@index');
       $this->addRoute('productCard', 'ProductCardController@index');
@@ -31,6 +32,9 @@ class Router
       $this->addRoute('addToCart', 'CartController@addToCart');
       $this->addRoute('refreshQuantity', 'CartController@refreshQuantity');
       $this->addRoute('changeQuantity', 'CartController@changeQuantity');
+
+      // subscribtion
+      $this->addRoute('subscribe', 'SubscriptionController@index');
    }
 
    private $routes = [];

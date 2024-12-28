@@ -34,16 +34,19 @@ class AuthorizationModel
 
          // Handle avatar upload
          $avatar_path = '';
-         if ($avatar['name']) {;
+         if (isset($avatar['name'])) {;
             $avatar_name = $avatar['name'];
             $avatar_path = 'assets/img/database/avatars/' . $avatar_name;
 
             if (!move_uploaded_file($avatar['tmp_name'], $avatar_path)) {
                return 'Error uploading avatar!';
             }
+         } else {
+            $avatar_name = 'default_avatar.png';
          }
 
          $this->conn->query("INSERT INTO users (full_name, login, email, password, avatar) VALUES ('$name', '$login', '$email', '$md5_password', '$avatar_name')");
+         $this->conn->query("INSERT IGNORE INTO subscription (email) VALUES ('$email')");
 
          return 'Registration completed successfully!';
       }

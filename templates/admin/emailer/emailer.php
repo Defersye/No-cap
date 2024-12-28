@@ -119,6 +119,15 @@ require 'php-mailer/SMTP.php';
 					header("Refresh: 0; URL=http://" . $ret_uri . "?messent");
 					exit;
 				}
+
+				if ($emailer_mails === "ALL_SUBSCRIBERS") {
+					$result = $conn->query("SELECT email FROM subscribtion");
+					$emails = [];
+					while ($row = $result->fetch_assoc()) {
+						$emails[] = $row['email'];
+					}
+					$emailer_mails = implode(",", $emails);
+				}
 				?>
 			</div>
 		</section>

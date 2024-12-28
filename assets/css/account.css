@@ -2,16 +2,18 @@
    padding-top: 40px;
    padding-bottom: 120px;
 }
-.account_name {
-   font-size: 32px;
-   font-weight: 500;
-   text-transform: capitalize;
-}
 .account_avatar {
    width: 300px;
    height: 300px;
    border-radius: 50%;
    object-fit: cover;
+   border: 1px solid #000;
+}
+.account_name {
+   margin-top: 10px;
+   font-size: 32px;
+   font-weight: 500;
+   text-transform: capitalize;
 }
 .account_logout {
    font-weight: 400;
