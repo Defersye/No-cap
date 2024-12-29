@@ -189,7 +189,8 @@ footer .container {
    row-gap: 40px;
 }
 .footer_subscribe {
-   width: 600px;
+   width: 100%;
+   max-width: 600px;
    border-bottom: #000 solid 1px;
    display: flex;
    justify-content: space-between;
@@ -208,8 +209,14 @@ footer .container {
 .footer_links {
    display: flex;
    align-items: center;
-   column-gap: 30px;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
    text-transform: uppercase;
+}
+.footer_link {
+   text-wrap: nowrap;
+   width: fit-content;
 }
 .footer_link:hover {
    color: steelblue;

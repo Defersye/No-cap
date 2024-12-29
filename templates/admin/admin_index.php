@@ -43,7 +43,7 @@ $current_tab = isset($_GET['tab']) ? $_GET['tab'] : 'database';
                   <a href="?tab=database" class="admin_nav_link <?= $current_tab == 'database' ? 'active' : ''; ?>">
                      <li>Database</li>
                   </a>
-                  <a href="?tab=emailer" class="admin_nav_link <?php echo $current_tab == 'emailer' ? 'active' : ''; ?>">
+                  <a href="?tab=emailer" class="admin_nav_link <?= $current_tab == 'emailer' ? 'active' : ''; ?>">
                      <li>Emailer</li>
                   </a>
                </ul>

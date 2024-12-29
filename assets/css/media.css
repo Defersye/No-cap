@@ -100,6 +100,15 @@
       max-width: 95vw;
    }
 
+   /* productCard */
+   .productCard .container {
+      grid-template-columns: 1fr;
+   }
+   .productCard img {
+      width: 100%;
+      max-width: none;
+   }
+
    /* admin */
    .admin .container {
       display: grid;

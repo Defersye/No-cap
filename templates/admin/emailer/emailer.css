@@ -1,3 +1,9 @@
+.emailer_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 /* form */
 form {
    width: 500px;
@@ -12,30 +18,45 @@ select,
 #submit {
    padding: 10px;
    width: 100%;
-   border: 1px solid #000;
+   border: 1px solid #ddd;
+   border-bottom: 1px solid #000;
 }
 
 textarea {
    height: 200px;
 }
 
-.red {
-   color: brown;
+.emailer_span {
+   font-weight: 500;
+   color: steelblue;
 }
 
 /* log */
-b {
-   display: block;
+.report {
+   text-align: center;
+}
+.report p {
+   margin-bottom: 20px;
+   display: flex;
 }
 
+.report_title {
+   font-weight: 500;
+}
 ol {
    margin: 10px 0;
-   width: 300px;
-   display: block;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.report li {
+   padding: 5px 0;
+   width: fit-content;
+   list-style-type: decimal;
 }
 .green {
-   color: green;
+   color: steelblue;
 }
 .red {
-   color: red;
+   color: brown;
 }

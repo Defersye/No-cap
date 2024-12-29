@@ -2,6 +2,9 @@ $(document).ready(function () {
    $(".footer_subscribe").on("submit", function (e) {
       e.preventDefault();
       let email = $("#email").val();
+      if (!confirm("Are you sure this is your email? " + email)) {
+         return;
+      }
 
       $.ajax({
          url: "/subscribe",

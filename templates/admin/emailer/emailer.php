@@ -9,14 +9,32 @@ require 'php-mailer/SMTP.php';
 
 // Если массив POST не пустой, отправка состоялась
 if (!empty($_POST) && !isset($sent)) {
+	// Инициализируем переменную для отчета
+	$report = '';
 
 	$emailer_subj = $_POST['subj'];
-	$emailer_mails = $_POST['mails'];
 	$emailer_text = $_POST['text'];
-	$emailer_yourmail = $_POST['yourmail'];
 
+	// Get emails from database
+	$emailer_mails = $_POST['mails'];
+	switch ($emailer_mails) {
+		case 'ALL_SUBSCRIBERS':
+			$stmt = "SELECT email FROM subscription";
+			break;
+		case 'ALL_USERS':
+			$stmt = "SELECT email FROM users";
+			break;
+		case 'ALL_USERS_AND_SUBSCRIBERS':
+			$stmt = "SELECT email FROM users UNION SELECT email FROM subscription";
+			break;
+	}
+	$conn = new mysqli("localhost", "root", "", "no-cap");
+	$result = mysqli_query($conn, $stmt);
+	$emails = [];
+	while ($row = $result->fetch_assoc()) {
+		$emails[] = $row['email'];
+	}
 
-	$emails = explode(",", $emailer_mails);
 	$count_emails = count($emails);
 
 	for ($i = 0; $i <= $count_emails - 1; $i++) {
@@ -28,68 +46,69 @@ if (!empty($_POST) && !isset($sent)) {
 
 		$mail = new PHPMailer(true);
 		try {
+			$data = json_decode(file_get_contents(__DIR__ . "/data.json"), true);
+			if (!$data) {
+				throw new Exception("Could not load mail configuration");
+			}
+
 			$mail->isSMTP();
 			$mail->Host = 'smtp.gmail.com';
 			$mail->SMTPAuth = true;
-			$mail->Username = 'danilobycnov@gmail.com';
-			$mail->Password = 'qlwh goea yjzz neat';
+			$mail->Username = $data['Username'];
+			$mail->Password = $data['Password'];
 			$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 			$mail->Port = 587;
 
-			$mail->setFrom('danilobycnov@gmail.com');
+			$mail->setFrom($data['Username'], 'No-Cap');
 			$mail->addAddress($emails[$i]);
 			$mail->Subject = $emailer_subj;
 			$mail->Body = $emailer_text;
 
 			$mail->send();
-			$report .= "<li class='green'>Отправлено: " . $emails[$i] . "</li>";
+			$report .= "<li class='green'>Sent: " . htmlspecialchars($emails[$i]) . "</li>";
 		} catch (Exception $e) {
-			$report .= "<li class='red'>Не отправлено: " . $emails[$i] . " <span>{$mail->ErrorInfo}</span></li>";
+			$report .= "<li class='red'>Not sent: " . htmlspecialchars($emails[$i]) . " <span>" . htmlspecialchars($mail->ErrorInfo) . "</span></li>";
 		}
 	}
 
-	// Запись отчёта в файл
-	$log = fopen("log.txt", "w");
-	fwrite($log, $report);
-	fclose($log);
-	// Переменная $sent – признак успешной отправки
-	$sent = 1;
+	// Перемещаем запись лога после всех отправок
+	if ($report) {
+		file_put_contents("log.txt", $report);
+	}
+
+	$ret_uri = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	header("Refresh: 0; URL=http://" . $ret_uri . "&messent");
+	exit;
 }
 
 // Если $sent не существует, выводим форму или отчёт
 if (!isset($sent)) {
 	if (isset($_GET['messent'])) { ?>
-		<b>Всё окей. Сообщение отправлено. <a href="emailer.php">Ещё?</a>
-			<br>
-			<br>
-			<u>Отчёт:</u>
-		</b>
-		<ol><?= file_get_contents("log.txt") ?></ol>
-		<ol><?= $report ?></ol>
+		<div class="emailer_container report">
+			<p>Everything is fine. The message has been sent.&nbsp;<a href="?tab=emailer" class="emailer_span"> Wanna send again?</a></p>
+			<div class="report_container">
+				<h6 class="report_title">Report:</h6>
+				<ol><?= file_get_contents("log.txt") ?></ol>
+			</div>
+		</div>
 	<?
 	} else { ?>
-		<form method="post">
-			<p class="red"><?= isset($mail_msg) ? $mail_msg : '' ?></p>
-			<input type="text" name="subj" id="subj" placeholder="По какому поводу пишем?" required>
-			<textarea name="mails" id="mails" placeholder="Кто получатели?" required></textarea>
-			<textarea name="text" id="text" placeholder="Что пишем?" required></textarea>
-			<input type="text" name="yourmail" id="yourmail" value="danilobycnov@gmail.com" required>
-			<button type="submit" id="submit">Отправить</button>
-		</form>
+		<div class="emailer_container">
+			<form method="post">
+				<p class="red"><?= isset($mail_msg) ? $mail_msg : '' ?></p>
+				<label for="subj">Theme:</label>
+				<input type="text" name="subj" id="subj" placeholder="What's the reason?" required>
+				<label for="mails">To:</label>
+				<select name="mails" id="mails" required>
+					<option value="ALL_USERS">All users</option>
+					<option value="ALL_SUBSCRIBERS">All subscribers</option>
+					<option value="ALL_USERS_AND_SUBSCRIBERS">All users and subscribers</option>
+				</select>
+				<label for="text">Message:</label>
+				<textarea name="text" id="text" placeholder="What's the message?" required></textarea>
+				<p>From: No-Cap <span class="emailer_span">danilobycnov@gmail.com</span></p>
+				<button type="submit" id="submit">Send</button>
+			</form>
+		</div>
 <?	}
-} else {
-	// А если $sent существует посылаем в заголовке редирект (303 Refresh) на этот же адрес с дополнительным параметром messent
-	$ret_uri = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-	header("Refresh: 0; URL=http://" . $ret_uri . "?messent");
-	exit;
 }
-
-if ($emailer_mails === "ALL_SUBSCRIBERS") {
-	$result = $conn->query("SELECT email FROM subscribtion");
-	$emails = [];
-	while ($row = $result->fetch_assoc()) {
-		$emails[] = $row['email'];
-	}
-	$emailer_mails = implode(",", $emails);
-}
-?>

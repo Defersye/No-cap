@@ -3,17 +3,22 @@
    padding-bottom: 120px;
 }
 .productCard .container {
-   flex-direction: row;
-   justify-content: center;
+   display: grid;
+   width: fit-content;
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
    gap: 20px;
 }
 .productCard img {
-   width: 560px;
-   height: 700px;
+   width: 50vw;
+   max-width: 560px;
+   height: auto;
    object-fit: cover;
 }
 
 .productCard_info {
+   width: 100%;
+   max-width: 600px;
    display: flex;
    flex-direction: column;
    row-gap: 10px;
@@ -75,14 +80,10 @@
 }
 .productCard_description {
    line-height: 1.5;
-   max-width: 600px;
-   width: 100%;
 }
 .productCard_btns {
    margin-top: 20px;
    display: flex;
-   max-width: 600px;
-   width: 100%;
 }
 .productCard_link {
    padding: 15px;
