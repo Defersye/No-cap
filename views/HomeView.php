@@ -70,7 +70,7 @@ class HomeView
                   $counter = 0;
                   foreach ($collections as $item) {
                      if ($counter == 0) { ?>
-                        <a href="/catalog?collection=<?= $item['name_collection'] ?>" class="collections_item" style=" grid-area: 1 / 1 / 3 / 2;">
+                        <a href="/catalog?collection=<?= $item['name_collection'] ?>" class="collections_item">
                            <img src="/assets/img/layout/<?= $item['name_collection'] ?>.png" alt="">
                            <p><?= $item['name_collection'] ?></p>
                         </a>

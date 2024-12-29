@@ -61,7 +61,6 @@ sup {
    padding-bottom: 120px;
 }
 .collections_cards {
-   /* margin: 50px; */
    width: 100%;
    display: grid;
    grid-template-columns: 2fr repeat(2, 1fr);
@@ -76,6 +75,9 @@ sup {
    justify-content: center;
    background-color: black;
    overflow: hidden;
+}
+.collections_item:nth-child(1) {
+   grid-area: 1 / 1 / 3 / 2;
 }
 .collections_item img {
    min-width: 105%;
@@ -168,6 +170,7 @@ sup {
 .last_logo {
    margin: 120px 0;
    font-size: 140px;
+   text-align: center;
    font-family: "intro";
    text-transform: uppercase;
    filter: drop-shadow(0 0 3px black) drop-shadow(0 0 6px black)
@@ -178,6 +181,8 @@ sup {
    width: 100%;
    display: flex;
    justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 40px;
 }
 .last_offer {
    text-align: center;

@@ -1,5 +1,7 @@
 <div align="center">
+
 # NO CAP - Online Store for Style Lovers
+
 </div>
 NO CAP is my first, most loved website. It's made for diploma work in college.
 
@@ -112,6 +114,7 @@ For business inquiries and collaborations, feel free to reach out via Telegram o
 ---
 
 <div align="center">
+
 _"Style that speaks for itself!"_
 
 Copyright © 2024 NO CAP | defersye
