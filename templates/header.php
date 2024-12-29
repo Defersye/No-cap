@@ -1,3 +1,5 @@
+<script src="assets/js/header.js" defer></script>
+<script src="assets/js/search.js" defer></script>
 <header>
    <div class="container">
       <div class="left">
@@ -33,7 +35,10 @@
    <!-- <a href="/liked" class="header_link">liked</a> -->
    <? if (isset($_SESSION['user_login'])) { ?>
       <a href="/account" class="header_link"><?= $_SESSION['user_login'] ?></a>
-      <a href="/cart" class="header_link">cart</a>
+      <div class="header_cart">
+         <a href="/cart" class="header_link">cart</a>
+         <span class="header_cart-quantity"><?= $_SESSION['quantityChecker'] ?></span>
+      </div>
    <? } else { ?>
       <a href="/login" class="header_link">account</a>
    <? } ?>

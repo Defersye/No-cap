@@ -53,10 +53,11 @@ class CartView
                } else { ?>
                   <div class="cart_cards">
                      <div class="cart_header">
-                        <b class="cart_title cart_title_product">Product</b>
+                        <b class="cart_title info">Product</b>
                         <b class="cart_title">Price</b>
                         <b class="cart_title">Quantity</b>
                         <b class="cart_title">Total</b>
+                        <b class="info">Info</b>
                      </div>
                      <?php
                      global $subtotal, $discount, $total;

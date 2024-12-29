@@ -1,5 +1,4 @@
 .account {
-   padding-top: 40px;
    padding-bottom: 120px;
 }
 .account_avatar {
@@ -10,6 +9,7 @@
    border: 2px solid #000;
 }
 .account_name {
+   text-align: center;
    margin-top: 10px;
    font-size: 32px;
    font-weight: 500;

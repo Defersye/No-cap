@@ -102,9 +102,17 @@ header .container {
 .header_link:hover::placeholder {
    color: steelblue;
 }
+.header_cart {
+   width: fit-content;
+   display: flex;
+}
+.header_cart .header_cart-quantity {
+   margin-left: 3px;
+   margin-top: 3px;
+}
 .header_cart-quantity {
    margin-left: -18px;
-   width: 20px;
+   min-width: 20px;
    height: 20px;
    display: flex;
    align-items: center;
@@ -191,20 +199,20 @@ footer .container {
 .footer_subscribe {
    width: 100%;
    max-width: 600px;
-   border-bottom: #000 solid 1px;
    display: flex;
    justify-content: space-between;
 }
 .footer_subscribe input {
    padding: 10px;
+   border-bottom: #000 solid 1px;
 }
 .footer_subscribe #email {
    width: 100%;
    outline: none;
 }
 .footer_subscribe #submit {
+   padding: 15px 25px;
    cursor: pointer;
-   padding: 0 25px;
 }
 .footer_links {
    display: flex;

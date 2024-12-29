@@ -1,10 +1,15 @@
+<div align="center">
 # NO CAP - Online Store for Style Lovers
+</div>
+NO CAP is my first, most loved website. It's made for diploma work in college.
 
-NO CAP is an e-commerce platform specializing in street casual style clothing. The platform offers a unique shopping experience with collections inspired by different regions of the world.
+This online store is an e-commerce platform specializing in street casual style clothing. The platform offers a unique shopping experience with collections inspired by different regions of the world.
 
 ## TODO list:
 
--  add product images in admin
+-  account customization
+
+-  footer links ~
 
 -  fix header height
 
@@ -12,15 +17,9 @@ NO CAP is an e-commerce platform specializing in street casual style clothing. T
 
 -  liked ~
 
--  email subscription (footer & register) ~
-
--  footer links ~
-
 -  color & size tags in products
 
 -  order
-
--  account customization
 
 ## Features
 
@@ -36,17 +35,17 @@ NO CAP is an e-commerce platform specializing in street casual style clothing. T
    -  User registration and authentication
    -  ~Personal account management
    -  Shopping cart functionality
-   -  ~Email subscription system
+   -  Email subscription system
 
 -  **Admin Panel**
 
-   -  ~img upload - Product management
+   -  Product management
    -  Category and collection management
    -  User management
-   -  ~Bulk email system for marketing
+   -  Email system for marketing or other purposes
 
 -  **Responsive Design**
-   -  ~Mobile-friendly interface
+   -  Mobile-friendly interface
    -  Dynamic header with search functionality
    -  Smooth animations and transitions
 
@@ -63,7 +62,7 @@ NO CAP is an e-commerce platform specializing in street casual style clothing. T
 
    -  PHP
    -  MySQL
-   -  PHPMailer for email functionality
+   -  PHPMailer
 
 -  **Additional Tools**
    -  Apache server
@@ -71,8 +70,6 @@ NO CAP is an e-commerce platform specializing in street casual style clothing. T
    -  .htaccess for URL rewriting
 
 ## Database Structure
-
-The application uses the following main tables:
 
 -  cart
 -  categories
@@ -93,16 +90,13 @@ The application uses the following main tables:
 4. Update database connection settings in your configuration files
 5. Configure email settings for the newsletter system
 
-## License
-
-Copyright © 2024 NO CAP | defersye
-
 ## Contact & Social Media
 
 ### Direct Contact
 
 -  **Email**: defersye@gmail.com
 -  **Telegram**: [@defersye](https://t.me/defersye)
+-  **Instagram**: [@defersye](https://instagram.com/defersye)
 
 ### Professional Networks
 
@@ -117,8 +111,9 @@ For business inquiries and collaborations, feel free to reach out via Telegram o
 
 ---
 
-## No-cap
-
-Here's my day so far; went to jail, lost the girl of my dreams, and got my butt kicked pretty good. Still, things could be a lot worse. Oh, that's right. I'm falling to my death. Guess they can't. <b>How did it all come to this you ask? My end starts at the beginning. The very beginning.</b> Yes, that's me. I had a fairly standard childhood. I came from what you might call a broken home, literally broken. I was 8 days old and still living with my parents. How sad is that? Clearly it was time to move on.
-
+<div align="center">
 _"Style that speaks for itself!"_
+
+Copyright © 2024 NO CAP | defersye
+
+</div>
