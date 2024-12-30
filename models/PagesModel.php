@@ -24,25 +24,7 @@ class PagesModel
       return "<p class='contacts_message'>Message sent successfully. Do it again, if you need to!</p>";
    }
 
-   public function delivery()
-   {
-      $query = mysqli_query($this->conn, "SELECT * FROM products");
-      return $query;
-   }
-
-   public function return()
-   {
-      $query = mysqli_query($this->conn, "SELECT * FROM products");
-      return $query;
-   }
-
-   public function terms_conditions()
-   {
-      $query = mysqli_query($this->conn, "SELECT * FROM products");
-      return $query;
-   }
-
-   public function privacy_policy()
+   public function order()
    {
       $query = mysqli_query($this->conn, "SELECT * FROM products");
       return $query;

@@ -1,3 +1,33 @@
+.pages_title {
+   width: 100%;
+   font-size: 60px;
+   font-weight: 600;
+   text-align: center;
+}
+.pages_subtitle {
+   margin-top: 60px;
+   margin-bottom: 40px;
+   font-size: 24px;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-decoration: underline;
+}
+.pages_text {
+   letter-spacing: -0.2px;
+   line-height: 1.8;
+}
+li.pages_text::marker {
+   content: "- ";
+}
+.pages_text + .pages_text {
+   margin-top: 20px;
+}
+.pages_link {
+   font-weight: 500;
+   color: steelblue;
+   text-decoration: underline;
+}
+
 /* contacts */
 .contacts .container {
    padding-bottom: 120px;
@@ -6,13 +36,12 @@
    justify-content: center;
    gap: 50px;
 }
+.contacts .pages_title {
+   text-align: left;
+}
 .contacts_form {
    width: 100%;
    max-width: 500px;
-}
-.contacts_title {
-   font-size: 60px;
-   font-weight: 600;
 }
 .contacts_subtitle {
    margin: 20px 0;
@@ -66,4 +95,69 @@ textarea.contacts_input {
    flex-wrap: wrap;
    justify-content: space-between;
    gap: 30px;
+}
+
+/* delivery */
+.delivery .container {
+   padding-bottom: 120px;
+   max-width: 800px;
+   align-items: start;
+}
+.delivery_span {
+   font-style: italic;
+   font-weight: 500;
+}
+
+/* return */
+.return .container {
+   padding-bottom: 120px;
+   max-width: 800px;
+   align-items: start;
+}
+.return .pages_text:nth-child(2) {
+   margin-top: 40px;
+}
+.return_span {
+   font-weight: 500;
+}
+
+/* terms & conditions */
+.terms_conditions .container {
+   padding-bottom: 120px;
+   max-width: 1000px;
+   align-items: start;
+}
+.terms_conditions .pages_text:nth-child(2) {
+   margin-top: 40px;
+}
+.terms_conditions_span {
+   font-weight: 500;
+}
+.terms_conditions li {
+   padding-left: 20px;
+}
+.terms_conditions li.pages_text::marker {
+   content: initial;
+}
+
+/* privacy policy */
+.privacy_policy .container {
+   padding-bottom: 120px;
+   max-width: 1000px;
+   align-items: start;
+}
+.privacy_policy .pages_text:nth-child(2) {
+   margin-top: 40px;
+}
+.privacy_policy_span {
+   font-weight: 500;
+}
+.privacy_policy li {
+   padding-left: 20px;
+}
+.privacy_policy li.second_lvl {
+   padding-left: 40px;
+}
+.privacy_policy li.pages_text::marker {
+   content: initial;
 }

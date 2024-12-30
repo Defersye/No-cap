@@ -69,7 +69,7 @@ class RegisterView
                      <input type="file" id="register_avatar" class="auth_input">
                      <span class="auth_avatar_btn">Choose file</span>
                   </label>
-                  <p class="auth_p">By creating an account, you agree to our <a href="">Terms and Conditions</a>, <a href="">Privacy Policy</a></p>
+                  <p class="auth_p">By creating an account, you agree to our <a href="/terms_conditions">Terms and Conditions</a>, <a href="/privacy_policy">Privacy Policy</a></p>
                   <p class="auth_error">Error!</p>
                   <button class="auth_btn" type="submit" id="submit">Create account</button>
                   <p class="auth_p">Already have an account? <a href="/login">Login!</a></p>

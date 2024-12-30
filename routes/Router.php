@@ -37,6 +37,7 @@ class Router
       $this->addRoute('contacts', 'PagesController@contacts');
       $this->addRoute('contactsSend', 'PagesController@contactsSend');
       $this->addRoute('delivery', 'PagesController@delivery');
+      $this->addRoute('order', 'PagesController@order');
       $this->addRoute('return', 'PagesController@return');
       $this->addRoute('terms_conditions', 'PagesController@terms_conditions');
       $this->addRoute('privacy_policy', 'PagesController@privacy_policy');

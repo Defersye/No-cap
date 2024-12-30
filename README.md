@@ -11,17 +11,17 @@ This online store is an e-commerce platform specializing in street casual style 
 
 -  account customization
 
--  footer links ~
+-  order
 
--  fix header height
+-  footer order
+
+-  color & size tags in products
 
 -  reviews ~
 
 -  liked ~
 
--  color & size tags in products
-
--  order
+-  fix header height
 
 ## Features
 

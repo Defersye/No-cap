@@ -17,29 +17,28 @@ class PagesController
 
    public function delivery()
    {
+      $DeliveryView = new \views\DeliveryView();
+   }
+
+   public function order()
+   {
       $pagesModel = new \models\PagesModel();
-      $delivery = $pagesModel->delivery();
-      $DeliveryView = new \views\DeliveryView($delivery);
+      $order = $pagesModel->order();
+      // $OrderView = new \views\OrderView($order);
    }
 
    public function return()
    {
-      $pagesModel = new \models\PagesModel();
-      $return = $pagesModel->return();
-      $ReturnView = new \views\ReturnView($return);
+      $ReturnView = new \views\ReturnView();
    }
 
    public function terms_conditions()
    {
-      $pagesModel = new \models\PagesModel();
-      $terms_conditions = $pagesModel->terms_conditions();
-      $TermsConditionsView = new \views\TermsConditionsView($terms_conditions);
+      $TermsConditionsView = new \views\TermsConditionsView();
    }
 
    public function privacy_policy()
    {
-      $pagesModel = new \models\PagesModel();
-      $privacy_policy = $pagesModel->privacy_policy();
-      $PrivacyPolicyView = new \views\PrivacyPolicyView($privacy_policy);
+      $PrivacyPolicyView = new \views\PrivacyPolicyView();
    }
 }
