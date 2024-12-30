@@ -161,6 +161,13 @@
       max-width: none;
    }
 
+   /* contacts */
+   .contacts .container {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 60px;
+   }
+
    /* admin */
    .admin .container {
       display: grid;

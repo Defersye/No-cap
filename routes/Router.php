@@ -33,6 +33,14 @@ class Router
       $this->addRoute('refreshQuantity', 'CartController@refreshQuantity');
       $this->addRoute('changeQuantity', 'CartController@changeQuantity');
 
+      // pages
+      $this->addRoute('contacts', 'PagesController@contacts');
+      $this->addRoute('contactsSend', 'PagesController@contactsSend');
+      $this->addRoute('delivery', 'PagesController@delivery');
+      $this->addRoute('return', 'PagesController@return');
+      $this->addRoute('terms_conditions', 'PagesController@terms_conditions');
+      $this->addRoute('privacy_policy', 'PagesController@privacy_policy');
+
       // subscribtion
       $this->addRoute('subscribe', 'SubscriptionController@index');
    }

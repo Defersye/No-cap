@@ -30,7 +30,7 @@
 .auth_error {
    margin-top: -15px;
    display: none;
-   color: #ba576f;
+   color: brown;
 }
 .auth_error a {
    font-weight: 500;
