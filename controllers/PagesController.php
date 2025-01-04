@@ -6,39 +6,39 @@ class PagesController
 {
    public function contacts()
    {
-      $ContactsView = new \views\ContactsView('No');
+      $contactsView = new \views\ContactsView('No');
    }
    public function contactsSend()
    {
       $pagesModel = new \models\PagesModel();
       $message = $pagesModel->contactsSend($_POST["name"], $_POST["email"], $_POST["message"]);
-      $ContactsView = new \views\ContactsView($message);
+      $contactsView = new \views\ContactsView($message);
    }
 
    public function delivery()
    {
-      $DeliveryView = new \views\DeliveryView();
+      $deliveryView = new \views\DeliveryView();
    }
 
    public function orderCheck()
    {
       $orderCheckModel = new \models\PagesModel();
       $orderCheck = $orderCheckModel->orderCheck();
-      $OrderCheckView = new \views\OrderCheckView($orderCheck);
+      $orderCheckView = new \views\OrderCheckView($orderCheck);
    }
 
    public function return()
    {
-      $ReturnView = new \views\ReturnView();
+      $returnView = new \views\ReturnView();
    }
 
    public function terms_conditions()
    {
-      $TermsConditionsView = new \views\TermsConditionsView();
+      $termsConditionsView = new \views\TermsConditionsView();
    }
 
    public function privacy_policy()
    {
-      $PrivacyPolicyView = new \views\PrivacyPolicyView();
+      $privacyPolicyView = new \views\PrivacyPolicyView();
    }
 }

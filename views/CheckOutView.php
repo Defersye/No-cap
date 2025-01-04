@@ -63,7 +63,7 @@ class CheckOutView
             <div class="container">
                <form class="checkout_form" action="/orderSend" method="post">
                   <h2 class="checkout_title">Delivery</h2>
-                  <div class="a">
+                  <div class="checkout_region">
                      <input type="text" name="country" class="checkout_input" value="<?= $user['country'] ?>" placeholder="Country" required>
                      <input type="number" name="postal_code" class="checkout_input" value="<?= $user['postal_code'] ?>" placeholder="Postal code" max="9999999" required>
                   </div>
@@ -95,10 +95,20 @@ class CheckOutView
                         Transfer</label>
                   </div>
                   <div id="Card" class="checkout_payment_form deactive">
-                     will be added first of all
+                     <p>Name on card</p>
+                     <input type="text" name="card_name" class="checkout_input" placeholder="Sum Name">
+                     <p>Card number</p>
+                     <input type="number" name="card_number" class="checkout_input" placeholder="000-0000-0000-0000">
+                     <div class="card_row">
+                        <p>Expiry date</p>
+                        <p>CVV</p>
+                        <input type="number" name="card_exp" class="checkout_input" placeholder="00/00">
+                        <input type="number" name="card_cvv" class="checkout_input" placeholder="000">
+                     </div>
                   </div>
                   <div id="Transfer" class="checkout_payment_form deactive">
-                     will be added later
+                     <p class="card_tite">We will be waiting for the payment to be received on this number:</p>
+                     <p class="card_title">8-800-555-35-35</p>
                   </div>
 
                   <button class="checkout_btn" type="submit" id="submit">Place order</button>

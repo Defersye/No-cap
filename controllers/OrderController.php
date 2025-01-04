@@ -12,6 +12,8 @@ class OrderController
    }
    public function orderSend()
    {
-      // $HomeView = new \views\HomeView();
+      $checkOutModel = new \models\OrderModel();
+      $hash = $checkOutModel->orderSend($_POST['country'], $_POST['postal_code'], $_POST['adress_1st_line'], $_POST['adress_2nd_line'], $_POST['post_service'], $_POST['payment_method']);
+      $OrderInfoView = new \views\OrderInfoView($hash);
    }
 }

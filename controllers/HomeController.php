@@ -9,6 +9,6 @@ class HomeController
       $homeModel = new \models\HomeModel();
       $products = $homeModel->getProducts();
       $collections = $homeModel->getCollection();
-      $HomeView = new \views\HomeView($products, $collections);
+      $homeView = new \views\HomeView($products, $collections);
    }
 }

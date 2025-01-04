@@ -161,6 +161,13 @@
       max-width: none;
    }
 
+   /* checkout */
+   .checkout .container {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 40px;
+   }
+
    /* contacts */
    .contacts .container {
       flex-direction: column;
@@ -330,6 +337,15 @@
 
 /* 500px */
 @media only screen and (max-width: 499px) {
+   /* checkout */
+   .checkout_region {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+   .checkout_radio {
+      flex-direction: column;
+   }
+
    /* footer */
    .footer_subscribe {
       flex-direction: column;
