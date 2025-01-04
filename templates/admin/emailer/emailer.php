@@ -46,20 +46,20 @@ if (!empty($_POST) && !isset($sent)) {
 
 		$mail = new PHPMailer(true);
 		try {
-			$data = json_decode(file_get_contents(__DIR__ . "/data.json"), true);
+			$data = json_decode(file_get_contents(__DIR__ . "/../../data.json"), true);
 			if (!$data) {
 				throw new Exception("Could not load mail configuration");
 			}
 
 			$mail->isSMTP();
-			$mail->Host = 'smtp.gmail.com';
+			$mail->Host = $data['Emailer_Host'];
 			$mail->SMTPAuth = true;
-			$mail->Username = $data['Username'];
-			$mail->Password = $data['Password'];
+			$mail->Username = $data['Emailer_Username'];
+			$mail->Password = $data['Emailer_Password'];
 			$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 			$mail->Port = 587;
 
-			$mail->setFrom($data['Username'], 'No-Cap');
+			$mail->setFrom($data['Emailer_Username'], 'No-Cap');
 			$mail->addAddress($emails[$i]);
 			$mail->Subject = $emailer_subj;
 			$mail->Body = $emailer_text;
@@ -68,6 +68,7 @@ if (!empty($_POST) && !isset($sent)) {
 			$report .= "<li class='green'>Sent: " . htmlspecialchars($emails[$i]) . "</li>";
 		} catch (Exception $e) {
 			$report .= "<li class='red'>Not sent: " . htmlspecialchars($emails[$i]) . " <span>" . htmlspecialchars($mail->ErrorInfo) . "</span></li>";
+			$report .= $e->getMessage();
 		}
 	}
 

@@ -12,7 +12,6 @@
    flex-direction: column;
    gap: 10px;
 }
-
 .emailer_container textarea,
 .emailer_container input,
 .emailer_container select,
@@ -22,9 +21,16 @@
    border: 1px solid #ddd;
    border-bottom: 1px solid #000;
 }
-
 .emailer_container textarea {
    height: 200px;
+   resize: vertical;
+   scroll-behavior: smooth;
+}
+.emailer_container textarea::-webkit-scrollbar {
+   width: 10px;
+}
+.emailer_container textarea::-webkit-scrollbar-thumb {
+   background-color: steelblue;
 }
 
 .emailer_span {
@@ -40,7 +46,6 @@
    margin-bottom: 20px;
    display: flex;
 }
-
 .report_title {
    font-weight: 500;
 }

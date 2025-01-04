@@ -18,6 +18,10 @@
    outline-width: 1px;
    outline-color: steelblue;
 }
+*::selection {
+   background-color: steelblue;
+   color: white;
+}
 body::-webkit-scrollbar {
    display: none;
 }

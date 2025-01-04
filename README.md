@@ -11,9 +11,11 @@ This online store is an e-commerce platform specializing in street casual style 
 
 -  account customization
 
--  order
+-  orders
 
--  footer order
+-  payment
+
+-  footer order check
 
 -  color & size tags in products
 
@@ -22,6 +24,10 @@ This online store is an e-commerce platform specializing in street casual style 
 -  liked ~
 
 -  fix header height
+
+-  verification of user email ~
+
+-  delivery cost based on user location ~
 
 ## Features
 
@@ -78,7 +84,7 @@ This online store is an e-commerce platform specializing in street casual style 
 -  collections
 -  products
 -  reviews
--  ~orders
+-  orders
 -  subscriptions
 -  users
 

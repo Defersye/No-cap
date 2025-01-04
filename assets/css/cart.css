@@ -189,10 +189,12 @@
    font-weight: 600;
 }
 .cart_payment #submit {
-   cursor: pointer;
    margin-top: 20px;
    padding: 20px;
    width: 100%;
+   display: block;
+   text-align: center;
    font-size: 18px;
    text-transform: uppercase;
+   cursor: pointer;
 }

@@ -81,7 +81,7 @@ class CartView
                            <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $total ?></p>
                         </div>
                      </div>
-                     <input type="submit" id="submit" value="Checkout">
+                     <a href="/check_out" id="submit">Checkout</a>
                   </div>
                <? } ?>
             </div>

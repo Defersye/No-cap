@@ -20,11 +20,11 @@ class PagesController
       $DeliveryView = new \views\DeliveryView();
    }
 
-   public function order()
+   public function orderCheck()
    {
-      $pagesModel = new \models\PagesModel();
-      $order = $pagesModel->order();
-      // $OrderView = new \views\OrderView($order);
+      $orderCheckModel = new \models\PagesModel();
+      $orderCheck = $orderCheckModel->orderCheck();
+      $OrderCheckView = new \views\OrderCheckView($orderCheck);
    }
 
    public function return()

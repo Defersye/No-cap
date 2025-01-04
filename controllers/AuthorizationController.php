@@ -28,7 +28,8 @@ class AuthorizationController
 
    public function login()
    {
-      if ($_POST['email'] == "admin" && $_POST['password'] == "admin") {
+      $data = json_decode(file_get_contents(__DIR__ . "/../templates/data.json"), true);
+      if ($_POST['email'] == $data['Admin_login'] && $_POST['password'] == $data['Admin_password']) {
          echo '<a href="/templates/admin/admin_index.php">Click to go to admin panel</a>';
       } else {
          $loginModel = new \models\AuthorizationModel();

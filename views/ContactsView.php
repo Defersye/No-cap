@@ -64,7 +64,7 @@ class ContactsView
                <div class="contacts_info">
                   <h2 class="contacts_info_title">Our socials</h2>
                   <ul class="contacts_info_list">
-                     <li>no-cap@gmail.com</li>
+                     <li>defersye@gmail.com</li>
                      <li>+47 924 805 72</li>
                      <li>Olaf Helsets Vei, 6, Oslo</li>
                      <li class="contacts_info_list_social">

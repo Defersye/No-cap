@@ -1,0 +1,117 @@
+.checkout {
+   padding-bottom: 120px;
+}
+.checkout .container {
+   flex-direction: row;
+   align-items: start;
+   justify-content: center;
+   gap: 20px;
+}
+.checkout_title {
+   font-size: 20px;
+   font-weight: 600;
+}
+/* form */
+.checkout_form {
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   row-gap: 20px;
+}
+.checkout_input {
+   height: 45px;
+   padding: 10px;
+   width: 100%;
+   border: 1px solid #ddd;
+   border-bottom: 1px solid black;
+}
+.a {
+   display: grid;
+   grid-template-columns: 3fr 2fr;
+   gap: 10px;
+}
+.checkout_radio {
+   display: flex;
+   gap: 20px;
+}
+.checkout_radio label {
+   display: flex;
+   gap: 5px;
+   cursor: pointer;
+}
+.checkout_subtitle {
+   font-weight: 500;
+}
+.checkout_btn {
+   width: 100%;
+   padding: 20px;
+   font-size: 18px;
+   text-transform: uppercase;
+}
+.checkout_payment_form {
+   padding: 10px;
+   width: fit-content;
+   background-color: #ffd4d4;
+   color: brown;
+}
+.deactive {
+   display: none;
+}
+/* data */
+.checkout_data {
+   padding: 15px 10px;
+   width: 100%;
+   max-width: 400px;
+   border: 1px solid black;
+}
+.checkout_logo {
+   font-size: 32px;
+   font-family: "intro";
+   text-transform: uppercase;
+   text-align: center;
+}
+.checkout_line {
+   margin: 10px 0;
+   height: 5px;
+   width: 100%;
+   border-top: 1px dashed black;
+   border-bottom: 1px dashed black;
+}
+.checkout_card .checkout_line {
+   height: 1px;
+   border-top: none;
+   opacity: 0.4;
+}
+.checkout_card {
+   padding: 10px 0;
+   display: grid;
+   grid-template-columns: auto 1fr auto auto;
+   gap: 5px;
+}
+.checkout_card.box {
+   padding: 2px 0;
+   grid-template-columns: auto 1fr auto;
+}
+.checkout_card.box .checkout_line {
+   height: 5px;
+   opacity: 1;
+}
+.checkout_shipping {
+   color: steelblue;
+}
+.checkout_total {
+   font-size: 18px;
+   font-weight: 500;
+}
+.checkout_user-data {
+   display: flex;
+   justify-content: space-between;
+}
+.checkout_user {
+   padding-top: 5px;
+}
+.checkout_user:last-child {
+   text-align: right;
+}

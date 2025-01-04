@@ -68,6 +68,13 @@ li.pages_text::marker {
 textarea.contacts_input {
    height: 150px;
    resize: vertical;
+   scroll-behavior: smooth;
+}
+textarea.contacts_input::-webkit-scrollbar {
+   width: 10px;
+}
+textarea.contacts_input::-webkit-scrollbar-thumb {
+   background-color: steelblue;
 }
 #submit {
    padding: 15px;
@@ -95,6 +102,9 @@ textarea.contacts_input {
    flex-wrap: wrap;
    justify-content: space-between;
    gap: 30px;
+}
+.contacts_info_list_social a {
+   font-weight: 500;
 }
 
 /* delivery */
