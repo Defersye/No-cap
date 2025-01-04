@@ -24,9 +24,22 @@ class PagesModel
       return "<p class='contacts_message'>Message sent successfully. Do it again, if you need to!</p>";
    }
 
-   public function orderCheck()
+   public function orderCheck($hash, $email)
    {
-      // $query = mysqli_query($this->conn, "SELECT * FROM orders");
-      // return $query;
+      if ($hash == "No") {
+         return "No";
+      } else {
+         $query = mysqli_query($this->conn, "SELECT * FROM orders, products, users WHERE id_product = product_id AND order_hash_id = '$hash' AND email = '$email'");
+         if ($query->num_rows) {
+            if ($query->num_rows) {
+               while ($row = $query->fetch_assoc()) {
+                  $answers[] = $row;
+               }
+            }
+            return $answers;
+         } else {
+            return "Error";
+         }
+      }
    }
 }

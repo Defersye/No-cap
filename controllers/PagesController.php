@@ -22,9 +22,12 @@ class PagesController
 
    public function orderCheck()
    {
+      $hash = isset($_POST["order_hash_id"]) ? $_POST["order_hash_id"] : "No";
+      $email = isset($_POST["email"]) ? $_POST["email"] : "No";
+
       $orderCheckModel = new \models\PagesModel();
-      $orderCheck = $orderCheckModel->orderCheck();
-      $orderCheckView = new \views\OrderCheckView($orderCheck);
+      $orderData = $orderCheckModel->orderCheck($hash, $email);
+      $orderCheckView = new \views\OrderCheckView($orderData);
    }
 
    public function return()
