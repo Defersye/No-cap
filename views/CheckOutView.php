@@ -72,7 +72,7 @@ class CheckOutView
                   <div class="checkout_radio">
                      <p class="checkout_subtitle">Post service</p>
                      <label>
-                        <input type="radio" name="post_service" value="Royal_Mail" required>
+                        <input type="radio" name="post_service" value="Royal Mail" required>
                         Royal Mail
                      </label>
                      <label>
@@ -80,7 +80,7 @@ class CheckOutView
                         DPD
                      </label>
                      <label>
-                        <input type="radio" name="post_service" value="DHL_Express">
+                        <input type="radio" name="post_service" value="DHL Express">
                         DHL Express
                      </label>
                   </div>

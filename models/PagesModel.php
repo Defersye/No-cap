@@ -31,10 +31,8 @@ class PagesModel
       } else {
          $query = mysqli_query($this->conn, "SELECT * FROM orders, products, users WHERE id_product = product_id AND order_hash_id = '$hash' AND email = '$email'");
          if ($query->num_rows) {
-            if ($query->num_rows) {
-               while ($row = $query->fetch_assoc()) {
-                  $answers[] = $row;
-               }
+            while ($row = $query->fetch_assoc()) {
+               $answers[] = $row;
             }
             return $answers;
          } else {

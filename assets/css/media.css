@@ -175,6 +175,45 @@
       row-gap: 60px;
    }
 
+   /* account */
+   .account_info {
+      grid-template-columns: 200px 1fr;
+      gap: 10px;
+   }
+   .account_line {
+      grid-column: span 2;
+      margin: 10px 50px;
+      width: calc(100vw - 120px);
+      height: 1px;
+   }
+   .account_postal_data {
+      grid-column: span 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+   }
+   .account_orders {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-wrap: wrap;
+      column-gap: 20px;
+   }
+   .account_order {
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 20px;
+   }
+   .order_data {
+      text-align: center;
+   }
+   .order_status {
+      padding: 0;
+   }
+   .order_items {
+      flex-direction: column;
+   }
+
    /* admin */
    .admin .container {
       display: grid;
@@ -344,6 +383,27 @@
    }
    .checkout_radio {
       flex-direction: column;
+   }
+
+   /* account */
+   .account_info {
+      grid-template-columns: 1fr;
+      justify-items: center;
+   }
+   .account_main_data {
+      text-align: center;
+   }
+   .account_line {
+      grid-column: auto;
+      margin: 10px 50px;
+      width: calc(100vw - 120px);
+      height: 1px;
+   }
+   .account_postal_data {
+      grid-column: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
    }
 
    /* order check */

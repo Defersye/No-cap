@@ -7,7 +7,8 @@ class AccountController
    public function index()
    {
       $accountModel = new \models\AccountModel();
-      $accountUser = $accountModel->getFullUser();
-      $accountView = new \views\AccountView($accountUser);
+      $userData = $accountModel->getFullUser();
+      $orders = $accountModel->getOrders();
+      $accountView = new \views\AccountView($userData, $orders);
    }
 }

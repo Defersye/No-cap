@@ -65,7 +65,7 @@ class OrderCheckView
    }
    function renderData($orderData)
    { ?>
-      <h2 class="check_title">Your order</h2>
+      <h2 class="check_title">Found it!</h2>
       <p class="check_text">Here's your order details.</p>
       <div class="check_item">
          <p class="check_item_title">Order id</p>

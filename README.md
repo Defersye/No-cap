@@ -11,7 +11,7 @@ This online store is an e-commerce platform specializing in street casual style 
 
 -  account customization
 
--  order management - user, admin
+-  order management - admin
 
 -  color & size tags in products
 
