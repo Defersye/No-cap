@@ -28,6 +28,7 @@ class ReturnView
          $this->return();
          include "./templates/footer.html";
          ?>
+
       </body>
 
       </html>

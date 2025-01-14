@@ -199,10 +199,17 @@
       flex-wrap: wrap;
       column-gap: 20px;
    }
+   .orders_title {
+      text-align: center;
+   }
    .account_order {
+      padding-left: 0;
+      padding-top: 10px;
       grid-template-columns: 1fr;
       place-items: center;
       gap: 20px;
+      border-left: 1px solid #0002;
+      border-top: 5px solid #000;
    }
    .order_data {
       text-align: center;
@@ -432,5 +439,8 @@
    .footer_subscribe input {
       border-bottom: none;
       border-top: 1px solid #000;
+   }
+   .footer_subscribe #submit {
+      max-width: none;
    }
 }

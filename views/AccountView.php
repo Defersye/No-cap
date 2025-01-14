@@ -49,7 +49,7 @@ class AccountView
                <div class="account_info">
                   <div class="accuont_img">
                      <img src="assets/img/database/avatars/<?= $user['avatar'] ?>" alt="" class="account_avatar">
-                     <a href="" class="account_edit"><img src="assets/img/layout/edit_account.png" alt=""></a>
+                     <!-- <a href="" class="account_edit"><img src="assets/img/layout/edit_account.png" alt=""></a> -->
                   </div>
                   <div class="account_main_data">
                      <h1 class="account_email"><?= $user['email'] ?></h1>
@@ -68,7 +68,7 @@ class AccountView
                         <p class="account_postal_row"><span>Unknown</span> - Postal code</p>
                         <p class="account_postal_row"><span>Unknown</span> - Adress</p>
                         <!-- link, mf! -->
-                        <a href="" class="account_postal_row link">Add postal info</a>
+                        <!-- <a href="" class="account_postal_row link">Add postal info</a> -->
                      <? } ?>
                   </div>
                </div>

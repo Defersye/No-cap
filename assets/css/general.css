@@ -6,7 +6,7 @@
    border: none;
    text-decoration: none;
    box-sizing: border-box;
-   font-family: "poppins", sans-serif;
+   font-family: "poppins", "open-sans", sans-serif;
    letter-spacing: 0.3px;
    font-weight: 300;
    font-size: 16px;
@@ -215,6 +215,8 @@ footer .container {
    outline: none;
 }
 .footer_subscribe #submit {
+   width: 100%;
+   max-width: fit-content;
    padding: 15px 25px;
    cursor: pointer;
 }

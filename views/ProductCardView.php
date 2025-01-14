@@ -56,10 +56,10 @@ class ProductCardView
                   </div>
                   <div class="productCard_nums">
                      <? if ($item['discount']) {
-                        echo "<p class='productCard_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
-                        echo "<p class='productCard_price_crossed'>&euro;" . $item['price'] . "</p>";
+                        echo "<p class='productCard_discount'>&#8381;" . $item['price'] - $item['discount'] . "</p>";
+                        echo "<p class='productCard_price_crossed'>&#8381;" . $item['price'] . "</p>";
                      } else {
-                        echo "<p class='productCard_price'>&euro;" . $item['price'] . "</p>";
+                        echo "<p class='productCard_price'>&#8381;" . $item['price'] . "</p>";
                      }
                      ?>
                   </div>

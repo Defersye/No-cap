@@ -33,3 +33,30 @@
    src: url("Poppins-Black.ttf");
    font-weight: 700;
 }
+
+/* open sans */
+@font-face {
+   font-family: "open-sans";
+   src: url("open-sans/OpenSans-Light.ttf");
+   font-weight: 200;
+}
+@font-face {
+   font-family: "open-sans";
+   src: url("open-sans/OpenSans-Regular.ttf");
+   font-weight: 300;
+}
+@font-face {
+   font-family: "open-sans";
+   src: url("open-sans/OpenSans-Medium.ttf");
+   font-weight: 400;
+}
+@font-face {
+   font-family: "open-sans";
+   src: url("open-sans/OpenSans-Bold.ttf");
+   font-weight: 500;
+}
+@font-face {
+   font-family: "open-sans";
+   src: url("open-sans/OpenSans-Black.ttf");
+   font-weight: 600;
+}
