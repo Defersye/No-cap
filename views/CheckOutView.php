@@ -132,17 +132,17 @@ class CheckOutView
                   <div class="checkout_card box">
                      <p class="checkout_tot">Sub total:</p>
                      <div class="checkout_line"></div>
-                     <p class="checkout_tot">&#8381;<?= $subtotal ?></p>
+                     <p class="checkout_tot">&euro;<?= $subtotal ?></p>
                   </div>
                   <div class="checkout_card box">
                      <p class="checkout_shipping">Shipping:</p>
                      <div class="checkout_line"></div>
-                     <p class="checkout_shipping">&#8381;<?= $shipping = 20 ?></p>
+                     <p class="checkout_shipping">&euro;<?= $shipping = 20 ?></p>
                   </div>
                   <div class="checkout_card box">
                      <p class="checkout_total">Total:</p>
                      <div class="checkout_line"></div>
-                     <p class="checkout_total">&#8381;<?= $total = $subtotal + $shipping ?></p>
+                     <p class="checkout_total">&euro;<?= $total = $subtotal + $shipping ?></p>
                   </div>
                   <div class="checkout_line"></div>
 

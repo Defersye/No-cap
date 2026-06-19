@@ -60,10 +60,10 @@ class RegisterView
                <h2 class="auth_title">Registration</h2>
                <form class="auth_form" method="post">
                   <input type="text" id="register_name" class="auth_input" placeholder="full name" required>
-                  <input type="text" id="register_login" class="auth_input" placeholder="login" required>
+                  <input type="text" id="register_login" class="auth_input" placeholder="login" maxlength="20" required>
                   <input type="email" id="register_email" class="auth_input" placeholder="email@mail.com" required pattern="^\S+@\S+\.\S+$">
-                  <input type="password" id="register_password" class="auth_input" placeholder="password" required>
-                  <input type="password" id="register_confirm" class="auth_input" placeholder="confirm password" required>
+                  <input type="password" id="register_password" minlength="6" maxlength="20" class="auth_input" placeholder="password" required>
+                  <input type="password" id="register_confirm" minlength="6" maxlength="20" class="auth_input" placeholder="confirm password" required>
                   <label class="auth_avatar">
                      <span class="auth_avatar_text" type="text">uploaded file name</span>
                      <input type="file" id="register_avatar" class="auth_input">

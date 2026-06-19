@@ -16,7 +16,7 @@
    display: grid;
    grid-template-columns: 1fr repeat(3, 100px);
    width: 100%;
-   border-bottom: #000 solid 1px;
+   border-bottom: var(--black) solid 1px;
 }
 .cart_title {
    padding-bottom: 15px;
@@ -38,13 +38,13 @@
    display: grid;
    grid-template-columns: 1fr repeat(3, 100px);
    place-items: center;
-   border-bottom: 1px solid #0002;
+   border-bottom: 1px solid var(--black-03);
 }
 .cart_card:last-of-type {
    border-bottom: none;
 }
 .cart_card:hover {
-   box-shadow: #0003 0px 0px 15px;
+   box-shadow: var(--black-03) 0px 0px 15px;
    transition: 0.2s ease-in-out;
 }
 .cart_card_empty {
@@ -106,12 +106,12 @@
 }
 .cart_card_price_crossed {
    font-weight: 300;
-   color: gray;
+   color: var(--gray);
    text-decoration: line-through;
 }
 .cart_card_discount {
    font-weight: 500;
-   color: steelblue;
+   color: var(--accent);
 }
 /* quantity */
 .cart_card_quantity {
@@ -126,8 +126,8 @@
    cursor: pointer;
 }
 .cart_card_quantity_change:hover {
-   background-color: #e7e7e7;
-   /* color: white; */
+   background-color: var(--gray-e7);
+   /* color: var(--white); */
    transition: 0.2s ease-in-out;
 }
 .cart_card_quantity_nums {
@@ -138,10 +138,10 @@
    -webkit-appearance: none;
 }
 .cart_card_quantity_change.decrement {
-   border-right: 1px solid #000;
+   border-right: 1px solid var(--black);
 }
 .cart_card_quantity_change.increment {
-   border-left: 1px solid #000;
+   border-left: 1px solid var(--black);
 }
 
 /* payment */
@@ -172,14 +172,14 @@
    text-align: end;
 }
 .cart_payment_discount {
-   color: steelblue;
+   color: var(--accent);
 }
 .cart_payment_line {
    margin: 20px 0;
    height: 1px;
    width: 100%;
    grid-column: span 2;
-   background-color: #000;
+   background-color: var(--black);
 }
 .cart_payment_total {
    font-weight: 600;

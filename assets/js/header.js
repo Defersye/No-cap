@@ -39,4 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
       burger.classList.toggle("active");
       mobileNav.classList.toggle("active");
    });
+
+   // up
+   window.onscroll = function () {
+      if (
+         document.body.scrollTop > 20 ||
+         document.documentElement.scrollTop > 20
+      ) {
+         document.getElementById("up").style.display = "block";
+      } else {
+         document.getElementById("up").style.display = "none";
+      }
+   };
+
+   document.getElementById("up").addEventListener("click", function () {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+      });
+   });
 });

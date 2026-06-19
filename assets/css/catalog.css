@@ -35,15 +35,15 @@
    box-sizing: border-box;
    width: 25px;
    height: 25px;
-   background-color: white;
-   border: 1px solid black;
+   background-color: var(--white);
+   border: 1px solid var(--black);
 }
 .catalog_filter_check:checked:after {
    content: "";
    display: block;
    width: 7px;
    height: 15px;
-   border: solid black;
+   border: solid var(--black);
    border-width: 0 1px 1px 0;
    transform: rotate(45deg);
    position: absolute;
@@ -54,8 +54,8 @@
    padding: 10px;
    text-align: center;
    transition: 0.2s ease-in-out;
-   background-color: black;
-   color: white;
+   background-color: var(--black);
+   color: var(--white);
 }
 #clear:hover {
    font-weight: 500;

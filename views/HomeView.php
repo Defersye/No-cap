@@ -29,15 +29,57 @@ class HomeView
          include "./templates/footer.html";
          ?>
          <script defer>
-            (function() {
-               function scrollHorizontally(e) {
+            const scroll = document.getElementById('scroll');
+            if (scroll) {
+               scroll.addEventListener("mousewheel", function (e) {
                   e = window.event || e;
                   var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-                  document.getElementById('scroll').scrollLeft -= (delta * 200);
+                  scroll.scrollLeft -= (delta * 200);
                   e.preventDefault();
+               }, false);
+            }
+         </script>
+         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+               const sliderContainer = document.querySelector('.slider-container');
+               const sliderWrapper = document.querySelector('.slider-wrapper');
+               const slides = document.querySelectorAll('.slide');
+               const arrowLeft = document.querySelector('.arrow-left');
+               const arrowRight = document.querySelector('.arrow-right');
+               if (!sliderContainer || !sliderWrapper || !slides.length || !arrowLeft || !arrowRight) {
+                  return;
                }
-               document.getElementById('scroll').addEventListener("mousewheel", scrollHorizontally, false);
-            })();
+
+               let slideWidth = sliderContainer.getBoundingClientRect().width;
+               let currentSlide = 0;
+
+               function updateSliderPosition() {
+                  sliderWrapper.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+               }
+
+               function updateSlideWidth() {
+                  slideWidth = sliderContainer.getBoundingClientRect().width;
+                  slides.forEach(slide => slide.style.width = `${slideWidth}px`);
+                  updateSliderPosition();
+               }
+
+               arrowRight.addEventListener('click', function () {
+                  currentSlide = currentSlide + 1 >= slides.length ? 0 : currentSlide + 1;
+                  updateSliderPosition();
+               });
+
+               arrowLeft.addEventListener('click', function () {
+                  currentSlide = currentSlide - 1 < 0 ? slides.length - 1 : currentSlide - 1;
+                  updateSliderPosition();
+               });
+
+               if (window.ResizeObserver) {
+                  new ResizeObserver(updateSlideWidth).observe(sliderContainer);
+               } else {
+                  window.addEventListener('resize', updateSlideWidth);
+               }
+               updateSlideWidth();
+            });
          </script>
       </body>
 
@@ -50,6 +92,28 @@ class HomeView
          <section class="hero">
             <div class="container">
                <a href="/catalog" class="hero_btn">To shopping</a>
+            </div>
+         </section>
+         <section class="slider">
+            <div class="container">
+               <div class="slider-container">
+                  <div class="slider-wrapper">
+                     <div class="slide">
+                        <h2 class="quote">Don't follow the trends. Don't let fashion control you. Decide who you are and what you want to express through your clothes and your lifestyle</h2>
+                        <p class="author">- Gianni Versace</p>
+                     </div>
+                     <div class="slide">
+                        <h2 class="quote">Style is a way to talk about yourself without saying a word</h2>
+                        <p class="author">- Rachel Zoe</p>
+                     </div>
+                     <div class="slide">
+                        <h2 class="quote">Clothes don't mean anything until someone starts living in them</h2>
+                        <p class="author">- Marc Jacobs</p>
+                     </div>
+                  </div>
+                  <button class="arrow arrow-left"><img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow"></button>
+                  <button class="arrow arrow-right"><img src="assets/img/layout/path_arrow.png" alt="" class="path_arrow"></button>
+               </div>
             </div>
          </section>
          <section class="suggestions">

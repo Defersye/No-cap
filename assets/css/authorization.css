@@ -24,12 +24,12 @@
    height: 45px;
    padding: 10px;
    width: 100%;
-   border-bottom: 1px solid black;
+   border-bottom: 1px solid var(--black);
 }
 .auth_error {
    margin-top: -15px;
    display: none;
-   color: brown;
+   color: var(--red);
 }
 .auth_error a {
    font-weight: 500;
@@ -41,7 +41,7 @@
    text-align: center;
 }
 .auth_p a {
-   color: steelblue;
+   color: var(--accent);
 }
 .auth_btn {
    width: 100%;
@@ -63,7 +63,7 @@
    align-items: center;
    justify-content: start;
    float: left;
-   border-bottom: 1px solid black;
+   border-bottom: 1px solid var(--black);
 }
 .auth_avatar_btn {
    padding: 10px 20px;
@@ -71,9 +71,9 @@
    min-width: fit-content;
    display: grid;
    place-items: center;
-   color: white;
+   color: var(--white);
    text-transform: uppercase;
-   background-color: steelblue;
+   background-color: var(--accent);
    background-size: 200px 200px;
    background-image: url(/assets//img/layout/texture.png);
    transition: 0.2s ease-in-out;

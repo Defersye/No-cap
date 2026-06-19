@@ -8,10 +8,10 @@
    <p class="catalog_card_collection"><?= $item['name_collection'] ?></p>
    <div class="catalog_card_nums">
       <? if ($item['discount']) {
-         echo "<p class='catalog_card_price_crossed'>&#8381;" . $item['price'] . "</p>";
-         echo "<p class='catalog_card_discount'>&#8381;" . $item['price'] - $item['discount'] . "</p>";
+         echo "<p class='catalog_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+         echo "<p class='catalog_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
       } else {
-         echo "<p class='catalog_card_price'>&#8381;" . $item['price'] . "</p>";
+         echo "<p class='catalog_card_price'>&euro;" . $item['price'] . "</p>";
       }
       ?>
    </div>

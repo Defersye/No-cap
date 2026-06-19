@@ -22,9 +22,9 @@
    right: 16px;
    display: grid;
    place-items: center;
-   background-color: black;
+   background-color: var(--black);
    border-radius: 100px;
-   border: 3px solid white;
+   border: 3px solid var(--white);
 }
 .account_edit img {
    height: 60%;
@@ -36,7 +36,7 @@
    height: 200px;
    border-radius: 50%;
    object-fit: cover;
-   border: 2px solid #000;
+   border: 2px solid var(--black);
 }
 .account_main_data {
    display: flex;
@@ -55,13 +55,13 @@
 }
 .account_logout {
    font-weight: 400;
-   color: brown;
+   color: var(--red);
 }
 .account_line {
    margin: 25px 0;
    height: 150px;
    width: 1px;
-   background-color: #000;
+   background-color: var(--black);
    opacity: 0.3;
 }
 .account_postal_data {
@@ -78,7 +78,7 @@
    font-weight: 500;
 }
 .account_postal_row.link {
-   color: steelblue;
+   color: var(--accent);
    font-weight: 400;
 }
 
@@ -98,8 +98,8 @@
    padding-left: 10px;
    display: grid;
    grid-template-columns: 200px 1fr auto;
-   border: 1px solid #0002;
-   border-left: 5px solid #000;
+   border: 1px solid var(--black-03);
+   border-left: 5px solid var(--black);
 }
 .order_data {
    padding: 5px;
@@ -129,7 +129,7 @@
    width: 8px;
    height: 8px;
    border-radius: 10px;
-   background-color: steelblue;
+   background-color: var(--accent);
 }
 .order_items {
    display: flex;
@@ -141,7 +141,7 @@
    flex-direction: column;
    justify-content: center;
    writing-mode: vertical-lr;
-   border-right: 1px solid white;
+   border-right: 1px solid var(--white);
 }
 .order_item img {
    height: 150px;
@@ -153,7 +153,7 @@
    position: absolute;
    right: 0;
    bottom: 0;
-   color: white;
+   color: var(--white);
    font-size: 12px;
    text-transform: uppercase;
    transform: rotate(180deg);

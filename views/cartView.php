@@ -69,16 +69,16 @@ class CartView
                         <p class="cart_payment_title">Payment:</p>
                         <div class="cart_payment_box">
                            <p class="cart_payment_sub">Sub total:</p>
-                           <p class="cart_payment_nums" id="payment_sub">&#8381;<?= $subtotal ?></p>
+                           <p class="cart_payment_nums" id="payment_sub">&euro;<?= $subtotal ?></p>
                         </div>
                         <div class="cart_payment_box">
                            <p class="cart_payment_sub cart_payment_discount">Discount:</p>
-                           <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&#8381;<?= $discount ?></p>
+                           <p class="cart_payment_nums cart_payment_discount" id="payment_discount">&euro;<?= $discount ?></p>
                         </div>
                         <div class="cart_payment_line"></div>
                         <div class="cart_payment_box">
                            <p class="cart_payment_total">To pay:</p>
-                           <p class="cart_payment_nums-total" id="payment_total">&#8381;<?= $total ?></p>
+                           <p class="cart_payment_nums-total" id="payment_total">&euro;<?= $total ?></p>
                         </div>
                      </div>
                      <a href="/check_out" id="submit">Checkout</a>
@@ -109,10 +109,10 @@ class CartView
             </a>
             <div class="cart_card_nums">
                <? if ($item['discount']) {
-                  echo "<p class='cart_card_price_crossed'>&#8381;" . $item['price'] . "</p>";
-                  echo "<p class='cart_card_discount'>&#8381;" . $item['price'] - $item['discount'] . "</p>";
+                  echo "<p class='cart_card_price_crossed'>&euro;" . $item['price'] . "</p>";
+                  echo "<p class='cart_card_discount'>&euro;" . $item['price'] - $item['discount'] . "</p>";
                } else {
-                  echo "<p class='cart_card_price'>&#8381;" . $item['price'] . "</p>";
+                  echo "<p class='cart_card_price'>&euro;" . $item['price'] . "</p>";
                }
                ?>
             </div>
@@ -121,7 +121,7 @@ class CartView
                <input type="number" class="cart_card_quantity_nums" value="<?= $item['quantity'] ?>" pattern="[0-9]*" min="1" max="99">
                <div class="cart_card_quantity_change increment">+</div>
             </div>
-            <p class="cart_card_total">&#8381;<?= $item['sum'] ?></p>
+            <p class="cart_card_total">&euro;<?= $item['sum'] ?></p>
          </div>
 <?php
          $subtotal += $item['price'] * $item['quantity'];
